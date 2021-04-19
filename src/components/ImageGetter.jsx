@@ -3,7 +3,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const ImageGetter = ({ filename, classes, alt }) => {
+const ImageGetter = ({ filename, classes, alt, backgroundColor }) => {
   const filterImage = (images) =>
     images.allImageSharp.edges.find(
       (element) =>
@@ -30,6 +30,7 @@ const ImageGetter = ({ filename, classes, alt }) => {
           image={filterImage(data).node.gatsbyImageData}
           className={classes}
           alt={alt}
+          backgroundColor={backgroundColor}
         />
       )}
     />
@@ -40,6 +41,11 @@ ImageGetter.propTypes = {
   filename: PropTypes.string.isRequired,
   classes: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+};
+
+ImageGetter.defaultProps = {
+  backgroundColor: 'transparent',
 };
 
 export default ImageGetter;
