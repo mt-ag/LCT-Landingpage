@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Low Code Testing`,
+    description: `Testing APEX Apps is now as easy as creating them.`,
+    author: `@MT_AG_`,
+    siteUrl: `https://lct.software`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -30,8 +31,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://lct.software/`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
   ],
 };
