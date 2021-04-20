@@ -35,18 +35,18 @@ const InfoHeader = () => (
                     type="submit"
                     className="block w-full text-black py-3 px-4 rounded-md shadow bg-gradient-to-r from-cyan-200 to-lightBlue-400 text-white font-medium hover:from-cyan-400 hover:to-lightBlue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue-400 focus:ring-offset-gray-900"
                   >
-                    Subscribe Newsletter
+                    Stay up to date
                   </button>
                 </div>
               </div>
               <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                We will periodically send updates about LCT. By providing your
-                email, you agree to our{' '}
+                Subscribe to our Newsletter. We will periodically send updates
+                about LCT. Please note our{' '}
                 <a
                   href="https://www.mt-ag.com/datenschutz/"
                   className="font-medium text-white"
                 >
-                  terms of service
+                  privacy policy
                 </a>
                 .
               </p>
