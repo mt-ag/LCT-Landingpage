@@ -2,6 +2,7 @@
   "name": "lct-landingpage",
   "version": "0.1.0",
   "dependencies": {
+    "@heroicons/react": "^1.0.1",
     "gatsby": "^3.3.0",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-image": "^1.3.0",
