@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ImageGetter from '../ImageGetter';
 
-const InfoHeader = () => (
+const InfoHeader = ({ openModal, email, setEmail }) => (
   <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
     <div className="lg:grid lg:grid-cols-2 lg:gap-8">
       <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -28,10 +29,13 @@ const InfoHeader = () => (
                     type="email"
                     placeholder="Enter your email"
                     className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lightBlue-500"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <button
+                    onClick={() => openModal()}
                     type="submit"
                     className="block w-full text-black py-3 px-4 rounded-md shadow bg-gradient-to-r from-cyan-200 to-lightBlue-400 font-medium hover:from-cyan-400 hover:to-lightBlue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue-400 focus:ring-offset-gray-900"
                   >
@@ -40,15 +44,7 @@ const InfoHeader = () => (
                 </div>
               </div>
               <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                Subscribe to our Newsletter. We will periodically send updates
-                about LCT. Please note our{' '}
-                <a
-                  href="https://www.mt-ag.com/datenschutz/"
-                  className="font-medium text-white"
-                >
-                  privacy policy
-                </a>
-                .
+                Subscribe to our Newsletter to get periodic updates about LCT.
               </p>
             </form>
           </div>
@@ -58,7 +54,7 @@ const InfoHeader = () => (
         <div className="h-full mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
           {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
           <ImageGetter
-            classes="hidden sm:visible w-3/4 xl:mt-16 ml-24 select-none"
+            classes="hidden sm:block w-3/4 xl:mt-16 ml-24 select-none"
             filename="lct-landing-page-preview.png"
             alt="LCT frontend as sketch"
             backgroundColor="transparent"
@@ -68,5 +64,11 @@ const InfoHeader = () => (
     </div>
   </div>
 );
+
+InfoHeader.propTypes = {
+  openModal: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  setEmail: PropTypes.func.isRequired,
+};
 
 export default InfoHeader;

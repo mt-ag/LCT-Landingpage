@@ -2,7 +2,9 @@
   "name": "lct-landingpage",
   "version": "0.1.0",
   "dependencies": {
+    "@headlessui/react": "^1.0.0",
     "@heroicons/react": "^1.0.1",
+    "@tailwindcss/forms": "^0.3.2",
     "gatsby": "^3.3.0",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-canonical-urls": "^3.3.0",

@@ -1,26 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Contact from '../components/landing-page/Contact';
 import InfoHeader from '../components/landing-page/InfoHeader';
 import LandingHeader from '../components/landing-page/LandingHeader';
+import NewsletterModal from '../components/landing-page/NewsletterModal';
 import SEO from '../components/seo';
 import '../styles/tailwind.css';
 
-const IndexPage = () => (
-  <>
-    <SEO title="Home" />
-    <div className="bg-gray-900">
-      <div className="mx-auto max-w-7xl lg:px-8">
-        <LandingHeader />
-        <InfoHeader />
+const IndexPage = () => {
+  const [email, setEmail] = useState('');
+  const [newsletterModalOpen, setNewsletterModalOpen] = useState(false);
+
+  const openModal = () => setNewsletterModalOpen(true);
+  const closeModal = () => setNewsletterModalOpen(false);
+
+  return (
+    <>
+      <SEO title="Home" />
+      <div className="bg-gray-900">
+        <div className="mx-auto max-w-7xl lg:px-8">
+          <LandingHeader />
+          <InfoHeader openModal={openModal} email={email} setEmail={setEmail} />
+        </div>
       </div>
-    </div>
-    <div className="h-72" />
-    <div className="bg-gradient-to-r from-cyan-300 to-lightBlue-400 ">
-      <div className="mx-auto max-w-7xl lg:px-8">
-        <Contact />
+      <div className="h-72" />
+      <div className="bg-gradient-to-r from-cyan-300 to-lightBlue-400 ">
+        <div className="mx-auto max-w-7xl lg:px-8">
+          <Contact />
+        </div>
       </div>
-    </div>
-  </>
-);
+      <NewsletterModal
+        open={newsletterModalOpen}
+        closeModal={closeModal}
+        email={email}
+        setEmail={setEmail}
+      />
+    </>
+  );
+};
 
 export default IndexPage;
