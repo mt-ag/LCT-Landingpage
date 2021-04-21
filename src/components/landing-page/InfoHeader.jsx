@@ -33,7 +33,7 @@ const InfoHeader = () => (
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <button
                     type="submit"
-                    className="block w-full text-black py-3 px-4 rounded-md shadow bg-gradient-to-r from-cyan-200 to-lightBlue-400 text-white font-medium hover:from-cyan-400 hover:to-lightBlue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue-400 focus:ring-offset-gray-900"
+                    className="block w-full text-black py-3 px-4 rounded-md shadow bg-gradient-to-r from-cyan-200 to-lightBlue-400 font-medium hover:from-cyan-400 hover:to-lightBlue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue-400 focus:ring-offset-gray-900"
                   >
                     Stay up to date
                   </button>
@@ -54,11 +54,11 @@ const InfoHeader = () => (
           </div>
         </div>
       </div>
-      <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+      <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative overflow-hidden">
         <div className="h-full mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
           {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
           <ImageGetter
-            classes="w-3/4 xl:mt-16 ml-24 select-none"
+            classes="hidden sm:visible w-3/4 xl:mt-16 ml-24 select-none"
             filename="lct-landing-page-preview.png"
             alt="LCT frontend as sketch"
             backgroundColor="transparent"
