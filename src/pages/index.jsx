@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Contact from '../components/landing-page/Contact';
+import Features from '../components/landing-page/Features';
 import InfoHeader from '../components/landing-page/InfoHeader';
 import LandingHeader from '../components/landing-page/LandingHeader';
 import NewsletterModal from '../components/landing-page/NewsletterModal';
@@ -22,7 +23,9 @@ const IndexPage = () => {
           <InfoHeader openModal={openModal} email={email} setEmail={setEmail} />
         </div>
       </div>
-      <div className="h-72" />
+      <div className="mx-auto w-2/3">
+        <Features />
+      </div>
       <div className="bg-gradient-to-r from-cyan-300 to-lightBlue-400 ">
         <div className="mx-auto max-w-7xl lg:px-8">
           <Contact />

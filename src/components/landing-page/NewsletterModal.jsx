@@ -96,17 +96,19 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
                               saved in a database. My email address can be used
                               as a contact possibility (this approvement can
                               always be reclaimed through a formless
-                              notification). More information can be found in
-                              our{' '}
-                              <a
-                                href="https://www.mt-ag.com/datenschutz/"
-                                className="text-gray-200 hover:underline focus:text-gray-400"
-                              >
-                                privacy policy
-                              </a>
-                              .
+                              notification).
                             </p>
                           </label>
+                          <p className="text-gray-400 font-light">
+                            More information can be found in our{' '}
+                            <a
+                              href="https://www.mt-ag.com/datenschutz/"
+                              className="text-gray-200 hover:underline focus:text-gray-400"
+                            >
+                              privacy policy
+                            </a>
+                            .
+                          </p>
                         </div>
                       </div>
                     </div>
