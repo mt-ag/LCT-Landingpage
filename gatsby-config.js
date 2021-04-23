@@ -45,7 +45,7 @@ module.exports = {
           include: /svgs/,
           options: {
             props: {
-              height: '',
+              height: '100%',
             },
           },
         },

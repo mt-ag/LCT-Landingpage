@@ -3,10 +3,15 @@ import Metadata from '../../svgs/lct-metadata-driven.svg';
 
 const Features = () => (
   <>
-    <div className="py-16 lg:py-32 my">
+    <div className="pt-8 pb-16 lg:pt-16 lg:pb-32">
+      <div className="pb-8 lg:pb-16">
+        <h2 className="text-gray-900 text-center text-3xl lg:text-5xl tracking-tight font-extrabold">
+          An APEX App to test APEX Apps
+        </h2>
+      </div>
       <div className="grid grid-cols-2 gap-x-5">
         <div className="">
-          <Metadata className="w-full" />
+          <Metadata className="w-full max-h-124" />
         </div>
         <div className="m-auto w-5/6">
           <h3 className="font-semibold text-gray-700 text-2xl">

@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         ...colors,
       },
+      spacing: {
+        124: '32rem',
+      },
     },
   },
   variants: {
