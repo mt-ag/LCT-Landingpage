@@ -2,10 +2,17 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { MailOpenIcon } from '@heroicons/react/solid';
 import PropTypes from 'prop-types';
-import React, { Fragment, useRef } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
+import usePlausible from '../../hooks/usePlausible';
 
 const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
   const cancelButtonRef = useRef();
+  const plausible = usePlausible();
+
+  // log opening of newsletter
+  useEffect(() => {
+    plausible('Newsletter-Modal');
+  });
 
   return (
     <Transition.Root show={open} as={Fragment}>
