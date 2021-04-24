@@ -15,15 +15,15 @@ const IndexPage = () => {
   const closeModal = () => setNewsletterModalOpen(false);
 
   return (
-    <>
+    <div className="">
       <SEO title="Home" />
-      <div className="bg-gray-900">
+      <div className="bg-gray-900 pb-8 lg:pb-0">
         <div className="mx-auto max-w-7xl lg:px-8">
           <LandingHeader />
           <InfoHeader openModal={openModal} email={email} setEmail={setEmail} />
         </div>
       </div>
-      <div className="mx-auto w-2/3">
+      <div className="mx-auto lg:w-2/3">
         <Features />
       </div>
       <div className="bg-gradient-to-r from-cyan-300 to-lightBlue-400 ">
@@ -37,7 +37,7 @@ const IndexPage = () => {
         email={email}
         setEmail={setEmail}
       />
-    </>
+    </div>
   );
 };
 

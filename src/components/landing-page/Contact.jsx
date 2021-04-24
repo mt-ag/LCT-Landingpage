@@ -8,15 +8,13 @@ const Contact = () => (
       Contact
     </h2>
     <div className="pt-8 pb-16 lg:pb-32 lg:pt-16">
-      <div className="bg-white mx-4 lg:mx-0 p-8 rounded-lg shadow-xl grid grid-cols-1 sm:grid-cols-3">
-        <div>
-          <ImageGetter
-            filename="lct-contact-kai-donato.jpg"
-            alt="Kai Donato Potrait"
-            classes="w-full md:w-48 md:h-48 lg:h-64 lg:w-64 rounded select-none"
-          />
-        </div>
-        <div>
+      <div className="bg-white mx-4 lg:mx-0 p-6 md:p-8 rounded-lg shadow-xl grid grid-cols-1 sm:grid-cols-3">
+        <ImageGetter
+          filename="lct-contact-kai-donato.jpg"
+          alt="Kai Donato Potrait"
+          classes="w-full sm:w-32 md:w-48 md:h-48 lg:h-64 lg:w-64 rounded select-none"
+        />
+        <div className="mt-4 sm:mt-0">
           <p className="text-2xl lg:text-3xl text-lightBlue-600 tracking-tight font-semibold">
             Kai Donato
           </p>
@@ -46,7 +44,7 @@ const Contact = () => (
               className="flex text-center py-3 px-3 text-xs sm:text-base lg:px-6 rounded-md shadow bg-black text-white font-medium
              hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 focus:ring-offset-white"
             >
-              <MailIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-400 mr-3 my-auto" />
+              <MailIcon className="h-5 w-5 md:h-6 md:w-6 text-gray-400 mr-1 lg:mr-3 m-auto" />
               <span className="my-auto">Kai.Donato@mt-ag.com</span>
             </a>
           </div>
