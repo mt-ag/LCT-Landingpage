@@ -59,14 +59,14 @@ const Features = () => (
           svgComp={<Metadata className="w-full" />}
           header="Don't write any test code"
           body="LCT offers a Low Code interface to design your tests. It accesses your
-          Applications metadata and lets and offers user friendly test definition
+          Applications metadata and offers user friendly test definition
           wizards with it."
         />
         <FeatureDisplay
           imageName="lct-multi-browser.png"
           reverse
           header="Test multiple engines"
-          body="Do you test every new feature with every browser? If not then this is now much easier to do!"
+          body="Do you test every new feature with every browser? If not then this is now much easier to do! Run your tests with multiple engines and quicky find out if you have browser specific problems."
         />
       </div>
     </div>
