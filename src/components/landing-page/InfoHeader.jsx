@@ -19,7 +19,7 @@ const InfoHeader = ({ openModal, email, setEmail }) => (
             Oracle APEX Apps.
           </p>
           <div className="mt-10 sm:mt-12">
-            <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+            <div className="sm:max-w-xl sm:mx-auto lg:mx-0">
               <div className="sm:flex">
                 <div className="min-w-0 flex-1">
                   <label htmlFor="email-info-header" className="sr-only">
@@ -37,7 +37,7 @@ const InfoHeader = ({ openModal, email, setEmail }) => (
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <button
                     onClick={() => openModal()}
-                    type="submit"
+                    type="button"
                     className="block w-full text-black py-3 px-4 rounded-md shadow bg-gradient-to-r from-cyan-200 to-lightBlue-400 font-medium hover:from-cyan-400 hover:to-lightBlue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lightBlue-400 focus:ring-offset-gray-900"
                   >
                     Stay up to date
@@ -47,7 +47,7 @@ const InfoHeader = ({ openModal, email, setEmail }) => (
               <p className="mt-3 text-sm text-gray-300 sm:mt-4">
                 Subscribe to our Newsletter to get periodic updates about LCT.
               </p>
-            </form>
+            </div>
           </div>
         </div>
       </div>
