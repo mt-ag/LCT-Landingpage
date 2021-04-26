@@ -37,10 +37,15 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
         body,
       });
       const result = await res.json();
-      // eslint-disable-next-line no-console
-      console.log(result);
-      setEmail('');
-      closeModal();
+
+      if (res.status === 200) {
+        // eslint-disable-next-line no-console
+        console.log(result);
+        setEmail('');
+        closeModal();
+      } else {
+        setError(JSON.stringify(result));
+      }
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err);
