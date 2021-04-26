@@ -19,27 +19,33 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
 
   const plausible = usePlausible();
 
-  const handleSubscribeClick = () => {
+  const handleSubscribeClick = async () => {
     plausible('Newsletter-Subscribe');
 
-    const custHeaders = new Headers();
-    custHeaders.append('Content-Type', 'application/json');
-    const requestOptions = {
-      method: 'POST',
-      headers: custHeaders,
-      body: JSON.stringify({ email }),
-      redirect: 'follow',
-    };
+    try {
+      const url = 'http://localhost:8451/register';
+      // const url = 'https://newsletter.lct.software/register';
 
-    fetch('https://newsletter.lct.software/register', requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        // eslint-disable-next-line no-console
-        console.log(result);
-        setEmail('');
-        closeModal();
-      })
-      .catch((err) => setError(`${err}`));
+      const body = JSON.stringify({ email });
+
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: new Headers({
+          accept: 'application/json',
+          'content-type': 'application/json',
+        }),
+        body,
+      });
+      const result = await res.json();
+      // eslint-disable-next-line no-console
+      console.log(result);
+      setEmail('');
+      closeModal();
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error(err);
+      setError(`${err}`);
+    }
   };
 
   // log opening of newsletter
