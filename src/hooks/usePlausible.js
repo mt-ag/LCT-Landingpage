@@ -1,4 +1,5 @@
 const usePlausible = () => {
+  if (typeof window === 'undefined') return null;
   window.plausible =
     window.plausible ||
     // eslint-disable-next-line func-names
