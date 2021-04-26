@@ -8,6 +8,7 @@ import usePlausible from '../../hooks/usePlausible';
 
 const approvalId = `newsletter_modal_approval`;
 const emailId = `newsletter_modal_email`;
+let opened = false;
 
 const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
   const [error, setError] = useState('');
@@ -23,8 +24,7 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
     plausible('Newsletter-Subscribe');
 
     try {
-      const url = 'http://localhost:8451/register';
-      // const url = 'https://newsletter.lct.software/register';
+      const url = process.env.NEWSLETTER_REGISTER_URL;
 
       const body = JSON.stringify({ email });
 
@@ -50,8 +50,11 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
 
   // log opening of newsletter
   useEffect(() => {
-    plausible('Newsletter-Modal');
-  });
+    if (open && !opened) {
+      plausible('Newsletter-Modal');
+      opened = true;
+    }
+  }, [open, plausible]);
 
   return (
     <Transition.Root show={open} as={Fragment}>
