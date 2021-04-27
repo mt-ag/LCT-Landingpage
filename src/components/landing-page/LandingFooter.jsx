@@ -2,20 +2,20 @@ import React from 'react';
 import ImageGetter from '../ImageGetter';
 
 const LandingFooter = () => (
-  <footer className="bg-gray-900 text-gray-200 grid grid-cols-4 py-4 px-4 md:px-8">
-    <div className="my-4 lg:my-0">{`© ${new Date().getFullYear()} MT AG. All Rights reserved.`}</div>
-    <div className="text-center">
+  <footer className="bg-gray-900 text-gray-200 grid grid-cols-2 md:grid-cols-4 gap-y-4 py-4 px-4 md:px-8 font-light">
+    <div className="my-auto">{`© ${new Date().getFullYear()} MT AG. All Rights reserved.`}</div>
+    <div className="text-center flex">
       <a
         href="https://www.mt-ag.com/impressum/"
-        className="px-2 py-1 text-white underline hover:text-blue-200 rounded focus:ring-2 focus:ring-blue-200"
+        className="my-auto px-2 py-1 underline hover:text-blue-200 rounded focus:ring-2 focus:ring-blue-200"
       >
         Legal Notice
       </a>
     </div>
-    <div className="text-center">
+    <div className="text-center flex">
       <a
         href="https://www.mt-ag.com/datenschutz/"
-        className="px-2 py-1 text-white underline hover:text-blue-200 rounded focus:ring-2 focus:ring-blue-200"
+        className="my-auto px-2 py-1 underline hover:text-blue-200 rounded focus:ring-2 focus:ring-blue-200"
       >
         Data protection declaration
       </a>
