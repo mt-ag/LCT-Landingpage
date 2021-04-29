@@ -36,6 +36,7 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
         }),
         body,
       });
+
       const result = await res.json();
 
       if (res.status === 200) {
@@ -46,10 +47,12 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
       } else {
         setError(JSON.stringify(result));
       }
+      setApproval(false);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err);
       setError(`${err}`);
+      setApproval(false);
     }
   };
 
@@ -145,7 +148,7 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
                             name="approval"
                             type="checkbox"
                             className="focus:ring-lightBlue-500 focus:ring-offset-gray-700 h-4 w-4 text-lightBlue-600 bg-gray-700 border-gray-600 rounded"
-                            value={approval}
+                            checked={approval}
                             onChange={(e) => setApproval(e.target.checked)}
                           />
                         </div>
