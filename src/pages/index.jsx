@@ -6,7 +6,6 @@ import Footer from '../components/footer';
 import LandingHeader from '../components/landing-page/LandingHeader';
 import NewsletterModal from '../components/landing-page/NewsletterModal';
 import SEO from '../components/seo';
-import '../styles/tailwind.css';
 
 const IndexPage = () => {
   const [email, setEmail] = useState('');

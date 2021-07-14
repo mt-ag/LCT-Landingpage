@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGetter from './ImageGetter';
+import '../styles/tailwind.css';
 
 const Footer = () => (
   <footer className="bg-gray-900 text-gray-200 grid grid-cols-2 md:grid-cols-4 gap-y-4 py-4 px-4 md:px-8 font-light">
