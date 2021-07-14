@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Contact from '../components/landing-page/Contact';
 import Features from '../components/landing-page/Features';
 import InfoHeader from '../components/landing-page/InfoHeader';
-import LandingFooter from '../components/landing-page/LandingFooter';
+import Footer from '../components/footer';
 import LandingHeader from '../components/landing-page/LandingHeader';
 import NewsletterModal from '../components/landing-page/NewsletterModal';
 import SEO from '../components/seo';
@@ -38,7 +38,7 @@ const IndexPage = () => {
         email={email}
         setEmail={setEmail}
       />
-      <LandingFooter />
+      <Footer />
     </div>
   );
 };

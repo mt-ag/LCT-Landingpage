@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageGetter from '../ImageGetter';
+import ImageGetter from './ImageGetter';
 
-const LandingFooter = () => (
+const Footer = () => (
   <footer className="bg-gray-900 text-gray-200 grid grid-cols-2 md:grid-cols-4 gap-y-4 py-4 px-4 md:px-8 font-light">
     <div className="my-auto">{`© ${new Date().getFullYear()} MT AG. All Rights reserved.`}</div>
     <div className="text-center flex">
@@ -33,4 +33,4 @@ const LandingFooter = () => (
   </footer>
 );
 
-export default LandingFooter;
+export default Footer;
