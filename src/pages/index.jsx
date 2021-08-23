@@ -6,6 +6,7 @@ import Footer from '../components/footer';
 import LandingHeader from '../components/landing-page/LandingHeader';
 import NewsletterModal from '../components/landing-page/NewsletterModal';
 import SEO from '../components/seo';
+import Offer from '../components/landing-page/Offer';
 
 const IndexPage = () => {
   const [email, setEmail] = useState('');
@@ -25,6 +26,9 @@ const IndexPage = () => {
       </div>
       <div className="mx-auto lg:w-2/3">
         <Features />
+      </div>
+      <div className="bg-gradient-to-b from-gray-100 to-white">
+        <Offer />
       </div>
       <div className="bg-gradient-to-r from-cyan-300 to-lightBlue-400 ">
         <div className="mx-auto max-w-7xl lg:px-8">
