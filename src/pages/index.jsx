@@ -18,7 +18,7 @@ const IndexPage = () => {
   return (
     <div className="">
       <SEO title="Home" />
-      <div className="bg-gray-900 pb-8 lg:pb-0">
+      <div className="bg-zinc-900 pb-8 lg:pb-0">
         <div className="mx-auto max-w-7xl lg:px-8">
           <LandingHeader />
           <InfoHeader openModal={openModal} email={email} setEmail={setEmail} />
@@ -27,10 +27,10 @@ const IndexPage = () => {
       <div className="mx-auto lg:w-2/3">
         <Features />
       </div>
-      <div className="bg-gradient-to-b from-gray-100 to-white">
+      <div className="bg-gradient-to-b from-zinc-100 to-white">
         <Offer />
       </div>
-      <div className="bg-gradient-to-r from-cyan-300 to-lightBlue-400 ">
+      <div className="bg-gradient-to-r from-cyan-300 to-sky-400 ">
         <div className="mx-auto max-w-7xl lg:px-8">
           <Contact />
         </div>

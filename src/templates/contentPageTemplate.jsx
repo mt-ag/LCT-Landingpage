@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     content: mdx(id: { eq: $id }) {
       frontmatter {
         title
@@ -29,7 +29,7 @@ const ContentPageTemplate = ({ data }) => {
       <SEO title={title} />
       <article className="pt-5 pb-12 md:w-3/4 lg:w-2/3 m-auto px-4 lg:px-8 bg-white shadow">
         <header className="mb-16">
-          <h1 className="text-gray-900 text-2xl lg:text-5xl tracking-tight font-extrabold">
+          <h1 className="text-zinc-900 text-2xl lg:text-5xl tracking-tight font-extrabold">
             {title}
           </h1>
         </header>

@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-function SEO({ description, lang, meta, title }) {
+const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -77,7 +77,7 @@ function SEO({ description, lang, meta, title }) {
       />
     </Helmet>
   );
-}
+};
 
 SEO.defaultProps = {
   lang: `en`,
@@ -88,6 +88,7 @@ SEO.defaultProps = {
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 };
