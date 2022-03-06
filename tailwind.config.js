@@ -6,6 +6,17 @@ module.exports = {
       spacing: {
         124: '32rem',
       },
+      fontFamily: {
+        'bold-header': [
+          '"IBM Plex Serif"',
+          'ui-serif',
+          'Georgia',
+          'Cambria',
+          '"Times New Roman"',
+          'Times',
+          'serif',
+        ],
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -19,8 +30,6 @@ module.exports = {
       }),
     },
   },
-  variants: {
-    extend: {},
-  },
+  variants: {},
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
