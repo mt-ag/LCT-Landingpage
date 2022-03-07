@@ -69,29 +69,31 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} meta={meta} />
-      <div className="bg-zinc-50">
-        <article className="m-auto flex max-w-[70%] flex-row-reverse bg-white px-8 pt-12 pb-6 shadow">
-          <div className="flex-grow border-l border-zinc-200 pl-6">
+      <div className="flex flex-grow bg-zinc-50">
+        <article className="m-auto flex flex-row-reverse bg-white px-8 pt-12 pb-6 shadow">
+          <div className="w-[300px] flex-grow border-l border-zinc-200 pl-6">
             <div className="prose lg:prose-lg">
-              <div className="flex items-center">
-                <CalendarIcon className="mr-3 h-5 w-5 text-zinc-400" />
-                <time dateTime={date}>{formattedDate}</time>
-              </div>
-              <div className="flex items-center">
-                <ClockIcon className="mr-3 h-5 w-5 text-zinc-400" />
-                {timeToRead} min
-              </div>
-              <div className="flex">
-                <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400" />
-                <ul>
-                  {tags.map((tag) => (
-                    <li className="!m-0">
-                      <Link to={`/blog/tag/${tag}`} key={tag}>
-                        {tag}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+              <div className="grid grid-cols-1 space-y-4">
+                <div className="flex items-center">
+                  <CalendarIcon className="mr-3 h-5 w-5 text-zinc-400" />
+                  <time dateTime={date}>{formattedDate}</time>
+                </div>
+                <div className="flex items-center">
+                  <ClockIcon className="mr-3 h-5 w-5 text-zinc-400" />
+                  {timeToRead} min
+                </div>
+                <div className="flex">
+                  <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400" />
+                  <ul>
+                    {tags.map((tag) => (
+                      <li className="!m-0">
+                        <Link to={`/blog/tag/${tag}`} key={tag}>
+                          {tag}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
