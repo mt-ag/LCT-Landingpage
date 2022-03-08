@@ -1,0 +1,1 @@
+export { AuthorDisplay } from './AuthorDisplay';

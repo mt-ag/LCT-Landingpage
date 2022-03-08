@@ -1,0 +1,18 @@
+[
+  {
+    "id": "kdonato",
+    "name": "Kai Donato",
+    "image": "kdonato.jpg",
+    "twitter": "https://twitter.com/_kaidonato",
+    "blog": null,
+    "linkedIn": null
+  },
+  {
+    "id": "phartenfeller",
+    "name": "Philipp Hartenfeller",
+    "image": "phartenfeller.jpg",
+    "twitter": "ttps://twitter.com/phartenfeller",
+    "blog": "https://hartenfeller.dev",
+    "linkedIn": "https://www.linkedin.com/in/phartenfeller/"
+  }
+]

@@ -10,7 +10,7 @@ const Contact = () => (
     <div className="pt-8 pb-16 lg:pb-32 lg:pt-16">
       <div className="mx-4 grid grid-cols-1 rounded-lg bg-white p-6 shadow-xl sm:grid-cols-3 md:p-8 lg:mx-0">
         <ImageGetter
-          filename="lct-contact-kai-donato.jpg"
+          filename="kdonato.jpg"
           alt="Kai Donato Potrait"
           classes="w-full sm:w-32 md:w-48 md:h-48 lg:h-64 lg:w-64 rounded select-none"
         />

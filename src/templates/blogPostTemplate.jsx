@@ -10,6 +10,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import '../styles/blog.css';
 import getBlogMeta from '../util/getBlogMeta';
+import { AuthorDisplay } from '../components/blog';
 
 export const query = graphql`
   query ($id: String!) {
@@ -35,6 +36,7 @@ export const query = graphql`
           href
         }
         tags
+        authors
       }
       body
       timeToRead
@@ -55,6 +57,7 @@ const BlogPostTemplate = ({ data }) => {
     titleImageAlt,
     titleImageSource,
     tags,
+    authors,
   } = frontmatter;
 
   const meta = getBlogMeta({
@@ -71,7 +74,7 @@ const BlogPostTemplate = ({ data }) => {
       <SEO title={title} description={description} meta={meta} />
       <div className="flex flex-grow bg-zinc-50">
         <article className="m-auto flex flex-row-reverse bg-white px-8 pt-12 pb-6 shadow">
-          <div className="w-[300px] flex-grow border-l border-zinc-200 pl-6">
+          <div className="w-[330px] flex-grow border-l border-zinc-200 pl-6">
             <div className="prose lg:prose-lg">
               <div className="grid grid-cols-1 space-y-4">
                 <div className="flex items-center">
@@ -86,7 +89,7 @@ const BlogPostTemplate = ({ data }) => {
                   <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400" />
                   <ul>
                     {tags.map((tag) => (
-                      <li className="!m-0">
+                      <li className="!m-0" key={tag}>
                         <Link to={`/blog/tag/${tag}`} key={tag}>
                           {tag}
                         </Link>
@@ -95,8 +98,13 @@ const BlogPostTemplate = ({ data }) => {
                   </ul>
                 </div>
               </div>
+
+              <div className="mt-16">
+                <AuthorDisplay authors={authors} />
+              </div>
             </div>
           </div>
+
           <div className="prose prose-zinc mr-6 prose-img:rounded-md lg:prose-xl">
             <header className="mb-6">
               <h1 className="font-bold-header text-2xl font-bold tracking-tight text-zinc-900 lg:text-5xl">
@@ -146,6 +154,7 @@ BlogPostTemplate.propTypes = {
         formattedDate: PropTypes.string.isRequired,
         titleImageAlt: PropTypes.string.isRequired,
         tags: PropTypes.arrayOf(PropTypes.string),
+        authors: PropTypes.arrayOf(PropTypes.string),
       }).isRequired,
     }).isRequired,
   }).isRequired,
