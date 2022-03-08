@@ -3,14 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/solid';
+
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import '../styles/blog.css';
 import getBlogMeta from '../util/getBlogMeta';
-import { AuthorDisplay } from '../components/blog';
+import { AuthorDisplay, PostStats } from '../components/blog';
 
 export const query = graphql`
   query ($id: String!) {
@@ -76,28 +76,12 @@ const BlogPostTemplate = ({ data }) => {
         <article className="m-auto flex flex-row-reverse bg-white px-8 pt-12 pb-6 shadow">
           <div className="w-[330px] flex-grow border-l border-zinc-200 pl-6">
             <div className="prose lg:prose-lg">
-              <div className="grid grid-cols-1 space-y-4">
-                <div className="flex items-center">
-                  <CalendarIcon className="mr-3 h-5 w-5 text-zinc-400" />
-                  <time dateTime={date}>{formattedDate}</time>
-                </div>
-                <div className="flex items-center">
-                  <ClockIcon className="mr-3 h-5 w-5 text-zinc-400" />
-                  {timeToRead} min
-                </div>
-                <div className="flex">
-                  <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400" />
-                  <ul>
-                    {tags.map((tag) => (
-                      <li className="!m-0" key={tag}>
-                        <Link to={`/blog/tag/${tag}`} key={tag}>
-                          {tag}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <PostStats
+                date={date}
+                formattedDate={formattedDate}
+                timeToRead={timeToRead}
+                tags={tags}
+              />
 
               <div className="mt-16">
                 <AuthorDisplay authors={authors} />

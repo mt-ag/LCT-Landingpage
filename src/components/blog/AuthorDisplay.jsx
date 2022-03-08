@@ -38,7 +38,7 @@ export const AuthorDisplay = ({ authors }) => {
                 ) : null}
                 {a.blog ? (
                   <a href={a.blog}>
-                    <GlobeAltIcon className="h-6 w-6 text-zinc-400 hover:text-amber-300" />
+                    <GlobeAltIcon className="h-6 w-6 text-zinc-400 hover:text-emerald-400" />
                   </a>
                 ) : null}
                 {a.linkedIn ? (
