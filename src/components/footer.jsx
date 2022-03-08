@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageGetter from './ImageGetter';
+import MTLogo from '../svgs/mt-ag-logo.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
@@ -21,16 +21,17 @@ const Footer = () => (
         Data protection declaration
       </a>
     </div>
-    <a
-      href="https://www.mt-ag.com/"
-      className="text-right focus:ring-2 focus:ring-blue-200"
-    >
-      <ImageGetter
-        filename="mt-ag-logo.png"
-        classes="max-h-6 w-20 select-none "
-        alt="mt ag logo"
-      />
-    </a>
+    <div className="flex items-center">
+      <a
+        href="https://www.mt-ag.com/"
+        className="mr-0 ml-auto flex"
+        style={{ width: 'fit-content' }}
+      >
+        <div className="">
+          <MTLogo className="h-[28px] w-auto text-zinc-100" />
+        </div>
+      </a>
+    </div>
   </footer>
 );
 
