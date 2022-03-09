@@ -10,7 +10,7 @@ export const AuthorDisplay = ({ authors }) => {
 
   return (
     <>
-      <div className="mb-2 text-center font-semibold text-zinc-600">
+      <div className="mb-2 text-center text-xl text-zinc-900">
         {authorsData.length > 1 ? 'Authors' : 'Author'}
       </div>
       <div className="grid grid-cols-1 space-y-5">
@@ -19,9 +19,9 @@ export const AuthorDisplay = ({ authors }) => {
             <ImageGetter
               filename={a.image}
               alt={`${a.name} portrait photo`}
-              classes="w-1/3 m-auto rounded-full select-none border-4 border-sky-500/60"
+              classes="w-1/3 m-3 shadow-md shadow-cyan-100 rounded-full select-none border-4 border-sky-500/60"
             />
-            <div className="my-auto w-2/3 space-y-1 pl-5">
+            <div className="my-auto w-2/3 space-y-1 pl-3">
               <div className="text-md font-light text-gray-900">{a.name}</div>
               <div className="flex space-x-3">
                 {a.twitter ? (
