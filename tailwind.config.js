@@ -17,17 +17,6 @@ module.exports = {
           'serif',
         ],
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            color: theme('colors.gray.700'),
-            'ul > li::before': {
-              'background-color': theme('colors.cyan.500'),
-            },
-            // ...
-          },
-        },
-      }),
     },
   },
   variants: {},

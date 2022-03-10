@@ -76,11 +76,11 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} meta={meta} />
-      <div className="flex flex-grow bg-zinc-50">
-        <article className="m-auto flex flex-row-reverse bg-white px-8 pt-12 pb-6 shadow">
-          <div className="w-[330px] flex-grow border-l border-zinc-200 pl-6">
-            <div className="prose flex h-full flex-col lg:prose-lg">
-              <div className="flex-grow">
+      <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
+        <article className="m-auto flex flex-row-reverse bg-white px-8 pt-12 pb-6 shadow dark:bg-slate-800/30">
+          <div className="w-[330px] flex-grow border-l border-zinc-200 pl-6 dark:border-slate-700/40">
+            <div className="prose prose-slate flex h-full flex-col dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 lg:prose-lg">
+              <div className="flex-grow text-zinc-700 dark:text-slate-300">
                 <PostStats
                   date={date}
                   formattedDate={formattedDate}
@@ -93,10 +93,7 @@ const BlogPostTemplate = ({ data }) => {
                 </div>
               </div>
               <div className="">
-                <a
-                  href={`#${titleId}`}
-                  className="flex items-center text-zinc-500"
-                >
+                <a href={`#${titleId}`} className="flex items-center">
                   <ArrowUpIcon className="mr-3 h-5 w-5" />
                   Back to top
                 </a>
@@ -104,17 +101,19 @@ const BlogPostTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div className="prose prose-zinc mr-6 prose-img:rounded-md lg:prose-xl">
+          <div className="prose prose-slate mr-6 prose-img:rounded-md dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 lg:prose-xl">
             <header className="mb-6">
               <h1
-                className="scroll-mt-32 font-bold-header text-2xl font-bold tracking-tight text-zinc-900 lg:text-5xl"
+                className="scroll-mt-32 font-bold-header text-2xl font-bold tracking-tight text-zinc-900 dark:text-cyan-400 lg:text-5xl"
                 id={titleId}
               >
                 {title}
               </h1>
             </header>
             <main className="">
-              <div className="my-4 text-zinc-800">{description}</div>
+              <div className="my-4 text-zinc-800 dark:text-zinc-200">
+                {description}
+              </div>
               <GatsbyImage
                 image={titleImage.childImageSharp.gatsbyImageData}
                 className="h-100 object-cover"

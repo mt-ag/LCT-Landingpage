@@ -10,7 +10,7 @@ export const AuthorDisplay = ({ authors }) => {
 
   return (
     <>
-      <div className="mb-2 text-center text-xl text-zinc-900">
+      <div className="mb-2 text-center text-xl text-zinc-900 dark:text-slate-300">
         {authorsData.length > 1 ? 'Authors' : 'Author'}
       </div>
       <div className="grid grid-cols-1 space-y-5">
@@ -19,15 +19,17 @@ export const AuthorDisplay = ({ authors }) => {
             <ImageGetter
               filename={a.image}
               alt={`${a.name} portrait photo`}
-              classes="w-1/3 m-3 shadow-md shadow-cyan-100 rounded-full select-none border-4 border-sky-500/60"
+              classes="w-1/3 m-3 shadow-md dark:shadow-none shadow-cyan-100 rounded-full select-none border-4 border-sky-500/60 dark:border-sky-500"
             />
             <div className="my-auto w-2/3 space-y-1 pl-3">
-              <div className="text-md font-light text-gray-900">{a.name}</div>
+              <div className="text-md font-light text-gray-900 dark:text-slate-300">
+                {a.name}
+              </div>
               <div className="flex space-x-3">
                 {a.twitter ? (
                   <a href={a.twitter}>
                     <svg
-                      className="h-6 w-6 text-zinc-400 hover:text-[#1DA1F2]"
+                      className="h-6 w-6 text-zinc-400 hover:text-[#1DA1F2] dark:text-slate-500"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentcolor"
@@ -38,13 +40,13 @@ export const AuthorDisplay = ({ authors }) => {
                 ) : null}
                 {a.blog ? (
                   <a href={a.blog}>
-                    <GlobeAltIcon className="h-6 w-6 text-zinc-400 hover:text-emerald-400" />
+                    <GlobeAltIcon className="h-6 w-6 text-zinc-400 hover:text-emerald-400 dark:text-slate-500" />
                   </a>
                 ) : null}
                 {a.linkedIn ? (
                   <a href={a.linkedIn}>
                     <svg
-                      className="h-6 w-6 text-zinc-400 hover:text-[#0e76a8]"
+                      className="h-6 w-6 text-zinc-400 hover:text-[#0e76a8] dark:text-slate-500"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentcolor"

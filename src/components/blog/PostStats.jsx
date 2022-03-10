@@ -6,15 +6,15 @@ import { Link } from 'gatsby';
 export const PostStats = ({ date, formattedDate, timeToRead, tags }) => (
   <div className="grid grid-cols-1 space-y-4">
     <div className="flex items-center">
-      <CalendarIcon className="mr-3 h-5 w-5 text-zinc-400" />
+      <CalendarIcon className="mr-3 h-5 w-5 text-zinc-400 dark:text-slate-500" />
       <time dateTime={date}>{formattedDate}</time>
     </div>
     <div className="flex items-center">
-      <ClockIcon className="mr-3 h-5 w-5 text-zinc-400" />
+      <ClockIcon className="mr-3 h-5 w-5 text-zinc-400 dark:text-slate-500" />
       {timeToRead} min
     </div>
     <div className="flex">
-      <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400" />
+      <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400 dark:text-slate-500" />
       <ul>
         {tags.map((tag) => (
           <li className="!m-0" key={tag}>
