@@ -15,6 +15,7 @@ const HighQuality = ({ filename, classes, alt }) => (
                 layout: CONSTRAINED
                 placeholder: BLURRED
                 quality: 80
+                formats: [AUTO, WEBP, AVIF]
               )
             }
           }

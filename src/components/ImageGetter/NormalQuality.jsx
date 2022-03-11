@@ -11,7 +11,11 @@ const NormalQuality = ({ filename, classes, alt }) => (
         allImageSharp {
           edges {
             node {
-              gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+              gatsbyImageData(
+                layout: CONSTRAINED
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
