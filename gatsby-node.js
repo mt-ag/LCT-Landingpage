@@ -1,5 +1,7 @@
 const slugify = require('./src/util/slugify');
 
+const tagSet = new Set();
+
 exports.createPages = async ({ actions, graphql }) => {
   const contentPagesQuery = await graphql(`
     {
@@ -36,6 +38,7 @@ exports.createPages = async ({ actions, graphql }) => {
         nodes {
           frontmatter {
             slug
+            tags
           }
           id
         }
@@ -46,12 +49,24 @@ exports.createPages = async ({ actions, graphql }) => {
   const blogPages = blogPagesQuery.data.pages.nodes;
 
   blogPages.forEach((page) => {
+    page.frontmatter.tags.forEach((tag) => tagSet.add(tag));
+
     actions.createPage({
       path: `/blog/${slugify(page.frontmatter.slug)}`,
       component: require.resolve('./src/templates/blogPostTemplate.jsx'),
       context: {
         id: page.id,
       },
+    });
+
+    tagSet.forEach((tag) => {
+      actions.createPage({
+        path: `/blog/tags/${slugify(tag)}`,
+        component: require.resolve('./src/templates/BlogTagTemplate.jsx'),
+        context: {
+          tag,
+        },
+      });
     });
   });
 };

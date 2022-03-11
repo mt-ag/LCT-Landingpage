@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/solid';
 import { Link } from 'gatsby';
+import slugify from '../../util/slugify';
 
 export const PostStats = ({ date, formattedDate, timeToRead, tags }) => (
   <div className="grid grid-cols-1 space-y-4">
@@ -18,7 +19,7 @@ export const PostStats = ({ date, formattedDate, timeToRead, tags }) => (
       <ul className="list-none !pl-0">
         {tags.map((tag, i) => (
           <li className="!m-0 !pl-0" key={tag}>
-            <Link to={`/blog/tag/${tag}`} key={tag}>
+            <Link to={`/blog/tags/${slugify(tag)}`} key={tag}>
               {tag}
             </Link>
             {i <= tags.length - 2 ? <span> ,</span> : null}
