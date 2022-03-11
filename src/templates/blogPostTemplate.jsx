@@ -7,12 +7,17 @@ import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { ArrowUpIcon } from '@heroicons/react/solid';
 import slugify from '../util/slugify';
-
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import '../styles/blog.css';
 import getBlogMeta from '../util/getBlogMeta';
 import { AuthorDisplay, PostStats } from '../components/blog';
+import ImageGetter from '../components/ImageGetter';
+
+const components = {
+  // eslint-disable-next-line react/prop-types
+  Image: ({ filename, alt }) => <ImageGetter filename={filename} alt={alt} />,
+};
 
 export const query = graphql`
   query ($id: String!) {
@@ -126,7 +131,7 @@ const BlogPostTemplate = ({ data }) => {
                   </a>
                 </div>
               ) : null}
-              <MDXProvider>
+              <MDXProvider components={components}>
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </main>
