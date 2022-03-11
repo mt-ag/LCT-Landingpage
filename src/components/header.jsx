@@ -18,21 +18,32 @@ const Header = () => {
   });
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-cyan-300/75 p-2 backdrop-blur dark:border-slate-800 dark:bg-slate-800/75 md:p-4 lg:px-8">
-      <Link to="/">
-        <span className="hidden text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:block">
-          Low Code Testing
-        </span>
-        <span className="text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:hidden">
-          LCT
-        </span>
-      </Link>
+    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-cyan-300/75 px-1 backdrop-blur dark:border-slate-800 dark:bg-slate-800/75 md:p-3 lg:px-4">
+      <div className="flex items-center space-x-5">
+        <Link
+          className="rounded px-2 py-1 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:hover:bg-slate-700/70"
+          to="/"
+        >
+          <span className="hidden text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:block ">
+            Low Code Testing
+          </span>
+          <span className="text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:hidden">
+            LCT
+          </span>
+        </Link>
+        <Link
+          to="/blog"
+          className="rounded px-2 py-1 text-slate-700 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:text-slate-300 dark:hover:bg-slate-700/70"
+        >
+          Blog
+        </Link>
+      </div>
       <div className="flex">
         <button
           type="button"
           onClick={toggleDarkMode}
           title={`switch to ${isDark ? 'light' : 'dark'} mode`}
-          className="mr-6 rounded p-1 text-zinc-700 focus:ring dark:text-slate-400"
+          className="mr-6 rounded px-2 py-1 text-zinc-700 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:text-slate-400 dark:hover:bg-slate-700/70"
         >
           {isDark ? (
             <SunIcon className="h-5 w-5" />

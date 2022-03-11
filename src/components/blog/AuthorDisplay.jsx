@@ -29,9 +29,12 @@ export const AuthorDisplay = ({ authors }) => {
               </div>
               <div className="flex space-x-3">
                 {a.twitter ? (
-                  <a href={a.twitter}>
+                  <a
+                    href={a.twitter}
+                    className="text-zinc-400 hover:text-[#1DA1F2] dark:text-slate-500 dark:hover:text-[#1DA1F2]"
+                  >
                     <svg
-                      className="h-4 w-4 text-zinc-400 hover:text-[#1DA1F2] dark:text-slate-500 md:h-6 md:w-6"
+                      className="h-4 w-4 md:h-6 md:w-6"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentcolor"
@@ -41,14 +44,20 @@ export const AuthorDisplay = ({ authors }) => {
                   </a>
                 ) : null}
                 {a.blog ? (
-                  <a href={a.blog}>
-                    <GlobeAltIcon className="h-4 w-4 text-zinc-400 hover:text-emerald-400 dark:text-slate-500 md:h-6 md:w-6" />
+                  <a
+                    href={a.blog}
+                    className="text-zinc-400 hover:text-emerald-400 dark:text-slate-500 dark:hover:text-emerald-400"
+                  >
+                    <GlobeAltIcon className="h-4 w-4 md:h-6 md:w-6" />
                   </a>
                 ) : null}
                 {a.linkedIn ? (
-                  <a href={a.linkedIn}>
+                  <a
+                    href={a.linkedIn}
+                    className="text-zinc-400 hover:text-[#0e76a8] dark:text-slate-500 dark:hover:text-[#0e76a8]"
+                  >
                     <svg
-                      className="h-4 w-4 text-zinc-400 hover:text-[#0e76a8] dark:text-slate-500 md:h-6 md:w-6"
+                      className="h-4 w-4 md:h-6 md:w-6"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentcolor"

@@ -16,7 +16,7 @@ const IndexPage = () => {
   const closeModal = () => setNewsletterModalOpen(false);
 
   return (
-    <div className="">
+    <div className="bg-zinc-200">
       <SEO title="Home" />
       <div className="bg-zinc-900 pb-8 lg:pb-0">
         <div className="mx-auto max-w-7xl lg:px-8">
