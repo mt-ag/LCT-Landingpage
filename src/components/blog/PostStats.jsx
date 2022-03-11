@@ -15,12 +15,13 @@ export const PostStats = ({ date, formattedDate, timeToRead, tags }) => (
     </div>
     <div className="flex">
       <TagIcon className="mr-3 mt-2 h-5 w-5 text-zinc-400 dark:text-slate-500" />
-      <ul>
-        {tags.map((tag) => (
-          <li className="!m-0" key={tag}>
+      <ul className="list-none !pl-0">
+        {tags.map((tag, i) => (
+          <li className="!m-0 !pl-0" key={tag}>
             <Link to={`/blog/tag/${tag}`} key={tag}>
               {tag}
             </Link>
+            {i <= tags.length - 2 ? <span> ,</span> : null}
           </li>
         ))}
       </ul>
