@@ -18,10 +18,13 @@ const Header = () => {
   });
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-cyan-300/75 py-4 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-800/75 lg:px-8">
+    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-cyan-300/75 p-2 backdrop-blur dark:border-slate-800 dark:bg-slate-800/75 md:p-4 lg:px-8">
       <Link to="/">
-        <span className="text-xl font-bold text-zinc-900 dark:text-cyan-300/90">
+        <span className="hidden text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:block">
           Low Code Testing
+        </span>
+        <span className="text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:hidden">
+          LCT
         </span>
       </Link>
       <div className="flex">
@@ -37,7 +40,7 @@ const Header = () => {
             <MoonIcon className="h-5 w-5" />
           )}
         </button>
-        <a href="https://www.mt-ag.com/" className="px-2">
+        <a href="https://www.mt-ag.com/" className="hidden px-2 lg:block">
           <div>
             <MTLogo className="h-[28px] w-auto text-zinc-800 dark:text-slate-200" />
           </div>

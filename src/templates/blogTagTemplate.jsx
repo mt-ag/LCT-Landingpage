@@ -52,20 +52,22 @@ const BlogTagTemplate = ({ data, pageContext }) => {
         title={`Blog | ${tag}`}
         description={`Blogposts tagged with: ${tag}`}
       />
-      <div className="flex flex-grow flex-col items-center bg-zinc-50">
-        <div className="w-full max-w-6xl flex-grow bg-white py-12 shadow">
+      <div className="flex flex-grow flex-col items-center bg-zinc-50 dark:bg-slate-900">
+        <div className="w-full max-w-6xl flex-grow bg-white py-12 shadow dark:bg-slate-800/30 dark:text-zinc-200">
           <div className="text-center">
-            <h1 className="brown-header-text text-3xl font-extrabold leading-9 sm:text-4xl sm:leading-10">
+            <h1 className="brown-header-text text-xl font-extrabold leading-9 sm:text-4xl sm:leading-10 md:text-2xl lg:text-3xl">
               <span>
                 Blogposts tagged with:{' '}
-                <span className="font-mono text-cyan-600">{tag}</span>
+                <span className="font-mono text-cyan-600 dark:text-cyan-300">
+                  {tag}
+                </span>
               </span>
             </h1>
           </div>
-          <div className="mx-16 mt-12 divide-y divide-zinc-200">
+          <div className="mx-4 mt-4 divide-y divide-zinc-200 dark:divide-slate-700 md:mx-16 md:mt-12">
             {blogposts.map(({ frontmatter }) => (
               <div className="flex flex-wrap space-x-3 py-4 md:flex-nowrap">
-                <div className="p-2">
+                <div className="mx-auto p-2">
                   <GatsbyImage
                     image={frontmatter.titleImage.sharp.gatsbyImageData}
                     className="max-w-[250px] rounded"
@@ -73,18 +75,20 @@ const BlogTagTemplate = ({ data, pageContext }) => {
                   />
                 </div>
                 <div className="flex flex-col p-2 md:flex-grow">
-                  <h2 className="title-font mb-2 text-2xl font-medium text-zinc-900">
+                  <h2 className="title-font mb-2 text-2xl font-medium text-zinc-900 dark:text-zinc-100">
                     {frontmatter.title}
                   </h2>
-                  <p className="flex-grow leading-relaxed text-zinc-800">
+                  <p className="flex-grow leading-relaxed text-zinc-800 dark:text-zinc-300">
                     {frontmatter.description}
                   </p>
                   <div className="flex items-center">
                     <date>{frontmatter.formattedDate}</date>
-                    <span className="mx-2 text-xl text-zinc-600">•</span>
+                    <span className="mx-2 text-xl text-zinc-600 dark:text-slate-500">
+                      •
+                    </span>
                     <Link
                       to={`/blog/${slugify(frontmatter.slug)}`}
-                      className="inline-flex items-center rounded px-2 py-1 text-cyan-600 focus:ring focus:ring-cyan-300/50"
+                      className="inline-flex items-center rounded px-2 py-1 text-cyan-600 focus:ring focus:ring-cyan-300/50 dark:text-cyan-400"
                     >
                       Read
                       <ArrowRightIcon className="ml-2 h-4 w-4 " />

@@ -82,9 +82,9 @@ const BlogPostTemplate = ({ data }) => {
     <Layout>
       <SEO title={title} description={description} meta={meta} />
       <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
-        <article className="m-auto flex flex-row-reverse bg-white px-8 pt-12 pb-6 shadow dark:bg-slate-800/30">
-          <div className="w-[330px] flex-grow border-l border-zinc-200 pl-6 dark:border-slate-700/40">
-            <div className="prose prose-slate flex h-full flex-col dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 lg:prose-lg">
+        <article className="m-auto flex-row-reverse bg-white px-2 pt-4 pb-6 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
+          <div className="flex-grow border-zinc-200 dark:border-slate-700/40 lg:w-[330px] lg:border-l lg:pl-6">
+            <div className="prose prose-slate mb-5 flex h-full flex-col dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 lg:prose-lg lg:mb-0">
               <div className="flex-grow text-zinc-700 dark:text-slate-300">
                 <PostStats
                   date={date}
@@ -93,11 +93,11 @@ const BlogPostTemplate = ({ data }) => {
                   tags={tags}
                 />
 
-                <div className="mt-16">
+                <div className="mt-6 lg:mt-16">
                   <AuthorDisplay authors={authors} />
                 </div>
               </div>
-              <div className="">
+              <div className="hidden lg:visible">
                 <a href={`#${titleId}`} className="flex items-center">
                   <ArrowUpIcon className="mr-3 h-5 w-5" />
                   Back to top

@@ -5,12 +5,12 @@ import { Link } from 'gatsby';
 import slugify from '../../util/slugify';
 
 export const PostStats = ({ date, formattedDate, timeToRead, tags }) => (
-  <div className="grid grid-cols-1 space-y-4">
-    <div className="flex items-center">
+  <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-1 lg:gap-4">
+    <div className="flex">
       <CalendarIcon className="mr-3 h-5 w-5 text-zinc-400 dark:text-slate-500" />
       <time dateTime={date}>{formattedDate}</time>
     </div>
-    <div className="flex items-center">
+    <div className="hidden items-center lg:flex">
       <ClockIcon className="mr-3 h-5 w-5 text-zinc-400 dark:text-slate-500" />
       {timeToRead} min
     </div>
