@@ -4,6 +4,7 @@ import { SunIcon, MoonIcon } from '@heroicons/react/outline';
 import MTLogo from '../svgs/mt-ag-logo.svg';
 import useDarkmodeStore from '../store/useDarkmodeStore';
 import '../styles/headerStyles.css';
+import classNames from '../util/classNames';
 
 let themeInitialized = false;
 
@@ -21,7 +22,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-cyan-300/75 px-1 backdrop-blur dark:border-slate-800 dark:bg-slate-800/75 md:p-3 lg:px-4">
       <div className="flex items-center space-x-5">
         <Link
-          className="rounded px-2 py-1 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:hover:bg-slate-700/70"
+          className="rounded px-2 py-1 transition-colors hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:hover:bg-slate-700/70"
           to="/"
         >
           <span className="hidden text-xl font-bold text-zinc-900 dark:text-cyan-300/90 md:block ">
@@ -33,7 +34,7 @@ const Header = () => {
         </Link>
         <Link
           to="/blog"
-          className="rounded px-2 py-1 text-slate-700 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:text-slate-300 dark:hover:bg-slate-700/70"
+          className="rounded px-2 py-1 text-slate-700 transition-colors hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:text-slate-300 dark:hover:bg-slate-700/70"
         >
           Blog
         </Link>
@@ -43,7 +44,10 @@ const Header = () => {
           type="button"
           onClick={toggleDarkMode}
           title={`switch to ${isDark ? 'light' : 'dark'} mode`}
-          className="mr-6 rounded px-2 py-1 text-zinc-700 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:text-slate-400 dark:hover:bg-slate-700/70"
+          className={classNames(
+            'mr-6 rounded px-2 py-1 text-zinc-700 hover:bg-cyan-500/50 focus:outline-none focus:ring focus:ring-cyan-600/50 dark:text-slate-400 dark:hover:bg-slate-700/70',
+            'transition-colors duration-300 hover:text-indigo-600 dark:hover:text-amber-400'
+          )}
         >
           {isDark ? (
             <SunIcon className="h-5 w-5" />

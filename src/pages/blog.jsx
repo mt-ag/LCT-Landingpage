@@ -63,11 +63,8 @@ BlogPage.propTypes = {
   data: PropTypes.shape({
     posts: PropTypes.shape({
       // eslint-disable-next-line react/forbid-prop-types
-      nodes: PropTypes.object,
+      nodes: PropTypes.arrayOf(PropTypes.object).isRequired,
     }).isRequired,
-  }).isRequired,
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
   }).isRequired,
 };
 
