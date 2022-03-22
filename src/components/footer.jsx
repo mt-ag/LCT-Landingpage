@@ -26,6 +26,7 @@ const Footer = () => (
         href="https://www.mt-ag.com/"
         className="mr-0 ml-auto flex"
         style={{ width: 'fit-content' }}
+        aria-label="MT AG"
       >
         <div className="">
           <MTLogo className="h-[28px] w-auto text-zinc-100" />

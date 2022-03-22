@@ -31,7 +31,9 @@ export const AuthorDisplay = ({ authors }) => {
                 {a.twitter ? (
                   <a
                     href={a.twitter}
-                    className="text-zinc-400 hover:text-[#1DA1F2] dark:text-slate-500 dark:hover:text-[#1DA1F2]"
+                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-[#1DA1F2] dark:text-slate-500 dark:hover:text-[#1DA1F2]"
+                    aria-label="Twitter"
+                    title="Twitter"
                   >
                     <svg
                       className="h-4 w-4 md:h-6 md:w-6"
@@ -46,7 +48,9 @@ export const AuthorDisplay = ({ authors }) => {
                 {a.blog ? (
                   <a
                     href={a.blog}
-                    className="text-zinc-400 hover:text-emerald-400 dark:text-slate-500 dark:hover:text-emerald-400"
+                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-emerald-400 dark:text-slate-500 dark:hover:text-emerald-400"
+                    aria-label="Blog"
+                    title="Blog"
                   >
                     <GlobeAltIcon className="h-4 w-4 md:h-6 md:w-6" />
                   </a>
@@ -54,7 +58,9 @@ export const AuthorDisplay = ({ authors }) => {
                 {a.linkedIn ? (
                   <a
                     href={a.linkedIn}
-                    className="text-zinc-400 hover:text-[#0e76a8] dark:text-slate-500 dark:hover:text-[#0e76a8]"
+                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-[#0e76a8] dark:text-slate-500 dark:hover:text-[#0e76a8]"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
                   >
                     <svg
                       className="h-4 w-4 md:h-6 md:w-6"

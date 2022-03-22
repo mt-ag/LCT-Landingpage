@@ -97,7 +97,7 @@ const BlogPostTemplate = ({ data }) => {
                   <AuthorDisplay authors={authors} />
                 </div>
               </div>
-              <div className="hidden lg:visible">
+              <div className="hidden lg:block">
                 <a href={`#${titleId}`} className="flex items-center">
                   <ArrowUpIcon className="mr-3 h-5 w-5" />
                   Back to top
@@ -126,7 +126,10 @@ const BlogPostTemplate = ({ data }) => {
               />
               {titleImageSource.text && titleImageSource.href ? (
                 <div className="text-base">
-                  <a href={titleImageSource.href} className="text-zinc-500">
+                  <a
+                    href={titleImageSource.href}
+                    className="text-zinc-500 dark:text-slate-300/70"
+                  >
                     [Source: {titleImageSource.text}]
                   </a>
                 </div>
