@@ -5,7 +5,9 @@ const useDarkmodeStore = create(
   persist(
     (set, get) => ({
       isDark:
-        window.matchMedia('(prefers-color-scheme: dark)').matches ?? false,
+        (typeof window !== 'undefined' &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches) ??
+        false,
       toggleDarkMode: () => {
         const newIsDark = !get().isDark;
         set(() => ({

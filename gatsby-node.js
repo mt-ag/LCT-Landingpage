@@ -62,7 +62,7 @@ exports.createPages = async ({ actions, graphql }) => {
     tagSet.forEach((tag) => {
       actions.createPage({
         path: `/blog/tags/${slugify(tag)}`,
-        component: require.resolve('./src/templates/BlogTagTemplate.jsx'),
+        component: require.resolve('./src/templates/blogTagTemplate.jsx'),
         context: {
           tag,
         },
