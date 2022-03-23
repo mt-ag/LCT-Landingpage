@@ -88,7 +88,7 @@ const BlogPostTemplate = ({ data }) => {
       <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
         <article className="m-auto flex-row-reverse bg-white px-2 pt-4 pb-6 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
           <div className="flex-grow border-zinc-200 dark:border-slate-700/40 lg:w-[330px] lg:border-l lg:pl-6">
-            <div className="prose prose-slate mb-5 flex h-full flex-col dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 lg:prose-lg lg:mb-0">
+            <div className="prose prose-slate mb-5 flex h-full flex-col px-2 dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 md:px-4 lg:prose-lg lg:mb-0 lg:px-0">
               <div className="flex-grow text-zinc-700 dark:text-slate-300">
                 <PostStats
                   date={date}
@@ -110,7 +110,7 @@ const BlogPostTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div className="prose prose-slate mr-6 prose-img:rounded-md dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 lg:prose-xl">
+          <div className="prose prose-slate px-2 prose-img:rounded-md dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 md:px-4 lg:prose-xl lg:mr-6 lg:px-0">
             <header className="mb-6">
               <h1
                 className="scroll-mt-32 font-bold-header text-2xl font-bold tracking-tight text-zinc-900 dark:text-cyan-400 lg:text-5xl"
@@ -142,7 +142,7 @@ const BlogPostTemplate = ({ data }) => {
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </main>
-            <div className="mt-8">
+            <div className="mt-16 border-t border-zinc-200 pt-16 dark:border-slate-700/40">
               <BlogNewsletterPrompt />
             </div>
           </div>
