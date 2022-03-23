@@ -11,7 +11,11 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import '../styles/blog.css';
 import getBlogMeta from '../util/getBlogMeta';
-import { AuthorDisplay, PostStats } from '../components/blog';
+import {
+  AuthorDisplay,
+  PostStats,
+  BlogNewsletterPrompt,
+} from '../components/blog';
 import ImageGetter from '../components/ImageGetter';
 
 const components = {
@@ -138,6 +142,9 @@ const BlogPostTemplate = ({ data }) => {
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </main>
+            <div className="mt-8">
+              <BlogNewsletterPrompt />
+            </div>
           </div>
         </article>
       </div>

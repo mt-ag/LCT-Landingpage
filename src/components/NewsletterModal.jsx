@@ -1,16 +1,18 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Dialog, Transition } from '@headlessui/react';
 import { MailOpenIcon } from '@heroicons/react/solid';
-import PropTypes from 'prop-types';
 import React, { Fragment, useEffect, useState } from 'react';
 import isEmail from 'validator/lib/isEmail';
-import usePlausible from '../../hooks/usePlausible';
+import usePlausible from '../hooks/usePlausible';
+import useNewsletterStore from '../store/newsletterStore';
 
 const approvalId = `newsletter_modal_approval`;
 const emailId = `newsletter_modal_email`;
 let opened = false;
 
-const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
+const NewsletterModal = () => {
+  const { isOpen, close, setEmail, email } = useNewsletterStore();
+
   const [error, setError] = useState('');
   const validEmail = email === '' || isEmail(email);
 
@@ -43,7 +45,7 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
         // eslint-disable-next-line no-console
         console.log(result);
         setEmail('');
-        closeModal();
+        close();
       } else {
         setError(JSON.stringify(result));
       }
@@ -58,20 +60,20 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
 
   // log opening of newsletter
   useEffect(() => {
-    if (open && !opened) {
+    if (isOpen && !opened) {
       plausible('Newsletter-Modal');
       opened = true;
     }
-  }, [open, plausible]);
+  }, [isOpen, plausible]);
 
   return (
-    <Transition.Root show={open} as={Fragment}>
+    <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
         as="div"
         static
         className="fixed inset-0 z-10 overflow-y-auto"
-        open={open}
-        onClose={closeModal}
+        open={isOpen}
+        onClose={close}
       >
         <div className="flex min-h-screen items-end justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -207,7 +209,7 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
                   <button
                     type="button"
                     className="mt-3 inline-flex w-full justify-center rounded-md border border-zinc-600 bg-zinc-700 px-4 py-2 text-base font-medium text-zinc-300 shadow-sm hover:bg-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-zinc-700 sm:col-start-1 sm:mt-0 sm:text-sm"
-                    onClick={() => closeModal()}
+                    onClick={() => close()}
                   >
                     Cancel
                   </button>
@@ -219,13 +221,6 @@ const NewsletterModal = ({ open, closeModal, email, setEmail }) => {
       </Dialog>
     </Transition.Root>
   );
-};
-
-NewsletterModal.propTypes = {
-  open: PropTypes.bool.isRequired,
-  closeModal: PropTypes.func.isRequired,
-  email: PropTypes.string.isRequired,
-  setEmail: PropTypes.func.isRequired,
 };
 
 export default NewsletterModal;
