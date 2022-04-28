@@ -17,10 +17,14 @@ import {
   BlogNewsletterPrompt,
 } from '../components/blog';
 import ImageGetter from '../components/ImageGetter';
+import Codemirror from '../components/blog/Codemirror';
 
 const components = {
   // eslint-disable-next-line react/prop-types
   Image: ({ filename, alt }) => <ImageGetter filename={filename} alt={alt} />,
+  // eslint-disable-next-line react/prop-types
+  pre: ({ children }) => children, // handled by code
+  code: Codemirror,
 };
 
 export const query = graphql`
@@ -125,7 +129,7 @@ const BlogPostTemplate = ({ data }) => {
               </div>
               <GatsbyImage
                 image={titleImage.childImageSharp.gatsbyImageData}
-                className="h-100 object-cover"
+                className="max-h-96 object-cover"
                 alt={titleImageAlt}
               />
               {titleImageSource.text && titleImageSource.href ? (

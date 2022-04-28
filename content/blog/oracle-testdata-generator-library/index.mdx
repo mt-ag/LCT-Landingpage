@@ -1,0 +1,79 @@
+---
+title: >
+  Introducing a testdata generator for Oracle PL/SQL
+date: 2022-04-28
+description: >
+  We open sourced a small Oracle PL/SQL library that can generate close-to-life test data.
+slug: oracle-testdata-generator-library
+titleImage: ./jeremy-bezanger-6QoU_lrlOtE-unsplash.jpg
+titleImageAlt: A huge old wooden library with many bookshelves
+titleImageSource:
+  {
+    text: 'Photo by Jeremy Bezanger on Unsplash',
+    href: 'https://unsplash.com/photos/6QoU_lrlOtE',
+  }
+tags: ['Testing', 'PLSQL']
+authors: ['phartenfeller']
+---
+
+## The need for realistic data
+
+Testing your APEX applications is crucial to delivering robust solutions. One key criterium of quality assurance for data-centric applications is having realistic data to test with. This aspect gets sometimes overlooked because coming up with many different names, phone numbers, country codes, etc. needs lots of creativity and time.
+
+One root cause for errors in logic is unexpected input. To efficiently test the robustness of your code you should test with a wide range of different input values. As the developers did not expect that certain inputs can lead to errors they most certainly won’t come up with it while creating test data.
+
+One thing that can help with this aspect is generating test data. With this method, you can easily create thousands of rows in little time without thinking about test values.
+
+## A library for Oracle
+
+For other programming languages like JavaScript, there are many libraries that help with test data generation. They have a wide variety of example values so you can test your application in close to real-life scenarios.
+
+For our Low Code Testing tool, we recently added a feature that allows for the use of variables in our test steps (e.g. filling a “name” input field with variable values changing each test execution). To increase the usability of this feature we decided to add the ability to generate these values next to manually supplying them.
+
+The newest APEX version 22.1 which is currently in the preview has similar functionality but this can still be useful for people on older versions and for DBs without APEX installed. LCT currently also supports APEX versions below 20.1.
+
+## How it works
+
+We mostly got the values from the existing JavaScript framework falso. It has a huge range of different values. For example, when generating names there are ones from a variety of different countries containing special characters that you might not even know existed.
+
+Here is an example of querying values with our framework:
+
+```sql
+select rownum
+     , ora_test_data_generator_api.get_first_name(p_accent_chance => 0.4)
+     , ora_test_data_generator_api.get_last_name(p_accent_chance => 0.4)
+  from dual
+  connect by rownum <= 100
+```
+
+Next to names, there is also a variety of other domains to query:
+
+- E-Mail addresses
+- Phone Numbers
+- Currency Symbols
+- Countries
+- US States
+- Job names
+- Company Names
+- Quotes
+- And more…
+
+For a full list and the exact function names check out the package spec on Github. If you need more domains feel free to open an issue or even create a pull request.
+
+You can even quickly prototype your own test table like the following:
+
+```sql
+create table users as
+  select rownum as id
+      , ora_test_data_generator_api.get_first_name(p_accent_chance => 0.05) as first_name
+      , ora_test_data_generator_api.get_last_name(p_accent_chance => 0.05) as last_name
+      , ora_test_data_generator_api.get_country() as country
+      , ora_test_data_generator_api.get_credit_card_number () as credit_card_no
+      , ora_test_data_generator_api.get_phone_number() as phone_no
+  from dual
+  connect by rownum <= 20
+```
+
+## Installation
+
+You can download a zip with the installation files on GitHub. Just run the `_installation.sql` file in the DB. The script will create one table with all possible values and one package that serves as the API. With the `_unisntall.sql` script, you can remove the objects.
