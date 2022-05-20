@@ -1,9 +1,11 @@
+const siteUrl = `https://lct.software`;
+
 module.exports = {
   siteMetadata: {
     title: `Low Code Testing`,
     description: `Testing APEX Apps is now as easy as creating them.`,
     author: `@MT_AG_`,
-    siteUrl: `https://lct.software`,
+    siteUrl,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -37,7 +39,20 @@ module.exports = {
         siteUrl: `https://lct.software/`,
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        resolveSiteUrl: () => siteUrl,
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

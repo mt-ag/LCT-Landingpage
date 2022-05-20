@@ -1,1 +1,1 @@
-Sitemap: https://lct.software/sitemap.xml
+Sitemap: https://lct.software/sitemap/sitemap-index.xml
