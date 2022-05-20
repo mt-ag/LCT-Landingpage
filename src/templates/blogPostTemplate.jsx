@@ -5,7 +5,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { ArrowUpIcon } from '@heroicons/react/solid';
+import { ArrowUpIcon, RssIcon } from '@heroicons/react/solid';
 import slugify from '../util/slugify';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -88,7 +88,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} meta={meta} />
+      <SEO title={title} description={description} meta={meta} blog />
       <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
         <article className="m-auto flex-row-reverse bg-white px-2 pt-4 pb-6 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
           <div className="flex-grow border-zinc-200 dark:border-slate-700/40 lg:w-[330px] lg:border-l lg:pl-6">
@@ -105,7 +105,11 @@ const BlogPostTemplate = ({ data }) => {
                   <AuthorDisplay authors={authors} />
                 </div>
               </div>
-              <div className="hidden lg:block">
+              <div className="hidden space-y-5 lg:block">
+                <a href="/blog/feed.xml" className="flex items-center">
+                  <RssIcon className="mr-3 h-5 w-5" />
+                  RSS Feed
+                </a>
                 <a href={`#${titleId}`} className="flex items-center">
                   <ArrowUpIcon className="mr-3 h-5 w-5" />
                   Back to top

@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const SEO = ({ description, lang, meta, title }) => {
+const SEO = ({ description, lang, meta, title, blog = false }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -75,6 +75,14 @@ const SEO = ({ description, lang, meta, title }) => {
         data-domain="lct.software"
         src="https://pagestats.lct.software/js/plausible.js"
       />
+      {blog && (
+        <link
+          data-title="LCT blog feed"
+          href="/blog/feed.xml"
+          rel="alternate"
+          type="application/atom+xml"
+        />
+      )}
     </Helmet>
   );
 };
@@ -83,6 +91,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  blog: false,
 };
 
 SEO.propTypes = {
@@ -91,6 +100,7 @@ SEO.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  blog: PropTypes.bool,
 };
 
 export default SEO;

@@ -79,5 +79,69 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.edges.map((edge) => ({
+                title: edge.node.frontmatter.title,
+                description: edge.node.frontmatter.description,
+                date: edge.node.frontmatter.date,
+                url: `${site.siteMetadata.siteUrl}/${edge.node.slug}`,
+                guid: `${site.siteMetadata.siteUrl}/${edge.node.slug}`,
+                enclosure: {
+                  url:
+                    site.siteMetadata.siteUrl +
+                    edge.node.frontmatter.titleImage.childImageSharp.fixed.src,
+                  type: 'image/jpeg',
+                  length: null,
+                },
+              })),
+            query: `
+              {
+                allMdx(
+                  sort: {fields: frontmatter___date, order: DESC}
+                  filter: {fileAbsolutePath: {glob: "**/content/blog/**"}}
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        title
+                        description
+                        date
+                        titleImage {
+                          childImageSharp {
+                            fixed(toFormat: JPG, jpegQuality: 50) {
+                              src
+                            }
+                          }
+                        }
+                      }
+                      slug
+                    }
+                  }
+                }
+              }            
+            `,
+            output: '/blog/feed.xml',
+            title: 'LCT Blog',
+          },
+        ],
+      },
+    },
   ],
 };
