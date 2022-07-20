@@ -1,3 +1,5 @@
+const siteUrl = `https://lct.software`;
+
 function getBlogMeta({
   imgSrc,
   imgAlt,
@@ -5,11 +7,12 @@ function getBlogMeta({
   tags,
   imgHeight,
   imgWidth,
+  authors,
 }) {
   const meta = [
     {
       name: `twitter:image`,
-      content: `https://hartenfeller.dev${imgSrc}`,
+      content: `${siteUrl}${imgSrc}`,
     },
     {
       name: `twitter:image:alt`,
@@ -17,7 +20,7 @@ function getBlogMeta({
     },
     {
       name: `og:image`,
-      content: `https://hartenfeller.dev${imgSrc}`,
+      content: `${siteUrl}${imgSrc}`,
     },
     {
       name: `og:image:width`,
@@ -37,11 +40,7 @@ function getBlogMeta({
     },
     {
       name: `article:author`,
-      content: 'Philipp Hartenfeller',
-    },
-    {
-      name: `monetization`,
-      content: `$ilp.uphold.com/dhUZx4rikrgf`,
+      content: authors.join(`, `),
     },
   ];
 

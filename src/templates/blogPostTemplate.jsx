@@ -82,6 +82,7 @@ const BlogPostTemplate = ({ data }) => {
     tags,
     imgWidth: fixedTitleImage.childImageSharp.gatsbyImageData.width,
     imgHeight: fixedTitleImage.childImageSharp.gatsbyImageData.height,
+    authors,
   });
 
   const titleId = slugify(title);
