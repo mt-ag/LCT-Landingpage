@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-readonly-codemirror6": "^1.0.0",
+    "react-zoom-pan-pinch": "1.6.1",
     "validator": "^13.7.0",
     "zustand": "^3.7.2"
   },

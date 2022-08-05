@@ -11,13 +11,13 @@ const BlogPostList = ({ blogposts }) => (
       <Link
         key={frontmatter.slug}
         to={`/blog/${slugify(frontmatter.slug)}`}
-        className="inline-flex  items-center rounded-md transition-colors hover:bg-zinc-100 focus:outline-none focus:ring focus:ring-cyan-300/50 dark:hover:bg-slate-700/70"
+        className="inline-flex w-full items-center rounded-md transition-colors hover:bg-zinc-100 focus:outline-none focus:ring focus:ring-cyan-300/50 dark:hover:bg-slate-700/70"
       >
         <div className="flex flex-wrap space-x-3 py-4 md:flex-nowrap">
           <div className="mx-auto p-2">
             <GatsbyImage
               image={frontmatter.titleImage.sharp.gatsbyImageData}
-              className="max-w-[250px] rounded"
+              className="w-[250px] max-w-[250px] rounded"
               alt={frontmatter.titleImageAlt}
             />
           </div>

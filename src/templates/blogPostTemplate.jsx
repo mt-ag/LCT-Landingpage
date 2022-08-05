@@ -16,12 +16,15 @@ import {
   PostStats,
   BlogNewsletterPrompt,
 } from '../components/blog';
-import ImageGetter from '../components/ImageGetter';
 import Codemirror from '../components/blog/Codemirror';
+import BlogImageGetter from '../components/blog/BlogImageGetter';
+import BlogImagePopup from '../components/blog/BlogImagePopup';
 
 const components = {
   // eslint-disable-next-line react/prop-types
-  Image: ({ filename, alt }) => <ImageGetter filename={filename} alt={alt} />,
+  Image: ({ filename, alt }) => (
+    <BlogImageGetter filename={filename} alt={alt} />
+  ),
   // eslint-disable-next-line react/prop-types
   pre: ({ children }) => children, // handled by code
   code: Codemirror,
@@ -157,6 +160,7 @@ const BlogPostTemplate = ({ data }) => {
           </div>
         </article>
       </div>
+      <BlogImagePopup />
     </Layout>
   );
 };
