@@ -11,8 +11,16 @@
     "id": "phartenfeller",
     "name": "Philipp Hartenfeller",
     "image": "phartenfeller.jpg",
-    "twitter": "ttps://twitter.com/phartenfeller",
+    "twitter": "https://twitter.com/phartenfeller",
     "blog": "https://hartenfeller.dev",
     "linkedIn": "https://www.linkedin.com/in/phartenfeller/"
+  },
+  {
+    "id": "mbouchi",
+    "name": "Mohamad Bouchi",
+    "image": "mbouchi.jpg",
+    "twitter": "https://twitter.com/BouchiMohamad",
+    "blog": "https://tm-apex.blogspot.com/",
+    "linkedIn": "https://www.linkedin.com/in/mohamad-subhi-bouchi/"
   }
 ]

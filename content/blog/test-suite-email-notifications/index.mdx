@@ -1,0 +1,58 @@
+---
+title: >
+  Introducing a testdata generator for Oracle PL/SQL
+date: 2022-08-05
+description: >
+  It is crucial to stay notified about the status of your Test Suites. To make it easier to achieve this LCT is now able to send automatic status E-Mails.
+slug: test-suite-email-notifications
+titleImage: ./davide-baraldi-BKFflYZYjoA-unsplash.jpg
+titleImageAlt: A blue mailbox sitting lonely in a grass field
+titleImageSource:
+  {
+    text: 'Photo by Davide Baraldi on Unsplash',
+    href: 'https://unsplash.com/photos/BKFflYZYjoA',
+  }
+tags: ['Feature', 'Test Suites']
+authors: ['mbouchi']
+---
+
+## Test Suite status updates
+
+LCT now comes with an email notification system that keeps you up to date and notified about all the execution results of any Test Suite you are interested in. The only thing you have to do is to subscribe to a Test Suite and specify what kind of notifications you want to receive.
+
+LCT offers two kinds of notification. “Only Error Notifications” means you will only receive a notification if at least one of the worksheets in your Test Suite fails. The second type is “Not only error notifications” which will send an update after every test run. The mail will include information about the failed and the succeeded worksheets, so you don't have to go through all the worksheets to find which one has failed. You will also find an overview of the last execution results, so you have an idea if the failure is a rarity or if the tests fail often.
+
+## Implementation
+
+Because LCT is developed on top of APEX so it can easily use its resources and APIs. In LCT we use the [apex_mail package](https://docs.oracle.com/en/cloud/paas/autonomous-database/adbsa/apex-send-email.html) for sending emails, we also take advantage of the apex email templates feature, by defining an email template to be used. This gives you the flexibility to define different templates for different notification types and gives you the ability to add your touch to the email template and make it more specified.
+
+If you want to learn more about how to use this API [check out my blog series](https://tm-apex.blogspot.com/search/label/mail).
+
+## Subscribing
+
+To subscribe to notifications, you need to choose the desired Test Suite and go to its settings.
+
+<Image
+  filename="lct-test-suite-edit.png"
+  alt="Screenshot of LCT Test Suite overview with the edit button highighted"
+/>
+
+Then, open the email settings tab, add your email, and choose the notifications type.
+
+<Image
+  filename="lct-test-suite-email-settings.png"
+  alt="Screenshot of the detail view of a LCT Test Suite with the email settings tab highlighted"
+/>
+
+That's it, you are now receiving E-Mail notifications.
+
+## Admin Settings
+
+LCT gives your admins full control of the email notifications settings, you can enable/disable this feature for the whole instance and, change the sender. All these settings are offered on the administration page in the UI of LCT.
+
+<Image
+  filename="lct-test-suite-admin-settings.png"
+  alt="Screenshot of the Admin Settings page in LCT. There 3 settings in the categoy Email."
+/>
+
+That's it for the new LCT notification feature, we hope you find it useful. Subscribe to our newsletter and stay updated on the latest LCT features.
