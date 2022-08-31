@@ -19,6 +19,7 @@ import {
 import Codemirror from '../components/blog/Codemirror';
 import BlogImageGetter from '../components/blog/BlogImageGetter';
 import BlogImagePopup from '../components/blog/BlogImagePopup';
+import YouTubeEmbed from '../components/blog/YouTubeEmbed';
 
 const components = {
   // eslint-disable-next-line react/prop-types
@@ -28,6 +29,7 @@ const components = {
   // eslint-disable-next-line react/prop-types
   pre: ({ children }) => children, // handled by code
   code: Codemirror,
+  YouTube: YouTubeEmbed,
 };
 
 export const query = graphql`
