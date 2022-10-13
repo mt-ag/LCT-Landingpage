@@ -7,6 +7,7 @@ import LandingHeader from '../components/landing-page/LandingHeader';
 import NewsletterModal from '../components/NewsletterModal';
 import SEO from '../components/seo';
 import Offer from '../components/landing-page/Offer';
+import Content from '../components/landing-page/Content';
 
 const IndexPage = () => (
   <div className="bg-zinc-200">
@@ -19,6 +20,11 @@ const IndexPage = () => (
     </div>
     <div className="mx-auto lg:w-2/3">
       <Features />
+    </div>
+    <div className="bg-zinc-900" w>
+      <div className="mx-auto lg:w-2/3">
+        <Content />
+      </div>
     </div>
     <div className="bg-gradient-to-b from-zinc-100 to-white">
       <Offer />
