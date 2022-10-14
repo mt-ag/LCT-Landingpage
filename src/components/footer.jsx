@@ -4,7 +4,7 @@ import MTLogo from '../svgs/mt-ag-logo.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
-  <footer className="grid grid-cols-1 divide-y divide-white/50 bg-mt-blue py-4 px-4 text-xs font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
+  <footer className="grid grid-cols-1 divide-y divide-white/50 bg-mt-blue py-4 px-4 text-sm font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
     <div className="mt-8 flex justify-between pb-4">
       <a
         href="https://www.mt-ag.com/"
