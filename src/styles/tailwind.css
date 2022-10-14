@@ -6,6 +6,10 @@ html {
   @apply bg-zinc-200 antialiased;
 }
 
+.u-footer-link {
+  @apply rounded px-2 py-1 underline hover:text-white/60 focus:ring-2 focus:ring-white/25;
+}
+
 /* manrope-regular - latin */
 @font-face {
   font-family: 'Manrope';

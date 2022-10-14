@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/outline';
 import MTLogo from '../svgs/mt-ag-logo.svg';
+import LCTLogo from '../svgs/lct-logo.svg';
 import useDarkmodeStore from '../store/useDarkmodeStore';
 import '../styles/headerStyles.css';
 import classNames from '../util/classNames';
@@ -25,8 +26,11 @@ const Header = () => {
           className="rounded px-2 py-1 font-bold text-zinc-900 transition-colors hover:bg-cyan-100/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-cyan-200 dark:hover:bg-slate-700/70"
           to="/"
         >
-          <span className="hidden text-xl md:block ">Low Code Testing</span>
-          <span className="text-xl md:hidden">LCT</span>
+          <div className="flex items-center">
+            <LCTLogo className="mr-2 h-[32px] w-auto" />
+            <span className="hidden text-xl md:block ">Low Code Testing</span>
+            <span className="text-xl md:hidden">LCT</span>
+          </div>
         </Link>
         <Link
           to="/blog"
