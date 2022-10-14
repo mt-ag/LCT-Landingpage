@@ -9,9 +9,9 @@ import SEO from '../components/seo';
 import Offer from '../components/landing-page/Offer';
 
 const IndexPage = () => (
-  <div className="bg-zinc-200">
+  <div className="bg-zinc-200 font-mt">
     <SEO title="Home" />
-    <div className="bg-zinc-900 pb-8 lg:pb-0">
+    <div className="bg-mt-blue pb-8 lg:pb-0">
       <div className="mx-auto max-w-7xl lg:px-8">
         <LandingHeader />
         <InfoHeader />
@@ -23,7 +23,7 @@ const IndexPage = () => (
     <div className="bg-gradient-to-b from-zinc-100 to-white">
       <Offer />
     </div>
-    <div className="bg-gradient-to-r from-cyan-300 to-sky-400 ">
+    <div className="bg-gradient-to-b from-zinc-200 to-zinc-100">
       <div className="mx-auto max-w-7xl lg:px-8">
         <Contact />
       </div>

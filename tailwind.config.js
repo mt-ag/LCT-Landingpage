@@ -3,6 +3,9 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'mt-blue': ' #0073aa',
+      },
       spacing: {
         124: '32rem',
       },
@@ -16,6 +19,9 @@ module.exports = {
           'Times',
           'serif',
         ],
+        'mt': [
+          'Manrope', 'Arial', 'Helvetica', 'sans-serif'
+        ]
       },
     },
   },

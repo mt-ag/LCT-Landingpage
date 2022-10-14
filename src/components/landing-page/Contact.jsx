@@ -18,11 +18,11 @@ const Contact = () => {
         Contact
       </h2>
       <div className="pt-8 pb-16 lg:pb-32 lg:pt-16">
-        <div className="mx-4 grid grid-cols-1 rounded-lg bg-white p-6 shadow-xl sm:grid-cols-3 md:p-8 lg:mx-0">
+        <div className="mx-4 grid grid-cols-1 rounded-xl bg-white p-6 shadow-xl sm:grid-cols-3 md:p-8 lg:mx-0">
           <ImageGetter
             filename="kdonato.jpg"
             alt="Kai Donato Potrait"
-            classes="w-full sm:w-32 md:w-48 md:h-48 lg:h-64 lg:w-64 rounded select-none"
+            classes="w-full sm:w-32 md:w-48 md:h-48 lg:h-64 lg:w-64 rounded-md select-none"
           />
           <div className="mt-4 sm:mt-0">
             <p className="text-2xl font-semibold tracking-tight text-sky-600 lg:text-3xl">

@@ -3,7 +3,7 @@ import MTLogo from '../svgs/mt-ag-logo.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
-  <footer className="grid grid-cols-2 gap-y-4 bg-zinc-900 py-4 px-4 font-light text-zinc-200 md:grid-cols-4 md:px-8">
+  <footer className="grid grid-cols-2 gap-y-4 bg-mt-blue py-4 px-4 font-light text-zinc-200 md:grid-cols-4 md:px-8">
     <div className="my-auto">{`© ${new Date().getFullYear()} MT AG. All Rights reserved.`}</div>
     <div className="flex text-center">
       <a

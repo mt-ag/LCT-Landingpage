@@ -11,7 +11,7 @@ const LandingHeader = () => (
       </h1>
       <Link
         to="/blog"
-        className="rounded px-2 py-1 text-zinc-300 hover:bg-zinc-700/50 focus:outline-none focus:ring focus:ring-cyan-300/70"
+        className="rounded px-2 py-1 text-zinc-200 hover:bg-zinc-700/25 focus:outline-none focus:ring focus:ring-emerald-400/75"
       >
         Blog
       </Link>
@@ -24,7 +24,7 @@ const LandingHeader = () => (
         aria-label="MT AG"
       >
         <div className="">
-          <MTLogo className="h-[28px] w-auto text-zinc-100" />
+          <MTLogo className="h-[28px] w-auto text-zinc-100 hover:text-zinc-100/75" />
         </div>
       </a>
     </div>

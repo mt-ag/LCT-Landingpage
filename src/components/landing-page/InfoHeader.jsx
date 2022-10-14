@@ -12,11 +12,12 @@ const InfoHeader = () => {
           <div className="lg:py-24">
             <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-5xl">
               <span className="block">Testing APEX Apps is now</span>
-              <span className="block bg-gradient-to-r from-cyan-200 to-sky-400 bg-clip-text py-3 text-transparent">
+
+              <span className="block bg-gradient-to-r from-green-200 to-emerald-400 bg-clip-text py-3 text-transparent">
                 as easy as creating them.
               </span>
             </h2>
-            <p className="mt-3 text-base text-zinc-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+            <p className="mt-3 text-base text-zinc-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
               Don&apos;t wrangle with testing frameworks and lots of test code
               anymore. LCT offers a Low Code interface for creating tests for
               your Oracle APEX Apps.
@@ -32,7 +33,7 @@ const InfoHeader = () => {
                       id="email-info-header"
                       type="email"
                       placeholder="Enter your email"
-                      className="block w-full rounded-md border-0 px-4 py-3 text-base text-zinc-900 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-300"
+                      className="block w-full rounded-md border-0 px-4 py-3 text-base text-zinc-900 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-400"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -41,13 +42,13 @@ const InfoHeader = () => {
                     <button
                       onClick={() => open()}
                       type="button"
-                      className="block w-full rounded-md bg-gradient-to-r from-cyan-200 to-sky-400 py-3 px-4 font-medium text-black shadow hover:from-cyan-400 hover:to-sky-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-zinc-900"
+                      className="block w-full rounded-md bg-gradient-to-r from-green-200 to-emerald-400 py-3 px-4 font-medium text-black shadow hover:from-green-400 hover:to-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-mt-blue"
                     >
                       Stay up to date
                     </button>
                   </div>
                 </div>
-                <p className="mt-3 text-sm text-zinc-300 sm:mt-4">
+                <p className="mt-3 text-sm text-zinc-100 sm:mt-4">
                   Subscribe to our Newsletter to get periodic updates about LCT.
                 </p>
               </div>
