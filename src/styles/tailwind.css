@@ -7,7 +7,7 @@ html {
 }
 
 .u-footer-link {
-  @apply rounded px-2 py-1 underline hover:text-white/60 focus:ring-2 focus:ring-white/25;
+  @apply rounded px-2 py-1 underline decoration-white/50 hover:text-white/60 focus:ring-2 focus:ring-white/25;
 }
 
 /* manrope-regular - latin */
