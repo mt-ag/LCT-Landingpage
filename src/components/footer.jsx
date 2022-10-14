@@ -25,7 +25,7 @@ const Footer = () => (
         <p className="mb-2">Fax: +49 2102 30961-101</p>
         <p>Info@mt-ag.com</p>
       </div>
-      <div className="grid grid-cols-1  space-y-4 md:grid-cols-2 md:space-x-6">
+      <div className="grid grid-cols-1 space-y-4 md:grid-cols-2 md:space-y-0 md:space-x-6">
         <div>
           <p className="mb-1 font-semibold">More</p>
           <p>
