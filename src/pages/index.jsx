@@ -11,7 +11,7 @@ import Offer from '../components/landing-page/Offer';
 const IndexPage = () => (
   <div className="bg-zinc-200 font-mt">
     <SEO title="Home" />
-    <div className="bg-mt-blue pb-8 lg:pb-0">
+    <div className="bg-mt-old-blue pb-8 lg:pb-0">
       <div className="mx-auto max-w-7xl lg:px-8">
         <LandingHeader />
         <InfoHeader />

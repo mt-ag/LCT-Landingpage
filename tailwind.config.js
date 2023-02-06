@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'mt-blue': ' #0073aa',
+        'mt-blue': '#00476f',
+        'mt-green': '#6ba055',
+        'mt-darkgreen': '#436e5e',
+        'mt-old-blue': '#0073aa',
       },
       spacing: {
         124: '32rem',
@@ -19,9 +22,7 @@ module.exports = {
           'Times',
           'serif',
         ],
-        'mt': [
-          'Manrope', 'Arial', 'Helvetica', 'sans-serif'
-        ]
+        mt: ['Manrope', 'Arial', 'Helvetica', 'sans-serif'],
       },
     },
   },

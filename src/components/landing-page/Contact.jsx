@@ -25,7 +25,7 @@ const Contact = () => {
             classes="w-full sm:w-32 md:w-48 md:h-48 lg:h-64 lg:w-64 rounded-md select-none"
           />
           <div className="mt-4 sm:mt-0">
-            <p className="text-2xl font-semibold tracking-tight text-sky-600 lg:text-3xl">
+            <p className="text-2xl font-semibold tracking-tight text-mt-blue lg:text-3xl">
               Kai Donato
             </p>
             <p className="mt-2 text-zinc-700">Product Manager LCT</p>
@@ -51,10 +51,10 @@ const Contact = () => {
             <div className="inline-block">
               <a
                 href={`mailto:${email}`}
-                className="flex rounded-md bg-black py-3 px-3 text-center text-xs font-medium text-white shadow hover:bg-zinc-700 focus:outline-none
-             focus:ring-2 focus:ring-zinc-800 focus:ring-offset-2 focus:ring-offset-white sm:text-base lg:px-6"
+                className="flex rounded-md bg-mt-green py-3 px-3 text-center text-xs font-semibold text-white shadow hover:bg-mt-green/80 focus:outline-none
+             focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white sm:text-base lg:px-6"
               >
-                <MailIcon className="m-auto mr-1 h-5 w-5 text-zinc-400 md:h-6 md:w-6 lg:mr-3" />
+                <MailIcon className="m-auto mr-1 h-5 w-5 text-gray-200/50 md:h-6 md:w-6 lg:mr-3" />
                 <span className="my-auto">{email}</span>
               </a>
             </div>

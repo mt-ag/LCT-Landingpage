@@ -107,7 +107,7 @@ const Offer = () => {
                 <div className="rounded-md shadow">
                   <a
                     href={`mailto:${email}`}
-                    className="flex items-center justify-center rounded-md border border-transparent bg-black px-12 py-3 text-base font-medium text-white hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-800 focus:ring-offset-2 focus:ring-offset-white"
+                    className="flex items-center justify-center rounded-md border border-transparent bg-mt-green px-12 py-3 text-base font-semibold text-white hover:bg-mt-green/80 focus:outline-none focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white"
                   >
                     Request Demo
                   </a>

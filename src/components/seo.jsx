@@ -73,7 +73,7 @@ const SEO = ({ description, lang, meta, title, blog = false }) => {
         async
         defer
         data-domain="lct.software"
-        src="https://pagestats.lct.software/js/plausible.js"
+        src="/toolsapi/script.js"
       />
       {blog && (
         <link

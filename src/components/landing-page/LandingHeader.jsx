@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import MTLogo from '../../svgs/mt-ag-logo.svg';
+import MTLogo from '../../svgs/mt-logo.svg';
 import LCTLogo from '../../svgs/lct-logo.svg';
 
 const LandingHeader = () => (
