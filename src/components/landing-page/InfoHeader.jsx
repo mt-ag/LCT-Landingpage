@@ -13,7 +13,7 @@ const InfoHeader = () => {
             <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-5xl">
               <span className="block">Testing APEX Apps is now</span>
 
-              <span className="block bg-gradient-to-r from-green-200 to-emerald-400 bg-clip-text py-3 text-transparent">
+              <span className="block bg-gradient-to-r from-green-300 to-emerald-500 bg-clip-text py-3 text-transparent">
                 as easy as creating them.
               </span>
             </h2>
@@ -33,7 +33,7 @@ const InfoHeader = () => {
                       id="email-info-header"
                       type="email"
                       placeholder="Enter your email"
-                      className="block w-full rounded-md border-0 px-4 py-3 text-base text-zinc-900 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-400"
+                      className="block w-full rounded-md border-0 px-4 py-3 text-base text-zinc-900 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-300"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -42,7 +42,7 @@ const InfoHeader = () => {
                     <button
                       onClick={() => open()}
                       type="button"
-                      className="block w-full rounded-md bg-gradient-to-r from-green-200 to-emerald-400 py-3 px-4 font-medium text-black shadow hover:from-green-400 hover:to-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-mt-blue"
+                      className="block w-full rounded-md bg-gradient-to-r from-green-200 to-emerald-400 py-3 px-4 font-medium text-gray-900 shadow hover:from-green-400 hover:to-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-mt-blue"
                     >
                       Stay up to date
                     </button>

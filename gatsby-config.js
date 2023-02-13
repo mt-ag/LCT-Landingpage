@@ -144,5 +144,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-uninline-styles',
+    {
+      resolve: `gatsby-source-youtube-v3`,
+      options: {
+        channelId: ['UCWj_laDAKjgRaw4SjEdVyIA'],
+        apiKey: process.env.YT_API_KEY, // Optional for public requests
+        maxVideos: 10, // Defaults to 50
+      },
+    },
   ],
 };
