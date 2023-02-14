@@ -1,4 +1,11 @@
 const siteUrl = `https://lct.software`;
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+if (!process.env.YT_API_KEY) {
+  throw new Error('YT_API_KEY env is not defined');
+}
 
 module.exports = {
   siteMetadata: {

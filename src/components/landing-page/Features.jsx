@@ -10,7 +10,9 @@ const FeatureDisplay = ({ reverse = false, imgComp, header, body }) => (
       reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
     }`}
   >
-    <div className="mx-auto max-h-124 w-2/3 flex-1 lg:w-full">{imgComp}</div>
+    <div className="mx-auto max-h-124 w-2/3 max-w-[500px] flex-1 lg:w-full">
+      {imgComp}
+    </div>
     <div className="mx-auto mt-4 w-5/6 flex-1 lg:my-auto">
       <h3 className="text-2xl font-semibold text-zinc-800">{header}</h3>
       <p className="mt-2 text-base text-zinc-600">{body}</p>
@@ -36,7 +38,7 @@ const Features = () => (
         An APEX App to test APEX Apps
       </h2>
     </div>
-    <div className="grid gap-y-16">
+    <div className="mx-auto grid max-w-7xl gap-y-16">
       <FeatureDisplay
         imgComp={<Metadata className="w-full" />}
         header="Don't write any test code"

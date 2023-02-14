@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -9,7 +8,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
     <h2 className="mx-auto mb-12 w-5/6 text-center text-2xl font-extrabold tracking-tight text-white lg:w-full lg:text-5xl">
       LCT in Action
     </h2>
-    <div className="mx-auto grid max-w-[900px] grid-cols-2 space-x-16">
+    <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-y-8 px-0 md:grid-cols-2 md:gap-x-8 md:gap-y-0 md:px-8 lg:gap-x-16">
       <div className="w-full rounded-lg bg-white p-4 shadow-md shadow-sky-500/50">
         <h3 className="mb-5 text-xl font-medium text-black">Videos</h3>
         <ul>
@@ -29,10 +28,10 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   />
                 </div>
                 <div className="text-slate-700">
-                  <span className="text-sm font-semibold">{video.title}</span>
+                  <span className="text-base font-semibold">{video.title}</span>
                   <time
                     dateTime={video.date}
-                    className="block text-sm text-slate-500"
+                    className="mt-1 block text-sm text-slate-500"
                   >
                     {video.formattedDate}
                   </time>
@@ -67,12 +66,12 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   />
                 </div>
                 <div className="text-slate-700">
-                  <span className="text-sm font-semibold">
+                  <span className="text-base font-semibold">
                     {post.frontmatter.title}
                   </span>
                   <time
                     dateTime={post.frontmatter.date}
-                    className="block text-sm text-slate-500"
+                    className="mt-1 block text-sm text-slate-500"
                   >
                     {post.frontmatter.formattedDate}
                   </time>

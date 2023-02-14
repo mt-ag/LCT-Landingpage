@@ -15,10 +15,18 @@ const LandingHeader = () => (
       </div>
       <Link
         to="/blog"
-        className="rounded px-2 py-1 text-zinc-200 hover:bg-zinc-700/25 focus:outline-none focus:ring focus:ring-emerald-400/75"
+        className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
       >
         Blog
       </Link>
+      <a
+        href="https://www.youtube.com/@lct-apex"
+        target="_blank"
+        rel="noopener"
+        className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
+      >
+        Videos
+      </a>
     </div>
     <div className="flex items-center">
       <a

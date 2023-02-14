@@ -33,7 +33,10 @@
       {
         "namedComponents": "arrow-function"
       }
-    ]
+    ],
+    "react/jsx-no-target-blank": {
+      "allowReferrer": true
+    }
   },
   "plugins": ["prettier", "react-hooks", "jsx-a11y"],
   "settings": {
