@@ -7,7 +7,7 @@ const Footer = () => (
   <footer className="grid grid-cols-1 divide-y divide-white/30 bg-mt-blue py-4 px-4 text-sm font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
     <div className="mt-8 flex justify-between pb-8">
       <a
-        href="https://www.mt-ag.com/"
+        href="https://www.mt-itsolutions.com/"
         className=" mb-2 text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
         aria-label="MT AG"
@@ -35,8 +35,11 @@ const Footer = () => (
             </Link>
           </p>
           <p>
-            <a className="u-footer-link" href="https://apex.mt-ag.com">
-              apex.mt-ag.com
+            <a
+              className="u-footer-link"
+              href="https://apex.mt-itsolutions.com/"
+            >
+              apex.mt-itsolutions.com
             </a>
           </p>
         </div>
@@ -64,10 +67,16 @@ const Footer = () => (
     <div className="mb-8 flex justify-between pt-4 text-sm">
       <div className="">{`© ${new Date().getFullYear()} • MT GmbH`}</div>
       <div className="flex">
-        <a href="https://www.mt-ag.com/impressum/" className="u-footer-link">
+        <a
+          href="https://www.mt-itsolutions.com/impressum/"
+          className="u-footer-link"
+        >
           Legal Notice
         </a>
-        <a href="https://www.mt-ag.com/datenschutz/" className="u-footer-link">
+        <a
+          href="https://www.mt-itsolutions.com/datenschutz/"
+          className="u-footer-link"
+        >
           Data protection declaration
         </a>
       </div>

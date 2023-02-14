@@ -56,7 +56,7 @@ const Header = () => {
           )}
         </button>
         <a
-          href="https://www.mt-ag.com/"
+          href="https://www.mt-itsolutions.com/"
           className="hidden px-2 lg:block"
           aria-label="MT AG"
         >

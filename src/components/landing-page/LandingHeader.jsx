@@ -30,7 +30,7 @@ const LandingHeader = () => (
     </div>
     <div className="flex items-center">
       <a
-        href="https://www.mt-ag.com/"
+        href="https://www.mt-itsolutions.com/"
         className="mr-0 ml-auto flex text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
         aria-label="MT AG"
