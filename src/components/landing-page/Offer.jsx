@@ -103,7 +103,7 @@ const Offer = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-zinc-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
+              <div className="my-8 border-zinc-200 bg-white py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:border-l-2 lg:p-12">
                 <div className="rounded-md shadow">
                   <a
                     href={`mailto:${email}`}
