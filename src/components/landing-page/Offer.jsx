@@ -64,7 +64,7 @@ const Offer = () => {
                         >
                           <div className="flex-shrink-0">
                             <CheckCircleIcon
-                              className="h-5 w-5 text-emerald-400"
+                              className="h-5 w-5 text-mt-green"
                               aria-hidden="true"
                             />
                           </div>
@@ -90,7 +90,7 @@ const Offer = () => {
                         >
                           <div className="flex-shrink-0">
                             <CheckCircleIcon
-                              className="h-5 w-5 text-emerald-400"
+                              className="h-5 w-5 text-mt-green"
                               aria-hidden="true"
                             />
                           </div>
