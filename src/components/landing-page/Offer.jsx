@@ -109,7 +109,7 @@ const Offer = () => {
                     href={`mailto:${email}`}
                     className="flex items-center justify-center rounded-md border border-transparent bg-mt-green px-12 py-3 text-base font-semibold text-white hover:bg-mt-green/80 focus:outline-none focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white"
                   >
-                    Request Demo
+                    {email === 'loading...' ? email : 'Request Demo'}
                   </a>
                 </div>
               </div>
