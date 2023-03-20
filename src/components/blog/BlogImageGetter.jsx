@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import useImagePreview from '../../store/useImagePreview';
 
-const BlogImageGetter = ({ filename, alt }) => {
+const BlogImageGetter = ({ filename, alt, maxWidthPx }) => {
   const { open } = useImagePreview();
 
   const filterImage = (images) =>
@@ -42,7 +42,9 @@ const BlogImageGetter = ({ filename, alt }) => {
           type="button"
           className="xxl:w-3/4 m-auto my-12 mx-auto block h-auto w-full cursor-zoom-in"
           style={{
-            maxWidth: `${filterImage(data).node.original.width}px`,
+            maxWidth: maxWidthPx
+              ? `${maxWidthPx}px`
+              : `${filterImage(data).node.original.width}px`,
           }}
           onClick={() => {
             open({
@@ -66,6 +68,11 @@ const BlogImageGetter = ({ filename, alt }) => {
 BlogImageGetter.propTypes = {
   filename: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  maxWidthPx: PropTypes.number,
+};
+
+BlogImageGetter.defaultProps = {
+  maxWidthPx: null,
 };
 
 export default BlogImageGetter;

@@ -28,3 +28,8 @@ html {
 .dark #blog-newsletter-prompt-header {
   text-shadow: #00000066 2px 2px 0px;
 }
+
+code::after,
+code::before {
+  content: none !important;
+}

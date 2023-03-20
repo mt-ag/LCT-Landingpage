@@ -23,8 +23,8 @@ import YouTubeEmbed from '../components/blog/YouTubeEmbed';
 
 const components = {
   // eslint-disable-next-line react/prop-types
-  Image: ({ filename, alt }) => (
-    <BlogImageGetter filename={filename} alt={alt} />
+  Image: ({ filename, alt, maxWidthPx }) => (
+    <BlogImageGetter filename={filename} alt={alt} maxWidthPx={maxWidthPx} />
   ),
   // eslint-disable-next-line react/prop-types
   pre: ({ children }) => children, // handled by code
