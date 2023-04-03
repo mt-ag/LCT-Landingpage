@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
 const useNewsletterStore = create((set) => ({
   isOpen: false,

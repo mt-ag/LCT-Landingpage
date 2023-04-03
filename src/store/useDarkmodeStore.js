@@ -1,5 +1,5 @@
-import create from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 const useDarkmodeStore = create(
   persist(
@@ -25,7 +25,7 @@ const useDarkmodeStore = create(
     }),
     {
       name: 'darkmode-storage',
-      getStorage: () => localStorage,
+      storage: createJSONStorage(() => localStorage),
     }
   )
 );
