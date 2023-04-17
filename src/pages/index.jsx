@@ -13,6 +13,7 @@ import LandingHeader from '../components/landing-page/LandingHeader';
 import Offer from '../components/landing-page/Offer';
 import NewsletterModal from '../components/NewsletterModal';
 import SEO from '../components/seo';
+import VideoShowcase from '../components/landing-page/VideoShowcase';
 
 export const query = graphql`
   {
@@ -74,6 +75,9 @@ const IndexPage = ({ data }) => (
       </div>
     </div>
     <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue">
+      <VideoShowcase />
+    </div>
+    <div className="">
       <Content allYoutubeVideo={data.allYoutubeVideo} posts={data.posts} />
     </div>
     <div className="mx-auto lg:w-2/3">

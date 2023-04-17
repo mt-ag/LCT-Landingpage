@@ -14,8 +14,10 @@ const FeatureDisplay = ({ reverse = false, imgComp, header, body }) => (
       {imgComp}
     </div>
     <div className="mx-auto mt-4 w-5/6 flex-1 lg:my-auto">
-      <h3 className="text-2xl font-semibold text-zinc-800">{header}</h3>
-      <p className="mt-2 text-base text-zinc-600">{body}</p>
+      <h3 className="text-2xl font-semibold text-zinc-800 lg:text-4xl">
+        {header}
+      </h3>
+      <p className="mt-2 text-base text-zinc-600 lg:text-xl">{body}</p>
     </div>
   </div>
 );
@@ -42,7 +44,20 @@ const Features = () => (
       <FeatureDisplay
         imgComp={<Metadata className="w-full" />}
         header="Don't write any test code"
-        body="LCT offers a Low Code interface to design your tests. It accesses your Application metadata and offers user-friendly test definition wizards with it."
+        body="LCT offers a Low Code interface to design your tests. It accesses your application metadata and offers user-friendly test definition wizards with it."
+      />
+      <FeatureDisplay
+        imgComp={
+          <ImageGetter
+            filename="lct-tailored-apex.png"
+            classes="block"
+            alt=""
+            quality="high"
+          />
+        }
+        reverse
+        header="Tailored to Oracle APEX"
+        body="Effortlessly interact with APEX applications using our user-friendly interfaces tailored to specific APEX components. We also ensure that your tests remain functional and compatible even after APEX upgrades."
       />
       <FeatureDisplay
         imgComp={
@@ -53,9 +68,21 @@ const Features = () => (
             quality="high"
           />
         }
-        reverse
         header="Test thoroughly"
-        body="Do you test every new feature with every browser? If not then this is now much easier to do! Run your tests with multiple engines and quickly find out if you have browser-specific problems."
+        body="Are you testing each new feature across all browsers? If not, we've made it much easier for you! Run your tests using multiple engines and rapidly identify any browser-specific issues that may arise."
+      />
+      <FeatureDisplay
+        imgComp={
+          <ImageGetter
+            filename="lct-regressions-feature.png"
+            classes="block"
+            alt=""
+            quality="high"
+          />
+        }
+        header="Automatically Detect Regressions"
+        body="Automate your test scheduling and receive instant notifications on any regression issues. Minimize risks associated with Oracle APEX upgrades and new feature implementations."
+        reverse
       />
       <FeatureDisplay
         imgComp={<img src={LiveLogGif} alt="test output log" />}
