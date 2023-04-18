@@ -9,9 +9,9 @@ if (!process.env.YT_API_KEY) {
 
 module.exports = {
   siteMetadata: {
-    title: `Low Code Testing`,
-    description: `Testing APEX Apps is now as easy as creating them.`,
-    author: `@MT_AG_`,
+    title: `Low Code Testing for Oracle APEX`,
+    description: `Testing Oracle APEX Apps is now as easy as creating them.`,
+    author: `@LowCodeTesting`,
     siteUrl,
   },
   plugins: [
