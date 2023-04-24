@@ -43,8 +43,8 @@ const Features = () => (
     <div className="mx-auto grid max-w-7xl gap-y-16">
       <FeatureDisplay
         imgComp={<Metadata className="w-full" />}
-        header="Don't write any test code"
-        body="LCT offers a Low Code interface to design your tests. It accesses your application metadata and offers user-friendly test definition wizards with it."
+        header="No coding required"
+        body="LCT provides an intuitive Low Code interface for designing Oracle APEX tests. By accessing your APEX application metadata, our user-friendly test definition wizards simplify the test creation process."
       />
       <FeatureDisplay
         imgComp={
@@ -57,7 +57,7 @@ const Features = () => (
         }
         reverse
         header="Tailored to Oracle APEX"
-        body="Effortlessly interact with APEX applications using our user-friendly interfaces tailored to specific APEX components. We also ensure that your tests remain functional and compatible even after APEX upgrades."
+        body="Effortlessly interact with APEX applications using our user-friendly interfaces tailored to specific APEX components. We also ensure that your tests remain functional and compatible even after Oracle APEX upgrades."
       />
       <FeatureDisplay
         imgComp={

@@ -28,7 +28,7 @@ const VideoShowcase = () => {
               type="button"
               className="absolute top-0 left-0 z-40 mx-auto h-full w-full text-cyan-300/90 transition-colors duration-150 ease-in-out hover:text-cyan-600/75"
               onClick={handleClick}
-              aria-label={`Play LCT Demo Video`}
+              aria-label={`Play Low Code Testing for Oracle APEX (LCT) Demo Video`}
             >
               <div>
                 <PlayIcon className="mx-auto h-48 w-48" />
@@ -36,7 +36,7 @@ const VideoShowcase = () => {
             </button>
             <div className="absolute top-0 left-0 z-30 mx-auto flex h-full w-full text-center ">
               <div className="z-30 self-end pl-3 pb-2 text-center font-sans text-2xl font-medium text-slate-100">
-                LCT Demo Video (12.6 MB)
+                LCT Oracle APEX Testing | Demo Video (12.6 MB)
               </div>
               <div
                 aria-hidden="true"
@@ -44,7 +44,7 @@ const VideoShowcase = () => {
               />
             </div>
             <div className="absolute top-0 left-0 z-10 mx-auto h-full w-full  text-center">
-              <ImageGetter filename="lct-video-thumb.png" />
+              <ImageGetter filename="lct-video-thumb.png" alt="" />
             </div>
           </div>
         </div>

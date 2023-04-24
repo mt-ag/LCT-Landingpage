@@ -8,7 +8,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
     <div className="h-[600px] w-full bg-mt-old-blue  pt-4 md:h-[400px] lg:pt-8"></div>
     <div className="mx-6 mt-[-600px]  md:mt-[-400px]">
       <h2 className="mx-auto mb-12 w-5/6 text-center text-2xl font-extrabold tracking-tight text-white lg:w-full lg:text-5xl">
-        More from the Team
+        More about LCT from the Team
       </h2>
       <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-y-8 px-0 md:grid-cols-2 md:gap-x-8 md:gap-y-0 md:px-8 lg:gap-x-16">
         <div className="w-full rounded-lg bg-white p-4 shadow-md ">
