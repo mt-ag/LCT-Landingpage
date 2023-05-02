@@ -1,102 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { CheckCircleIcon, CheckIcon, XIcon } from '@heroicons/react/solid';
+import { CheckCircleIcon } from '@heroicons/react/solid';
 import decodeMail from '../../util/decodeMail';
 
-const kSep = (number) => {
-  const formatter = new Intl.NumberFormat('de-DE', {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  });
+const includedFeatures = [
+  'Requirements Analysis',
+  'Installation',
+  'Training',
+  'Creation of sample test',
+];
 
-  return formatter.format(number);
-};
-
-const PriceBlock = ({
-  primary = false,
-  optional = false,
-  supportPrice = false,
-  title,
-  desc,
-  price,
-  features,
-  notFeatures = [],
-  priceSuffix,
-}) => {
-  const [sliderVal, setSliderVal] = useState(10);
-
-  return (
-    <div
-      className={`rounded-3xl p-8 xl:p-10 ${
-        primary ? 'ring-2 ring-mt-blue/75' : 'ring-1 ring-gray-200'
-      }`}
-    >
-      <div className="flex items-center justify-between gap-x-4">
-        <h3
-          className={`text-lg font-semibold leading-8 ${
-            primary ? 'text-mt-old-blue' : 'text-gray-900'
-          }`}
-        >
-          {title}
-        </h3>
-        {optional && (
-          <span className="inline-flex items-center rounded-full bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-700">
-            Optional
-          </span>
-        )}
-      </div>
-      <p className="mt-4 text-sm leading-6 text-gray-600">{desc}</p>
-      {supportPrice && (
-        <div className="mt-3">
-          <p>{sliderVal} hours</p>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value={sliderVal}
-            onChange={(e) => setSliderVal(e.target.value)}
-            class="x-accent-color h-2 w-full cursor-ew-resize appearance-none rounded-full bg-gray-200 disabled:cursor-not-allowed"
-          ></input>
-
-          <div class="-mt-1 flex w-full justify-between">
-            <span class="text-sm text-gray-600">1</span>
-            <span class="text-sm text-gray-600">100</span>
-          </div>
-        </div>
-      )}
-      <p className="mt-6 flex items-baseline gap-x-1">
-        <span className="text-4xl font-bold tracking-tight text-gray-900">
-          {supportPrice ? `${kSep(500 + sliderVal * 100)} €` : price}
-        </span>
-        <span className="text-sm font-semibold leading-6 text-gray-600">
-          {priceSuffix}
-        </span>
-      </p>
-      <ul
-        role="list"
-        className="mt-8 space-y-3 text-sm leading-6 text-gray-600 xl:mt-10"
-      >
-        {features.map((feature) => (
-          <li key={feature} className="flex gap-x-3">
-            <CheckCircleIcon
-              className="h-6 w-5 flex-none text-mt-green"
-              aria-hidden="true"
-            />
-            {feature}
-          </li>
-        ))}
-        {notFeatures.map((feature) => (
-          <li key={feature} className="flex gap-x-3">
-            <XIcon
-              className="h-6 w-5 flex-none text-gray-400"
-              aria-hidden="true"
-            />
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+const optionalFeatures = [
+  'Support during test development',
+  'Development of new features tailored to your needs',
+];
 
 const Offer = () => {
   const [email, setEmail] = useState('loading...');
@@ -113,54 +29,92 @@ const Offer = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-zinc-900 sm:text-4xl lg:text-5xl">
-              Pricing
+              Our Offer
             </h2>
           </div>
         </div>
       </div>
-      <div className="mx-12 mt-16 mb-8">
-        <div className="grid grid-cols-3 gap-x-12">
-          <PriceBlock
-            title="Usage Fee"
-            desc="Monthly usage free to get access to LCT and receive updates. No support included."
-            price="500 €"
-            priceSuffix="/month"
-            features={['LCT App and Server', 'Version Updates']}
-            notFeatures={['Access to our Support Team']}
-          />
-          <PriceBlock
-            primary
-            supportPrice
-            title="LCT with Support Hours"
-            desc="Get LCT with updates and access to our support team."
-            price="1.000 €"
-            priceSuffix="/month"
-            features={[
-              'LCT App and Server',
-              'Version Updates',
-              'Access to our Support Team',
-              'Unused hours will sum up for 12 months',
-            ]}
-          />
-          <PriceBlock
-            optional
-            title="Jump Start"
-            desc="Monthly support contingent 10 hours (unused hours will sum up for 12 months)"
-            price="11.800 €"
-            priceSuffix="once"
-            features={['Installation and Setup', 'Workshop']}
-          />
-        </div>
-
-        <div className="mt-16 mb-24 flex">
-          <a
-            href={`mailto:${email}`}
-            className="mx-auto rounded-md border border-transparent bg-mt-green px-12 py-3 text-base font-semibold text-white hover:bg-mt-green/80 focus:outline-none focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white"
-          >
-            {email === 'loading...'
-              ? email
-              : 'Get in contact or request a Demo'}
-          </a>
+      <div className="mt-8 pb-16 sm:mt-12 sm:pb-20 lg:pb-28 ">
+        <div className="relative">
+          <div className="absolute inset-0 h-1/2" />
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-lg overflow-hidden rounded-lg bg-white shadow-lg lg:flex lg:max-w-none">
+              <div className="flex-1 px-6 py-8 lg:p-12">
+                <h3 className="text-2xl font-extrabold text-zinc-900 sm:text-3xl">
+                  Basic Package
+                </h3>
+                <p className="mt-6 text-base text-zinc-500">
+                  The basic package includes the installation of LCT in your
+                  environment and training for your team on how to get the most
+                  out of it.
+                </p>
+                <div className="mt-8 flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-12">
+                  <div className="w-full">
+                    <div className="flex items-center">
+                      <h4 className="flex-shrink-0 pr-4 text-sm font-semibold uppercase tracking-wider text-sky-600">
+                        What&apos;s included
+                      </h4>
+                      <div className="flex-1 border-t-2 border-zinc-200" />
+                    </div>
+                    <ul className=" mt-8 grid space-y-5 lg:gap-y-5 lg:space-y-0">
+                      {includedFeatures.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-start lg:col-span-1"
+                        >
+                          <div className="flex-shrink-0">
+                            <CheckCircleIcon
+                              className="h-5 w-5 text-emerald-400"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <p className="ml-3 text-sm text-zinc-700">
+                            {feature}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="w-full">
+                    <div className="flex items-center">
+                      <h4 className="flex-shrink-0 pr-4 text-sm font-semibold uppercase tracking-wider text-sky-600">
+                        Optional
+                      </h4>
+                      <div className="flex-1 border-t-2 border-zinc-200" />
+                    </div>
+                    <ul className=" mt-8 grid space-y-5 lg:gap-y-5 lg:space-y-0">
+                      {optionalFeatures.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-start lg:col-span-1"
+                        >
+                          <div className="flex-shrink-0">
+                            <CheckCircleIcon
+                              className="h-5 w-5 text-emerald-400"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <p className="ml-3 text-sm text-zinc-700">
+                            {feature}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-zinc-50 py-8 px-6 text-center lg:flex lg:flex-shrink-0 lg:flex-col lg:justify-center lg:p-12">
+                <div className="rounded-md shadow">
+                  <a
+                    href={`mailto:${email}`}
+                    className="flex items-center justify-center rounded-md border border-transparent bg-mt-green px-12 py-3 text-base font-semibold text-white hover:bg-mt-green/80 focus:outline-none focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white"
+                  >
+                    Request Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
