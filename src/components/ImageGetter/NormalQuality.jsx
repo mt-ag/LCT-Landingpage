@@ -4,7 +4,7 @@ import React from 'react';
 import filterImage from './filterImage';
 import imgPropTypes from './propTypes';
 
-const NormalQuality = ({ filename, classes, alt }) => (
+const NormalQuality = ({ filename, classes, alt, maxWidthPx }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -23,7 +23,14 @@ const NormalQuality = ({ filename, classes, alt }) => (
     `}
     render={(data) => {
       const image = filterImage(data, filename);
-      return <GatsbyImage image={image} className={classes} alt={alt} />;
+      return (
+        <GatsbyImage
+          image={image}
+          className={classes}
+          alt={alt}
+          style={maxWidthPx ? { maxWidth: maxWidthPx } : undefined}
+        />
+      );
     }}
   />
 );

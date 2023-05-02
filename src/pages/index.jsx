@@ -14,6 +14,7 @@ import Offer from '../components/landing-page/Offer';
 import NewsletterModal from '../components/NewsletterModal';
 import SEO from '../components/seo';
 import VideoShowcase from '../components/landing-page/VideoShowcase';
+import NewsletterSection from '../components/landing-page/NewsletterSection';
 
 export const query = graphql`
   {
@@ -69,13 +70,17 @@ const IndexPage = ({ data }) => (
   <div className="flex flex-col bg-zinc-200 font-mt">
     <SEO title="Home" />
     <div className="bg-mt-blue pb-8 lg:pb-0">
-      <div className="mx-auto max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-6xl lg:px-8">
         <LandingHeader />
+      </div>
+      <div className="mx-auto mt-16 xl:w-2/3">
         <InfoHeader />
       </div>
     </div>
-    <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue">
-      <VideoShowcase />
+    <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue pt-16 pb-32">
+      <div className="mx-auto max-w-4xl ">
+        <NewsletterSection />
+      </div>
     </div>
     <div className="">
       <Content allYoutubeVideo={data.allYoutubeVideo} posts={data.posts} />
