@@ -40,7 +40,7 @@ const BlogImageGetter = ({ filename, alt, maxWidthPx }) => {
       render={(data) => (
         <button
           type="button"
-          className="xxl:w-3/4 m-auto my-12 mx-auto block h-auto w-full cursor-zoom-in"
+          className="xxl:w-3/4 m-auto my-12 mx-auto block h-auto w-full cursor-zoom-in "
           style={{
             maxWidth: maxWidthPx
               ? `${maxWidthPx}px`

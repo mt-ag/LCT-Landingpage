@@ -132,7 +132,7 @@ const BlogPostTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div className="prose prose-slate px-2 dark:prose-invert lg:prose-xl prose-img:rounded-md dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 md:px-4 lg:mr-6 lg:px-0">
+          <div className="prose prose-slate px-2 dark:prose-invert lg:prose-xl prose-img:rounded-md prose-img:border prose-img:border-slate-200 dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 dark:prose-img:border-slate-600/50 md:px-4 lg:mr-6 lg:px-0">
             <header className="mb-6">
               <h1
                 className="scroll-mt-32 font-bold-header text-2xl font-bold tracking-tight text-zinc-900 dark:text-cyan-400 lg:text-5xl"

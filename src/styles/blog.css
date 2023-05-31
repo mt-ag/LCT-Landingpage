@@ -33,3 +33,9 @@ code::after,
 code::before {
   content: none !important;
 }
+
+/*
+.prose-img\:rounded-md :is(:where(img):not(:where([class~='not-prose'] *))) {
+  @apply border border-slate-200 dark:border-slate-600;
+}
+*/
