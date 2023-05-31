@@ -20,6 +20,7 @@ import Codemirror from '../components/blog/Codemirror';
 import BlogImageGetter from '../components/blog/BlogImageGetter';
 import BlogImagePopup from '../components/blog/BlogImagePopup';
 import YouTubeEmbed from '../components/blog/YouTubeEmbed';
+import BlogGifGetter from '../components/blog/BlogGifGetter';
 
 const components = {
   // eslint-disable-next-line react/prop-types
@@ -30,6 +31,13 @@ const components = {
   pre: ({ children }) => children, // handled by code
   code: Codemirror,
   YouTube: YouTubeEmbed,
+  BlogGif: ({ filename, alt }) => (
+    <BlogGifGetter
+      filename={filename}
+      alt={alt}
+      classes="object-contain my-12 mx-auto shadow-md xxl:w-3/4"
+    />
+  ),
 };
 
 export const query = graphql`
@@ -98,7 +106,7 @@ const BlogPostTemplate = ({ data }) => {
       <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
         <article className="m-auto flex-row-reverse bg-white px-2 pt-4 pb-6 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
           <div className="flex-grow border-zinc-200 dark:border-slate-700/40 lg:w-[330px] lg:border-l lg:pl-6">
-            <div className="prose prose-slate mb-5 flex h-full flex-col px-2 dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 md:px-4 lg:prose-lg lg:mb-0 lg:px-0">
+            <div className="prose prose-slate mb-5 flex h-full flex-col px-2 dark:prose-invert lg:prose-lg dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 md:px-4 lg:mb-0 lg:px-0">
               <div className="flex-grow text-zinc-700 dark:text-slate-300">
                 <PostStats
                   date={date}
@@ -124,7 +132,7 @@ const BlogPostTemplate = ({ data }) => {
             </div>
           </div>
 
-          <div className="prose prose-slate px-2 prose-img:rounded-md dark:prose-invert dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 md:px-4 lg:prose-xl lg:mr-6 lg:px-0">
+          <div className="prose prose-slate px-2 dark:prose-invert lg:prose-xl prose-img:rounded-md dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 dark:prose-tr:text-slate-300 md:px-4 lg:mr-6 lg:px-0">
             <header className="mb-6">
               <h1
                 className="scroll-mt-32 font-bold-header text-2xl font-bold tracking-tight text-zinc-900 dark:text-cyan-400 lg:text-5xl"

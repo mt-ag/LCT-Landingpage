@@ -1,0 +1,104 @@
+---
+title: >
+  Why LCT does not need a recording feature
+date: 2023-05-31
+description: >
+  LCT is an innovative testing framework designed to simplify the testing process for Oracle APEX, eliminating the need for users to write test code. We frequently get asked about test recording features in our framework. In this post, we reason why we don't want such a feature.
+slug: lct-needs-no-recording-feature
+titleImage: ./craig-pattenaude-UukHCVBKBS4-unsplash.jpg
+titleImageAlt: ''
+titleImageSource:
+  {
+    text: 'Photo by Craig Pattenaude on Unsplash',
+    href: 'https://unsplash.com/photos/UukHCVBKBS4',
+  }
+tags: ['Product', 'Testing']
+authors: ['phartenfeller']
+---
+
+## The Value of Recorders
+
+Almost all UI testing engines come with recording features that make it easy to create new tests. You can click on a recording button and then navigate the App or Website normally. The recorder will convert any action you take into code, so you can replay exactly that behavior.
+
+This sounds like a great and user-friendly feature. While we agree with the second part of that statement, we do see some downsides of that approach.
+
+<BlogGif
+  filename="screen-recorder-demo.gif"
+  alt="Example usage of the Chrome Recorder"
+/>
+
+## First Hurdle: APEX URLs
+
+If you developed Oracle APEX Apps before, you are probably aware that it stores Session-IDs in the URL. You may also know that modifying or deleting this ID from the URL will result in having to log in again.
+
+The Playwright recorder does not know about this (to be fair, it is quite extraordinary) design decision. It will happily record any navigation and store the URL with the Session-ID of the record session. When you rerun that same test, it will fail because you will get a new Session-ID and the old hard-coded is not valid anymore.
+
+This is one of the start problems, but we could simply implement a feature that would overwrite the hard-coded session with a dynamic one. So, this is not a big problem. Instead, we have bigger problems about the recording feature.
+
+## Maintainability
+
+The recorders excel at making recording a sequence as easy as possible. But what happens if your app gets a new form item that you now need to fill in your test, or you need to change something? You have 2 options:
+
+1. Re-record the whole test
+2. Edit recording to insert/edit step
+
+The first step is just tedious, and the second is not as easy as it sounds. For example, in the Chrome recorder editing your steps looks like this:
+
+<Image filename="chrome-recorder-edit-step.png" alt="" maxWidthPx={325} />
+
+Thanks, but this looks confusing / technical. We just switched levels from where you simply record the actions you take to a level where you have to edit a JSON representation and understand a set of selectors.
+
+Our slogan is "Testing APEX Apps is now as easy as creating them". This is not easy. We provide UIs for humans where you don't need to rely on complex selectors. For example, for a Popup LOV you tell us which item you want to fill and just the value. We then take care of the rest. This is how our step looks like:
+
+<Image filename="popuplov-step-lct.png" alt="" />
+
+Notice how we also encapsulate multiple browser actions in this single UI. With the two inputs (item and value) we generate test steps that click on the item, search for the value, wait until the network request is done and finally click on it. And the good part is **you don't need to worry about any of this**.
+
+## You want Assertions
+
+Adding assertions to your tests has great benefits. It makes sure that your app is in an expected state. Only clicking around and filling some inputs does test your logic, but for a good test coverage you want to check more. Some examples are:
+
+- Is this button hidden / disabled with this user authorization level`
+- Does my page title correctly include information x?
+- Is the save button hot if I have unsaved changes?
+- Does the form show the correct error message if I enter invalid data?
+
+The second big advantage of assertions is that they make your tests more robust. Flakiness is a big problem in UI testing. It is not uncommon that a test fails because the page was not fully loaded yet, or the button was not yet clickable. Adding assertions will result in slowing down the test by making sure everything is in the expected state before performing the next action. It will also lead to tests failing faster, leading to a clear error message instead of running into a state where the test doesn't work anymore and something later fails.
+
+## Horrible Selectors
+
+Any test framework needs selectors to know where in the page to interact with. In a perfect world, you would have a unique ID for every element in your page. But this is not the case, so you need to rely on hierarchies like:
+
+- From the Classic Report with the ID `myGrid`
+- It's child a `table` with the class `t-Report`
+- The third row of that table
+- The second column of that row
+
+There are countless possibilities to select an element. Some are perfectly fine and some are prone to errors in the future. For example, if you change the column order of your table, the second column is now an entirely different one and your test will interact with the wrong element.
+
+In really complex element structures like the Interactive Grid, it is very hard to create a selector that is not prone to errors. For example, you can't even get the Chrome Recorder (I was using Chrome 113) to do the steps you recorded. Notice how in the replay, the test ends up in the Salary column and the test fails. I did not even interact with it while recording the test:
+
+<BlogGif
+  filename="recorder-ig-error.gif"
+  alt="Chrome Recorder test with an Interactive Grid. The test fails because the recorder did not record the correct steps."
+/>
+
+It is also completely understandable that recorders can't find the perfect selector. They only see the generated output HTML but miss the complete context of how APEX works.
+
+We know which attributes and classes have a huge meaning to them and which are changing when you, for example, change the order of things. We can handpick good selectors for you and make sure that your tests are stable.
+
+## The Power of Storing Test Definitions with Metadata
+
+The superpower of LCT is its access to the APEX App definition metadata. We look into the App and know which items, regions etc. are there with all the attributes. This makes our UI super easy to use, but also helps us to generate good selectors for you.
+
+We find the Interactive Grid internal column ID to your selected column and then use it to generate a good and stable selector for the test.
+
+**Another huge advantage is LCTs APEX version tolerance**. We store the test definitions in a metadata state. Instead of any test code, we store that you want to fill the value "XYZ" to the Interactive Grid with the ID "myGrid" in the column "Salary".
+
+If there are significant changes in a new APEX version that would still break our tests, we can then generate new test code with new selectors for you without you having to do anything.
+
+## Conclusion
+
+Recorders are super cool to quickly record a test case. But for maintainable and robust tests they are not suitable. Our approach of using APEX app metadata allows us to generate stable selectors for you and also makes your tests more robust.
+
+There is still the dream in our head, that someday we provide our own recorder where we can translate it's output to our metadata definition. This would get the best of both worlds. But we know this huge and super complex project. Realistically, we will probably not do this anytime soon.
