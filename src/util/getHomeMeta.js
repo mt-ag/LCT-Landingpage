@@ -18,10 +18,6 @@ function getHomeMeta({ imgSrc, imgHeight, imgWidth }) {
       name: `og:image:height`,
       content: imgHeight,
     },
-    {
-      name: `og:title`,
-      content: `Low Code Testing for Oracle APEX`,
-    },
   ];
 
   return meta;
