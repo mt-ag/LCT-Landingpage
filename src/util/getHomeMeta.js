@@ -1,12 +1,14 @@
+const siteUrl = `https://lct.software`;
+
 function getHomeMeta({ imgSrc, imgHeight, imgWidth }) {
   const meta = [
     {
       name: `twitter:image`,
-      content: `${imgSrc}`,
+      content: `${siteUrl}${imgSrc}`,
     },
     {
       name: `og:image`,
-      content: `${imgSrc}`,
+      content: `${siteUrl}${imgSrc}`,
     },
     {
       name: `og:image:width`,
