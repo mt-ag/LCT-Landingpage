@@ -34,9 +34,13 @@
         "namedComponents": "arrow-function"
       }
     ],
-    "react/jsx-no-target-blank": {
-      "allowReferrer": true
-    }
+    "react/jsx-no-target-blank": [
+      2,
+      {
+        "allowReferrer": true
+      }
+    ],
+    "jsx-a11y/media-has-caption": 0
   },
   "plugins": ["prettier", "react-hooks", "jsx-a11y"],
   "settings": {

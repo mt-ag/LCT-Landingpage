@@ -31,6 +31,7 @@ const components = {
   pre: ({ children }) => children, // handled by code
   code: Codemirror,
   YouTube: YouTubeEmbed,
+  // eslint-disable-next-line react/prop-types
   BlogGif: ({ filename, alt }) => (
     <BlogGifGetter
       filename={filename}

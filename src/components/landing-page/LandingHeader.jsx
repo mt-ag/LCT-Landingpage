@@ -19,6 +19,7 @@ const LandingHeader = () => (
       >
         Blog
       </Link>
+
       <a
         href="https://www.youtube.com/@lct-apex"
         target="_blank"
