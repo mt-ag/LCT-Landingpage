@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <div className="flex flex-col bg-zinc-200 font-mt">
-      <SEO title="Low Code Testing for Oracle APEX" meta={meta} />
+      <SEO title="Low Code Testing for Oracle APEX" meta={meta} home />
       <div className="bg-mt-blue pb-8 lg:pb-0">
         <div className="mx-auto max-w-6xl lg:px-8">
           <LandingHeader />
