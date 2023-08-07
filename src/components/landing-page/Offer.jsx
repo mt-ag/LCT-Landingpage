@@ -3,6 +3,7 @@ import { CheckCircleIcon, CheckIcon, XIcon } from '@heroicons/react/solid';
 import decodeMail from '../../util/decodeMail';
 import { RadioGroup } from '@headlessui/react';
 import classNames from '../../util/classNames';
+import usePlausible from '../../hooks/usePlausible';
 
 const kSep = (number) => {
   const formatter = new Intl.NumberFormat('de-DE', {
@@ -25,6 +26,7 @@ const PriceBlock = () => {
   const [sliderVal, setSliderVal] = useState(10);
   const noSupport = sliderVal < 1;
   const features = noSupport ? noSupportFeatures : supportFeatures;
+  const plausible = usePlausible();
 
   return (
     <div className={`rounded-3xl bg-white p-8 ring-2 ring-mt-blue/75 xl:p-10`}>
@@ -44,7 +46,10 @@ const PriceBlock = () => {
           min="0"
           max="100"
           value={sliderVal}
-          onChange={(e) => setSliderVal(e.target.value)}
+          onChange={(e) => {
+            plausible('Pricing-Slider');
+            setSliderVal(e.target.value);
+          }}
           class="x-accent-color h-2 w-full cursor-ew-resize appearance-none rounded-full bg-gray-200 disabled:cursor-not-allowed"
         ></input>
 
@@ -150,7 +155,7 @@ const WorkshopBlock = ({}) => {
                   checked
                     ? 'bg-mt-blue text-white hover:bg-mt-blue/80'
                     : 'bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50',
-                  'flex cursor-pointer select-none items-center justify-center rounded-md py-3 px-3 text-sm font-semibold uppercase focus:outline-none sm:flex-1'
+                  'flex cursor-pointer select-none items-center justify-center rounded-md px-3 py-3 text-sm font-semibold uppercase focus:outline-none sm:flex-1'
                 )
               }
             >
@@ -244,16 +249,16 @@ const Offer = () => {
         </div>
       </div>
 
-      <div className="my-12 text-center text-xl">
-        LCT Installation + Integration Tests. 200 € / hour on avg. 3 days can
-        vary.
-      </div>
-
-      <div className="mx-auto mt-16 mb-8 max-w-5xl">
+      <div className="mx-auto mb-8 mt-16 max-w-5xl">
         <div className="grid grid-cols-2 justify-center gap-x-12">
           <PriceBlock />
 
           <WorkshopBlock />
+        </div>
+
+        <div className="my-12 text-center text-xl">
+          LCT installation and integration tests: on average 1 day with 200 €
+          per hour (can vary).
         </div>
 
         <div className="mt-12 text-center">
@@ -266,7 +271,7 @@ const Offer = () => {
           </a>
         </div>
 
-        <div className="mt-16 mb-24 flex">
+        <div className="mb-24 mt-16 flex">
           <a
             href={`mailto:${email}`}
             className="mx-auto rounded-md border border-transparent bg-mt-green px-12 py-3 text-base font-semibold text-white hover:bg-mt-green/80 focus:outline-none focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white"
