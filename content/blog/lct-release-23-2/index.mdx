@@ -1,0 +1,90 @@
+---
+title: >
+  New Release: LCT 0.18
+date: 2023-03-20
+description: >
+  We are happy to announce the release of LCT 0.18. This release contains a lot of new features and improvements.
+slug: lct-release-0-18
+titleImage: ./backsplash-release-0-18.jpg
+titleImageAlt: ''
+titleImageSource: { text: null, href: null }
+tags: ['Release', 'Video']
+authors: ['phartenfeller']
+---
+
+## Showcase of biggest new features
+
+<YouTube videoID="Jhds0hg_JhM" />
+
+## New naming scheme
+
+Last release was version [0.18](https://lct.software/blog/lct-release-0-18). LCT has been stable quite som while now so the zero in front of the version number didn't really mean that it is in a beta-like state. We finally change that and directly jump to 23 to match Oracles versioning scheme. 23.2 means that this is the second release in 2023. It does not mean that it is only compatible with APEX 23.x or anything like that.
+
+The timing to change the versioning system is also quite nice as this is **our biggest** release ever. I think you will like most changes we made.
+
+## New Features
+
+### Interactive Grid support
+
+You can imagine that this is a not only a highly requested feature but something we worked on for quite some time. But we believe that we got Interactive Grid testing right.
+
+<Image filename="popup-lov-step-0-18.png" alt="" />
+
+You can enter the application and page where the item is located and whether it is a page item or inside an interactive grid. If this is the case, you can also specify the column.
+
+To select the correct value, you can enter the term to search for. If “exact match” is set to yes, the value will be selected that exactly matches the search term. Otherwise, the first value that appears after the search will be selected.
+
+### Interactive Grid and Report Steps
+
+We had improving interacting with the interactive table components in APEX on our agenda for a while now. With this release, we've added three new steps to make searching, checking a value in a cell and clicking something in a cell.
+
+<Image filename="filter-table-step-0-18.png" alt="" maxWidthPx={700} />
+
+Filtering a table is pretty straight-forward. Just select the desired table and the search term.
+
+<Image filename="check-cell-step-0-18.png" alt="" maxWidthPx={700} />
+
+To check a cell value again, select the table, the column, and then the value to check for. The check will be executed for the first row. Add a filter step before to make sure your target row will be the first.
+
+<Image filename="click-step-0-18.png" alt="" maxWidthPx={700} />
+
+In the third step, you can enter a selector after selecting the column. This selector will be used to find the element to click on. This can be a button, a link, or any other element that is inside the cell. Again, this will be performed on the first row.
+
+### Quickly perform actions on cases with the new context menu
+
+<Image filename="context-menu-0-18.png" alt="" maxWidthPx={400} />
+
+We've added a context menu to the case list. This menu allows you to quickly edit, duplicate enable and disable any case.
+
+## Further enhancements
+
+### Step Execution Sequences
+
+Per default, step sequences are now separated by values of ten. This allows you to easily add steps in between without having to change the sequence of all following steps.
+
+When you add a new step, you can change the sequence by entering a new value. You can still use the up and down arrows to change the sequence, and we've added a button to re-seqeuence all steps of a case.
+
+### Server configuration
+
+We've added two server settings regarding log files. You can now define the maximum age in days for log files, and whether old log files should be zipped.
+
+Additionally, you can now finally define a different database port 😅.
+
+### Accessibility
+
+We've added a few accessibility improvements. The most noticeable is that clickable elements in a table now have a hover effect and an outline. We also added a few aria labels to make the application more accessible for screen readers.
+
+### Upgraded Playwright version
+
+We upgraded the version of our browser automation engine Playwright to the version `1.30`. It comes with Chromium `110`, Firefox `108`, and Webkit `16.4`.
+
+You can checkout the [docker image here](https://github.com/mt-ag/lct-playwright-image/releases/tag/v0.18).
+
+## Bug Fixes
+
+- Fixed duplicate rows appearing after in Steps Grid after adding a Step
+- Fixed being able to create more than one beforeEach/afterEach-Case per Worksheet
+- Fixed 'Run Worksheet' button staying disabled after adding Step to empty Case
+- Added missing settings to install-from-scratch-script
+- Fixed not being able to copy beforeEach/afterEach-Case into Worksheet
+- Fixed various small UI Issues
