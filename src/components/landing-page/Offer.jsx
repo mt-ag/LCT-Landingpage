@@ -34,7 +34,6 @@ const PriceBlock = () => {
     // debounce slider
     clearTimeout(timer);
     timer = setTimeout(() => {
-      console.log('timer fires');
       plausible('Pricing-Slider');
     }, 2500);
     setSliderVal(e.target.value);
