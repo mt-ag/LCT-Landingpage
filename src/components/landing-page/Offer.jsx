@@ -22,18 +22,19 @@ const supportFeatures = [
   'Unused hours will sum up for 12 months',
 ];
 
+let timer;
+
 const PriceBlock = () => {
   const [sliderVal, setSliderVal] = useState(10);
   const noSupport = sliderVal < 1;
   const features = noSupport ? noSupportFeatures : supportFeatures;
   const plausible = usePlausible();
 
-  let timer;
-
   function handleSlider(e) {
     // debounce slider
     clearTimeout(timer);
     timer = setTimeout(() => {
+      console.log('timer fires');
       plausible('Pricing-Slider');
     }, 2500);
     setSliderVal(e.target.value);
