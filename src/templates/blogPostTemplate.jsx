@@ -51,7 +51,12 @@ export const query = graphql`
         description
         titleImage {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 825
+              formats: [AUTO, WEBP, AVIF]
+              breakpoints: [500, 650, 825]
+            )
           }
         }
         fixedTitleImage: titleImage {
@@ -105,7 +110,7 @@ const BlogPostTemplate = ({ data }) => {
     <Layout>
       <SEO title={title} description={description} meta={meta} blog />
       <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
-        <article className="m-auto flex-row-reverse bg-white px-2 pt-4 pb-6 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
+        <article className="m-auto flex-row-reverse bg-white px-2 pb-6 pt-4 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
           <div className="flex-grow border-zinc-200 dark:border-slate-700/40 lg:w-[330px] lg:border-l lg:pl-6">
             <div className="prose prose-slate mb-5 flex h-full flex-col px-2 dark:prose-invert lg:prose-lg dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 md:px-4 lg:mb-0 lg:px-0">
               <div className="flex-grow text-zinc-700 dark:text-slate-300">

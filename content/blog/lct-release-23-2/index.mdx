@@ -1,0 +1,109 @@
+---
+title: >
+  New Release: LCT 23.2
+date: 2023-08-28
+description: >
+  Interactive Grid Testing, Variable Rework, New Output View, and more.
+slug: lct-release-23-2
+titleImage: ./backsplash-release-23-2.jpg
+titleImageAlt: ''
+titleImageSource: { text: null, href: null }
+tags: ['Release', 'Video']
+authors: ['phartenfeller']
+---
+
+## New naming scheme
+
+Our most recent release was version [0.18](https://lct.software/blog/lct-release-0-18). Despite the preceding zero, LCT has been stable for a while and isn't in a beta phase. Aligning with Oracle's versioning system, we've decided to leap to version 23. The 23.2 indicates our second release in 2023. This does not imply compatibility solely with APEX 23.x or similar.
+
+The timing to change the versioning system is great, as this is **our biggest** release to date. I think you will like most of the changes we made.
+
+## New Features
+
+We've also recorded a YouTube video that shows all the new features in action.
+
+<YouTube videoID="QhIoAfYzFN0" />
+
+### Interactive Grid support
+
+You can imagine that this is not only a highly requested feature but also something we have worked on for quite some time. But we believe that we got Interactive Grid testing right.
+
+We added a new template that makes it simple to add or modify an interactive grid row.
+
+<Image filename="lct-23-2-ig-template.png" alt="" />
+
+You can select the desired grid on the given page and get a list of all columns with their types. Enter some values, and after saving, it will generate a sequence of steps that interact with the grid.
+
+The steps that input the values are just `fillField` steps. You can now easily set Interactive Grid column selectors.
+
+<Image filename="lct-23-2-ig-fill-field.png" alt="" />
+
+### Variable Rework
+
+We observed a need for different use cases for variables. We now have three different types of variables:
+
+- Constants: These are variables that are set once and never change. They are useful to store values that are used in multiple steps. For example, a URL or a username.
+- Dynamic Case Variables: The values of this type of variable can change during execution. They are scoped to a case, so the value resets when the next step starts. You can define start values for each case, like "username1" in the first case and "username2" in the second case. We also have a new step (storeTextInVar) that allows you to change the value during execution by grabbing a text or value from the page.
+- Dynamic Case Variables: This type is basically the same as Dynamic Case Variables, with the only difference that you can access values in different cases. This is useful if you want to store a value in one case and use it in another. Although we **discourage this, good tests have no dependencies between cases**.
+- Set Variable: This was the only type of variable we had before. You can define sets of values for these variables, like "Hans" and "Garry" for first names. At the start of a test, a random set of values is picked, resulting in testing with different values.
+
+<Image filename="lct-23-2-var-types.png" alt="" />
+
+The new step `storeTextInVar` allows you to store a text or value from the page in a variable.
+
+<Image filename="lct-23-2-var-storetext.png" alt="" />
+
+### Output view improvements
+
+Until now, the output view was the technical log that playwright provides. This was not very user-friendly and did not meet our low-code standards.
+
+We now have a more visual output view that shows the steps that were executed and the result of each step. You can directly see which step failed and, with the log, debug the issue.
+
+The screenshots on the right side are now sorted by case and retry, and you can filter them.
+
+<Image filename="lct-23-2-output.png" alt="" />
+
+### New step to upload files
+
+As some application workflows have mandatory file input fields, we added a new step to upload files.
+
+Inside your worksheet, you can access the section "Worksheet Files" where you can upload files that should be used in the tests.
+
+<Image filename="lct-23-2-upload-files.png" alt="" />
+
+We also added a new step `setInputFiles` that allows you to set the value of a file input field to a file that was uploaded before.
+
+<Image filename="lct-23-2-upload-step.png" alt="" />
+
+### New hover step
+
+We added a new step `hoverOverElement` that allows you to mouse hover over elements. This is useful if you want to test a tooltip or a hover menu.
+
+<Image filename="lct-23-2-hover-step.png" alt="" />
+
+### New assertions
+
+We also added new assertions. The steps `hasAttribute` and `hasClass` make it easy to check if the HTML is in the desired state.
+
+<Image filename="lct-23-2-assertions.png" alt="" />
+
+### Apply templates to existing cases
+
+It was only possible to create a new case with the templates `login`, `fillForm` or the new Interactive Grid template. We have added a new button to apply a template to an existing case.
+
+<Image filename="lct-23-2-template-existing-case.png" alt="" />
+
+### Other improvements
+
+- You can remove `target="_blank"` in the `click` step from the target element to open the link in the same tab.
+- We improved the accessibility of the application.
+- We upgraded Playwright to version `1.36.2` which comes with Chromium `115`, Firefox `115`, and Webkit `17.0`.
+- We found and fixed some bugs.
+
+## What's next?
+
+Following our significant update with Interactive Grid support, we're excited to announce two more releases this year. These will be more concise.
+
+## Get in contact
+
+Interested in LCT or have inquiries? [Feel free to reach out to us](https://lct.software/#contact). You can also subscribe to our newsletter below or explore our [pricing details](https://lct.software/#pricing).
