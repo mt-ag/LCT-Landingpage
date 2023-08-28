@@ -14,10 +14,13 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="pt-8 text-center text-3xl font-extrabold tracking-tight text-zinc-900 lg:pt-16 lg:text-5xl">
+      <h2
+        id="contact"
+        className="pt-8 text-center text-3xl font-extrabold tracking-tight text-zinc-900 lg:pt-16 lg:text-5xl"
+      >
         Contact
       </h2>
-      <div className="pt-8 pb-16 lg:pb-32 lg:pt-16">
+      <div className="pb-16 pt-8 lg:pb-32 lg:pt-16">
         <div className="mx-4 grid grid-cols-1 rounded-xl bg-white p-6 shadow-xl sm:grid-cols-3 md:p-8 lg:mx-0">
           <ImageGetter
             filename="kdonato.jpg"
@@ -51,7 +54,7 @@ const Contact = () => {
             <div className="inline-block">
               <a
                 href={`mailto:${email}`}
-                className="flex rounded-md bg-mt-green py-3 px-3 text-center text-xs font-semibold text-white shadow hover:bg-mt-green/80 focus:outline-none
+                className="flex rounded-md bg-mt-green px-3 py-3 text-center text-xs font-semibold text-white shadow hover:bg-mt-green/80 focus:outline-none
              focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white sm:text-base lg:px-6"
               >
                 <MailIcon className="m-auto mr-1 h-5 w-5 text-gray-200/50 md:h-6 md:w-6 lg:mr-3" />

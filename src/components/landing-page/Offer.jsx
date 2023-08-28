@@ -257,7 +257,10 @@ const Offer = () => {
       <div className="pt-12 sm:pt-16 lg:pt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-zinc-900 sm:text-4xl lg:text-5xl">
+            <h2
+              id="pricing"
+              className="text-3xl font-extrabold text-zinc-900 sm:text-4xl lg:text-5xl"
+            >
               Pricing
             </h2>
           </div>

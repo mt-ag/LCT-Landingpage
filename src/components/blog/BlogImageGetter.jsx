@@ -24,8 +24,9 @@ const BlogImageGetter = ({ filename, alt, maxWidthPx }) => {
               node {
                 gatsbyImageData(
                   layout: CONSTRAINED
-                  placeholder: BLURRED
+                  width: 825
                   formats: [AUTO, WEBP, AVIF]
+                  breakpoints: [500, 650, 825]
                 )
                 original {
                   height
@@ -40,7 +41,7 @@ const BlogImageGetter = ({ filename, alt, maxWidthPx }) => {
       render={(data) => (
         <button
           type="button"
-          className="xxl:w-3/4 m-auto my-12 mx-auto block h-auto w-full cursor-zoom-in "
+          className="xxl:w-3/4 m-auto mx-auto my-12 block h-auto w-full cursor-zoom-in "
           style={{
             maxWidth: maxWidthPx
               ? `${maxWidthPx}px`
