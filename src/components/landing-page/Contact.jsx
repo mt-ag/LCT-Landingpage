@@ -26,6 +26,7 @@ const Contact = () => {
             filename="kdonato.jpg"
             alt="Kai Donato Potrait"
             classes="w-full sm:w-32 md:w-48 md:h-48 lg:h-64 lg:w-64 rounded-md select-none"
+            sizes="20vw"
           />
           <div className="mt-4 sm:mt-0">
             <p className="text-2xl font-semibold tracking-tight text-mt-blue lg:text-3xl">

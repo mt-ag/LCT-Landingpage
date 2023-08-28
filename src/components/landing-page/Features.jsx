@@ -34,7 +34,7 @@ FeatureDisplay.defaultProps = {
 };
 
 const Features = () => (
-  <div className="mt-8 mb-16 lg:mt-16 lg:mb-32">
+  <div className="mb-16 mt-8 lg:mb-32 lg:mt-16">
     <div className="pb-8 lg:pb-16">
       <h2 className="mx-auto w-5/6 text-center text-2xl font-extrabold tracking-tight text-zinc-900 lg:w-full lg:text-5xl">
         An APEX App to test APEX Apps
@@ -53,6 +53,7 @@ const Features = () => (
             classes="block"
             alt=""
             quality="high"
+            sizes="65vw"
           />
         }
         reverse
@@ -66,6 +67,7 @@ const Features = () => (
             classes="block"
             alt="LCT supports Browsers like Edge, Firefox, Safari and Chrome"
             quality="high"
+            sizes="65vw"
           />
         }
         header="Test thoroughly"
@@ -78,6 +80,7 @@ const Features = () => (
             classes="block"
             alt=""
             quality="high"
+            sizes="65vw"
           />
         }
         header="Automatically Detect Regressions"
