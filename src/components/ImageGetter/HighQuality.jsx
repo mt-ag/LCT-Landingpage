@@ -4,7 +4,13 @@ import React from 'react';
 import filterImage from './filterImage';
 import imgPropTypes from './propTypes';
 
-const HighQuality = ({ filename, classes, alt, maxWidthPx }) => (
+const HighQuality = ({
+  filename,
+  classes,
+  alt,
+  maxWidthPx,
+  sizes = undefined,
+}) => (
   <StaticQuery
     query={graphql`
       query {
@@ -13,7 +19,6 @@ const HighQuality = ({ filename, classes, alt, maxWidthPx }) => (
             node {
               gatsbyImageData(
                 layout: CONSTRAINED
-                placeholder: BLURRED
                 quality: 80
                 formats: [AUTO, WEBP, AVIF]
               )
@@ -30,6 +35,7 @@ const HighQuality = ({ filename, classes, alt, maxWidthPx }) => (
           className={classes}
           alt={alt}
           style={maxWidthPx ? { maxWidth: maxWidthPx } : undefined}
+          sizes={sizes}
         />
       );
     }}

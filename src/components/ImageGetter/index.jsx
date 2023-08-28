@@ -10,6 +10,7 @@ const ImageGetter = ({
   alt,
   quality = 'normal',
   maxWidthPx,
+  sizes = undefined,
 }) => {
   if (quality === 'normal') {
     return (
@@ -18,6 +19,7 @@ const ImageGetter = ({
         classes={classes}
         alt={alt}
         maxWidthPx={maxWidthPx}
+        sizes={sizes}
       />
     );
   }
@@ -40,6 +42,7 @@ ImageGetter.propTypes = {
 ImageGetter.defaultProps = {
   quality: 'normal',
   maxWidthPx: undefined,
+  sizes: undefined,
 };
 
 export default ImageGetter;

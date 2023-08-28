@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 
 const Content = ({ allYoutubeVideo, posts }) => (
   <div className="pb-16 lg:pb-32">
-    <div className="h-[600px] w-full bg-mt-old-blue  pt-4 md:h-[400px] lg:pt-8"></div>
+    <div className="h-[600px] w-full bg-mt-old-blue  pt-4 md:h-[400px] lg:pt-8" />
     <div className="mx-6 mt-[-600px]  md:mt-[-400px]">
       <h2 className="mx-auto mb-12 w-5/6 text-center text-2xl font-extrabold tracking-tight text-white lg:w-full lg:text-5xl">
         More about LCT from the Team
@@ -20,7 +20,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   href={`https://www.youtube.com/watch?v=${video.videoId}`}
                   target="_blank"
                   rel="noopener"
-                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded py-1 px-2 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-mt-blue"
+                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-mt-blue"
                 >
                   <div className="">
                     <GatsbyImage
@@ -60,7 +60,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
               <li key={post.frontmatter.slug}>
                 <Link
                   to={`/blog/${post.frontmatter.slug}`}
-                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded py-1 px-2 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-mt-blue"
+                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-mt-blue"
                 >
                   <div className="">
                     <GatsbyImage

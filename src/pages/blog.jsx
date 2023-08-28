@@ -20,11 +20,7 @@ export const query = graphql`
           slug
           titleImage {
             sharp: childImageSharp {
-              gatsbyImageData(
-                width: 250
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
+              gatsbyImageData(width: 250, formats: [AUTO, WEBP, AVIF])
             }
           }
           titleImageAlt

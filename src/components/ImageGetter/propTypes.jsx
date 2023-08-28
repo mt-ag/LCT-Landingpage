@@ -5,6 +5,7 @@ const imgPropTypes = {
   classes: PropTypes.string,
   alt: PropTypes.string.isRequired,
   maxWidthPx: PropTypes.number,
+  sizes: PropTypes.string,
 };
 
 export default imgPropTypes;

@@ -33,7 +33,7 @@ export const query = graphql`
           sharp: childImageSharp {
             gatsbyImageData(
               layout: CONSTRAINED
-              placeholder: BLURRED
+              width: 315
               formats: [AUTO, WEBP, AVIF]
             )
           }
@@ -55,7 +55,7 @@ export const query = graphql`
             sharp: childImageSharp {
               gatsbyImageData(
                 layout: CONSTRAINED
-                placeholder: BLURRED
+                width: 315
                 formats: [AUTO, WEBP, AVIF]
               )
             }
@@ -93,7 +93,7 @@ const IndexPage = ({ data }) => {
           <InfoHeader />
         </div>
       </div>
-      <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue pt-16 pb-32">
+      <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue pb-32 pt-16">
         <div className="mx-auto max-w-4xl ">
           <NewsletterSection />
         </div>

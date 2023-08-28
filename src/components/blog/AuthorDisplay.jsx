@@ -19,8 +19,9 @@ export const AuthorDisplay = ({ authors }) => {
             <div className="lg:m-2">
               <ImageGetter
                 filename={a.image}
-                alt={`${a.name} portrait photo`}
+                alt=""
                 classes="object-cover shadow-md dark:shadow-none shadow-cyan-100 rounded-full select-none border-4 border-sky-500/60 dark:border-sky-500"
+                sizes="10vw"
               />
             </div>
             <div className="col-span-2 my-auto space-y-1">

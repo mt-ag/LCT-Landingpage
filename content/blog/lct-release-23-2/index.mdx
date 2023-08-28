@@ -30,13 +30,19 @@ You can imagine that this is not only a highly requested feature but also someth
 
 We added a new template that makes it simple to add or modify an interactive grid row.
 
-<Image filename="lct-23-2-ig-template.png" alt="" />
-
 You can select the desired grid on the given page and get a list of all columns with their types. Enter some values, and after saving, it will generate a sequence of steps that interact with the grid.
+
+<Image
+  filename="lct-23-2-ig-template.png"
+  alt="A modal apex page lets the user choose an interactive grid from a popup lov. Below is an Interactive Grid with rows that represent columns of the selected grid. Users can enter values for each column."
+/>
 
 The steps that input the values are just `fillField` steps. You can now easily set Interactive Grid column selectors.
 
-<Image filename="lct-23-2-ig-fill-field.png" alt="" />
+<Image
+  filename="lct-23-2-ig-fill-field.png"
+  alt="A modal page with the header 'fillField'. On the left side you can select an item. A switch allows to choose between custom selectors, interactive grid columns and page items."
+/>
 
 ### Variable Rework
 
@@ -47,7 +53,10 @@ We observed a need for different use cases for variables. We now have three diff
 - Dynamic Case Variables: This type is basically the same as Dynamic Case Variables, with the only difference that you can access values in different cases. This is useful if you want to store a value in one case and use it in another. Although we **discourage this, good tests have no dependencies between cases**.
 - Set Variable: This was the only type of variable we had before. You can define sets of values for these variables, like "Hans" and "Garry" for first names. At the start of a test, a random set of values is picked, resulting in testing with different values.
 
-<Image filename="lct-23-2-var-types.png" alt="" />
+<Image
+  filename="lct-23-2-var-types.png"
+  alt="An interactive grid where the user can define variables. One column is named type where one row is edited. It shows a select list with all variable types."
+/>
 
 The new step `storeTextInVar` allows you to store a text or value from the page in a variable.
 
@@ -61,7 +70,10 @@ We now have a more visual output view that shows the steps that were executed an
 
 The screenshots on the right side are now sorted by case and retry, and you can filter them.
 
-<Image filename="lct-23-2-output.png" alt="" />
+<Image
+  filename="lct-23-2-output.png"
+  alt="On the left side is a list of cases. It shows the case title and a colored icons. Successfull tests show green checkmarks, failed ones red x's. A failed one is expanded where it shows that step 6 named 'Hover over interactive grid' failed"
+/>
 
 ### New step to upload files
 
@@ -69,7 +81,10 @@ As some application workflows have mandatory file input fields, we added a new s
 
 Inside your worksheet, you can access the section "Worksheet Files" where you can upload files that should be used in the tests.
 
-<Image filename="lct-23-2-upload-files.png" alt="" />
+<Image
+  filename="lct-23-2-upload-files.png"
+  alt="An interactive grid that shows file names, an edit and a download button in the columns."
+/>
 
 We also added a new step `setInputFiles` that allows you to set the value of a file input field to a file that was uploaded before.
 
@@ -91,7 +106,10 @@ We also added new assertions. The steps `hasAttribute` and `hasClass` make it ea
 
 It was only possible to create a new case with the templates `login`, `fillForm` or the new Interactive Grid template. We have added a new button to apply a template to an existing case.
 
-<Image filename="lct-23-2-template-existing-case.png" alt="" />
+<Image
+  filename="lct-23-2-template-existing-case.png"
+  alt="On a page you see a selected case and the list of steps in an interactive grid. In the grid header the button 'Add steps via template' is highlighted."
+/>
 
 ### Other improvements
 

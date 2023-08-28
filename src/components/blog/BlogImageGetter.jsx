@@ -27,6 +27,7 @@ const BlogImageGetter = ({ filename, alt, maxWidthPx }) => {
                   width: 825
                   formats: [AUTO, WEBP, AVIF]
                   breakpoints: [500, 650, 825]
+                  quality: 80
                 )
                 original {
                   height
