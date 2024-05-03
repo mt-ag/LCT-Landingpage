@@ -22,5 +22,13 @@
     "twitter": "https://twitter.com/BouchiMohamad",
     "blog": "https://tm-apex.blogspot.com/",
     "linkedIn": "https://www.linkedin.com/in/mohamad-subhi-bouchi/"
+  },
+  {
+    "id": "llenffer",
+    "name": "Lynn Nari Lenffer",
+    "image": "llenffer.jpg",
+    "twitter" : "https://twitter.com/lynninafaerie",
+    "blog": null,
+    "linkedIn": null
   }
 ]
