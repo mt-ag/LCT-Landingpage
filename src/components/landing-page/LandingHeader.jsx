@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import MTLogo from '../../svgs/mt-logo.svg';
+import HyandLogo from '../../svgs/hyand_logo_rgb_all_white.svg';
 import LCTLogo from '../../svgs/lct-logo.svg';
 
 const LandingHeader = () => (
@@ -37,7 +37,7 @@ const LandingHeader = () => (
         aria-label="MT AG"
       >
         <div className="">
-          <MTLogo className="h-[28px] w-auto " />
+          <HyandLogo className="h-[28px] w-auto " />
         </div>
       </a>
     </div>

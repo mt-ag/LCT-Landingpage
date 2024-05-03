@@ -1,30 +1,30 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import MTLogo from '../svgs/mt-logo.svg';
+import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
   <footer className="grid grid-cols-1 divide-y divide-white/30 bg-mt-blue py-4 px-4 text-sm font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
     <div className="mt-8 flex justify-between pb-8">
       <a
-        href="https://www.mt-itsolutions.com/"
+        href="https://www.hyand.com/"
         className=" mb-2 text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
-        aria-label="MT AG"
+        aria-label="MT Part of Hyand"
       >
         <div className="">
-          <MTLogo className="h-[48px] w-auto " />
+          <HyandLogo className="h-[48px] w-auto " />
         </div>
       </a>
     </div>
     <div className="flex justify-between py-4">
       <div>
-        <p className="mb-5 mt-3">MT GmbH</p>
+        <p className="mb-5 mt-3">MT Part of Hyand</p>
         <p className="mb-2">Balcke-Dürr-Allee 9</p>
         <p className="mb-2">40882 Ratingen</p>
         <p className="mt-5 mb-2">Phone: +49 2102 30961-0</p>
         <p className="mb-5">Fax: +49 2102 30961-101</p>
-        <p>Info@mt-itsolutions.com</p>
+        <p>Info@hyand.com</p>
       </div>
       <div className="grid grid-cols-1 space-y-4 md:grid-cols-2 md:space-y-0 md:space-x-12">
         <div>
@@ -65,16 +65,16 @@ const Footer = () => (
       </div>
     </div>
     <div className="mb-8 flex justify-between pt-4 text-sm">
-      <div className="">{`© ${new Date().getFullYear()} • MT GmbH`}</div>
+      <div className="">{`© ${new Date().getFullYear()} • MT Part of Hyand`}</div>
       <div className="flex">
         <a
-          href="https://www.mt-itsolutions.com/impressum/"
+          href="https://www.hyand.com/impressum/"
           className="u-footer-link"
         >
           Legal Notice
         </a>
         <a
-          href="https://www.mt-itsolutions.com/datenschutz/"
+          href="https://www.hyand.com/datenschutz/"
           className="u-footer-link"
         >
           Data protection declaration

@@ -179,7 +179,7 @@ const NewsletterModal = () => {
                             <p className="font-light text-zinc-400">
                               More information can be found in our{' '}
                               <a
-                                href="https://www.mt-itsolutions.com/datenschutz/"
+                                href="https://www.hyand.com/datenschutz/"
                                 className="text-zinc-200 hover:underline focus:text-zinc-400"
                               >
                                 privacy policy
