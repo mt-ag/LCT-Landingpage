@@ -61,7 +61,7 @@ Worksheets can be restored under Administration -> Deleted Workspaces.
 
 Our biggest feature in this release is that we have changed the way backend communication works. We have moved from Node Oracle DB to secure REST endpoints. This way we do not need to know the credentials to the database where LCT is installed to enable communication. The database and server can also be in different environments, such as the cloud. And we also have one dependency less. 
 
-The way the backend communication works is that our test definition is stored in an Oracle database which runs the LCT instance and then via REST the definition is sent to the nodejs backend server which then executes the test.  The result is then sent back to the DB via REST.
+The way the backend communication works is that our test definition is stored in an Oracle database which runs the LCT instance and then via REST the definition is sent to the Node.js backend server which then executes the test.  The result is then sent back to the DB via REST.
 
 One reason we did this is that in the future we want to develop REST endpoints that can provide test insights data to tools like Jira or GitHub, as the developers working with LCT are probably already using such tools to track their work and their tickets.  
 This way their project managers can get some insight into how the test ran directly in those tools and not have to look specifically at LCT. 
