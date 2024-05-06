@@ -11,9 +11,11 @@ const Footer = () => (
         className=" mb-2 text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
         aria-label="MT Part of Hyand"
+        target="_blank"
+        rel="noreferrer"
       >
         <div className="">
-          <HyandLogo className="h-[48px] w-auto " />
+          <HyandLogo className="h-[32px] w-auto " />
         </div>
       </a>
     </div>
@@ -38,6 +40,8 @@ const Footer = () => (
             <a
               className="u-footer-link"
               href="https://apex.mt-itsolutions.com/"
+              target="_blank"
+              rel="noreferrer"
             >
               apex.mt-itsolutions.com
             </a>
@@ -49,6 +53,8 @@ const Footer = () => (
             <a
               className="u-footer-link"
               href="https://twitter.com/LowCodeTesting"
+              target="_blank"
+              rel="noreferrer"
             >
               Twitter
             </a>
@@ -57,6 +63,8 @@ const Footer = () => (
             <a
               className="u-footer-link"
               href="https://www.youtube.com/channel/UCWj_laDAKjgRaw4SjEdVyIA"
+              target="_blank"
+              rel="noreferrer"
             >
               YouTube
             </a>
@@ -70,12 +78,16 @@ const Footer = () => (
         <a
           href="https://www.hyand.com/impressum/"
           className="u-footer-link"
+          target="_blank"
+          rel="noreferrer"
         >
           Legal Notice
         </a>
         <a
           href="https://www.hyand.com/datenschutz/"
           className="u-footer-link"
+          target="_blank"
+          rel="noreferrer"
         >
           Data protection declaration
         </a>

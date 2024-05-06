@@ -41,7 +41,7 @@ const Header = () => {
         <a
           href="https://www.youtube.com/@lct-apex"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           className="rounded px-2 py-1 text-slate-300 transition-colors hover:bg-mt-old-blue/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:hover:bg-slate-700/70"
         >
           Videos
@@ -67,6 +67,8 @@ const Header = () => {
           href="https://www.hyand.com/"
           className="hidden px-2 focus:outline-none focus:ring focus:ring-cyan-500/50 lg:block"
           aria-label="MT Part of Hyand"
+          target="_blank"
+          rel="noreferrer"
         >
           <div>
             <HyandLogo className="h-[24px] w-auto " />
