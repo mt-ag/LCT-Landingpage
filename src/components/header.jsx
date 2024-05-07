@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/outline';
-import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
+import HyandLogo from '../svgs/mt_logo_partof_rgb_neg.svg';
 import LCTLogo from '../svgs/lct-logo.svg';
 import useDarkmodeStore from '../store/useDarkmodeStore';
 import '../styles/headerStyles.css';

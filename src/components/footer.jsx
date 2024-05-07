@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
+import HyandLogo from '../svgs/mt_logo_partof_rgb_neg.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
@@ -15,13 +15,13 @@ const Footer = () => (
         rel="noreferrer"
       >
         <div className="">
-          <HyandLogo className="h-[32px] w-auto " />
+          <HyandLogo className="h-[45px] w-auto " />
         </div>
       </a>
     </div>
     <div className="flex justify-between py-4">
       <div>
-        <p className="mb-5 mt-3">MT Part of Hyand</p>
+        <p className="mb-5 mt-3">Hyand Solutions GmbH</p>
         <p className="mb-2">Balcke-Dürr-Allee 9</p>
         <p className="mb-2">40882 Ratingen</p>
         <p className="mt-5 mb-2">Phone: +49 2102 30961-0</p>
@@ -73,7 +73,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="mb-8 flex justify-between pt-4 text-sm">
-      <div className="">{`© ${new Date().getFullYear()} • MT Part of Hyand`}</div>
+      <div className="">{`© ${new Date().getFullYear()} • Hyand Solutions GmbH`}</div>
       <div className="flex">
         <a
           href="https://www.hyand.com/impressum/"
