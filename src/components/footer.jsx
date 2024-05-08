@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import HyandLogo from '../svgs/mt_logo_partof_rgb_neg.svg';
+import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
