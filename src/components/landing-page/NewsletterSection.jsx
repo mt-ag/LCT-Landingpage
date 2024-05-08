@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import useNewsletterStore from '../../store/newsletterStore';
-import ImageGetter from '../ImageGetter';
 
 const NewsletterSection = () => {
   const { open, setEmail, email } = useNewsletterStore();

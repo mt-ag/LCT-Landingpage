@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import MTLogo from '../../svgs/mt-logo.svg';
+import HyandLogo from '../../svgs/hyand_logo_rgb_all_white.svg';
 import LCTLogo from '../../svgs/lct-logo.svg';
 
 const LandingHeader = () => (
@@ -31,13 +31,15 @@ const LandingHeader = () => (
     </div>
     <div className="flex items-center">
       <a
-        href="https://www.mt-itsolutions.com/"
+        href="https://www.hyand.com/"
         className="mr-0 ml-auto flex text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
-        aria-label="MT AG"
+        aria-label="MT Part of Hyand"
+        target="_blank"
+        rel="noreferrer"
       >
         <div className="">
-          <MTLogo className="h-[28px] w-auto " />
+          <HyandLogo className="h-[28px] w-auto " />
         </div>
       </a>
     </div>

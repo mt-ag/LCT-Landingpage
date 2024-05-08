@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/outline';
-import MTLogo from '../svgs/mt-logo.svg';
+import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
 import LCTLogo from '../svgs/lct-logo.svg';
 import useDarkmodeStore from '../store/useDarkmodeStore';
 import '../styles/headerStyles.css';
@@ -41,7 +41,7 @@ const Header = () => {
         <a
           href="https://www.youtube.com/@lct-apex"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
           className="rounded px-2 py-1 text-slate-300 transition-colors hover:bg-mt-old-blue/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:hover:bg-slate-700/70"
         >
           Videos
@@ -64,12 +64,14 @@ const Header = () => {
           )}
         </button>
         <a
-          href="https://www.mt-itsolutions.com/"
+          href="https://www.hyand.com/"
           className="hidden px-2 focus:outline-none focus:ring focus:ring-cyan-500/50 lg:block"
-          aria-label="MT AG"
+          aria-label="MT Part of Hyand"
+          target="_blank"
+          rel="noreferrer"
         >
           <div>
-            <MTLogo className="h-[28px] w-auto " />
+            <HyandLogo className="h-[24px] w-auto " />
           </div>
         </a>
       </div>
