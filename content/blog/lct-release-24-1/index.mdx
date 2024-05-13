@@ -1,0 +1,96 @@
+---
+title: >
+  New Release: LCT 24.1
+date: 2024-05-03
+description: >
+  Date Picker Step, Single Checkbox Step and more.
+slug: lct-release-24-1
+titleImage: ./Release-24.1.jpg
+titleImageAlt: 'Release 24.1 of LCT'
+titleImageSource: { text: null, href: null }
+tags: ['Release', 'Video']
+authors: ['llenffer']
+---
+
+## New Features
+
+We've also recorded a YouTube video that shows all the new features in action.
+
+<YouTube videoID="uJ6kEs2a4bU" />
+
+### Date Picker Step
+The date picker step allows you to easily test any input made with a date picker. This is not limited to the latest date picker, the step can be used with any date picker that exists in APEX since 20.2 (the lowest release we support). 
+If the developer has given the date picker a specific format mask, this will also be displayed in the LCT step. 
+
+Our goal with LCT is to provide as many steps as possible for each APEX component, so that you can easily test them with just one step. 
+Even if LCT does not provide you with a dedicated step, you can still test your entire APEX application, this just makes it much faster and easier. 
+
+<Image
+  filename="datepicker_step.png"
+  alt="A modal page with the heading 'Step: setDatePicker'. On the left you can select a page item or an interactive grid column where the date picker is located. Depending on the item selected, a format mask is displayed."
+/>
+
+### Single Checkbox Step
+
+This step is not a new step, but an extension of the existing Check Options step. Previously this step could be used to test checkbox groups and radio groups. And as you may remember, before 20.2 this was all that was available in APEX. But since then the single checkbox has been added in APEX and is now also available for testing via LCT.
+
+​
+Just as with the date picker, you could test single checkboxes in APEX before this step existed. But this required a few more steps and you needed a different approach depending on the way the single checkbox is implemented. This can be done as
+- a page item
+- as an interactive grid column, where the value of the cell is either the checked or unchecked value assigned to the single checkbox
+- as an interactive grid column, where the value of the cell is **not** equal to either the checked or unchecked value assigned to the checkbox (e.g. the value of the cell is null, the checked value is 1 and the unchecked value is 0). The checkbox is not displayed by default, but only when you click on the cell. 
+
+You would need to click on the item a different number of times in each scenario to get it checked. So you need a different number/type of steps in LCT. But with the single checkbox step you don't have to worry about that, all the different scenarios are covered in the step.
+
+<Image
+  filename="single_checkbox_step.png"
+  alt="A modal page with the heading 'Step: checkOption'. On the left you can select a page item or an interactive grid column where the date picker is located. Depending on the item selected, an option name is displayed and the user can choose to tick or untick the checkbox."
+/>
+
+### Soft Delete
+
+Worksheets are at the heart of the application and encapsulate steps and cases. So when you delete a worksheet, you delete a lot of input data and also results and statistics about or involving that worksheet. 
+Now, when you delete a worksheet, it is only soft deleted, which means you can always restore it if you find you need some of that data again.
+Worksheets can be restored under Administration -> Deleted Workspaces. 
+
+<Image
+  filename="soft-delete.png"
+  alt="Interactive Grid on the page Deleted Workspaces"
+/>
+
+### REST Backend
+
+Our biggest feature in this release is that we have changed the way backend communication works. We have moved from Node Oracle DB to secure REST endpoints. This way we do not need to know the credentials to the database where LCT is installed to enable communication. The database and server can also be in different environments, such as the cloud. And we also have one dependency less. 
+
+The way the backend communication works is that our test definition is stored in an Oracle database which runs the LCT instance and then via REST the definition is sent to the Node.js backend server which then executes the test.  The result is then sent back to the DB via REST.
+
+One reason we did this is that in the future we want to develop REST endpoints that can provide test insights data to tools like Jira or GitHub, as the developers working with LCT are probably already using such tools to track their work and their tickets.  
+This way their project managers can get some insight into how the test ran directly in those tools and not have to look specifically at LCT. 
+
+<Image
+  filename="REST-new-release.jpg"
+  alt="A diagram of how the backend communication works"
+/>
+
+### Custom email procedure
+
+LCT has the ability to send automatic mails with updates etc. The execution is described [here](https://lct.software/blog/test-suite-email-notifications). 
+So far, mails have always been sent via *apex_mail.send*, but if you use a different procedure to send mails in your APEX instance, you can enter it here. Mails will then be sent using this procedure. 
+
+<Image filename="custom_mail_procedure.png" alt="Modal Dialog on Settings Page, where the user can insert a custom mail procedure" />
+
+### Other improvements
+
+- We have made some UI enhancements
+- We have adapted LCT to changes made in Playwright
+- We found and fixed some bugs.
+
+## What's next?
+
+- We want to provide the above mentioned REST endpoints to be used with Jira, GitHub etc.
+- We are currently researching test coverage and what metrics we want to show in LCT. The results will find their way into LCT.
+- We want to add more templates/allow users to add their own templates. 
+
+## Get in contact
+
+Interested in LCT or have inquiries? [Feel free to reach out to us](https://lct.software/#contact). You can also subscribe to our newsletter below or explore our [pricing details](https://lct.software/#pricing).
