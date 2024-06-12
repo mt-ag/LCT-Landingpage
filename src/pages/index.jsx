@@ -93,10 +93,8 @@ const IndexPage = ({ data }) => {
           <InfoHeader />
         </div>
       </div>
-      <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue pb-32 pt-16">
-        <div className="mx-auto max-w-4xl ">
-          <NewsletterSection />
-        </div>
+      <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue pb- pt-16">
+        <div className="mx-auto max-w-4xl " />
       </div>
       <div className="">
         <Content allYoutubeVideo={data.allYoutubeVideo} posts={data.posts} />
