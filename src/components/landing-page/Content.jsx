@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 
 const Content = ({ allYoutubeVideo, posts }) => (
   <div className="pb-16 lg:pb-32">
-    <div className="h-[600px] w-full bg-mt-old-blue  pt-4 md:h-[400px] lg:pt-8" />
+    <div className="h-[600px] w-full pt-4 md:h-[400px] lg:pt-8" />
     <div className="mx-6 mt-[-600px]  md:mt-[-400px]">
       <h2 className="mx-auto mb-12 w-5/6 text-center text-2xl font-extrabold tracking-tight text-white lg:w-full lg:text-5xl">
         More about LCT from the Team
@@ -20,7 +20,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   href={`https://www.youtube.com/watch?v=${video.videoId}`}
                   target="_blank"
                   rel="noopener"
-                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-mt-blue"
+                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-hyand-blue"
                 >
                   <div className="">
                     <GatsbyImage
@@ -47,13 +47,13 @@ const Content = ({ allYoutubeVideo, posts }) => (
           <div className="mt-5 text-center">
             <a
               href="https://www.youtube.com/@lct-apex"
-              className="rounded px-2 py-1 text-slate-700 underline hover:text-mt-blue/70 focus:outline-none focus:ring-1 focus:ring-mt-old-blue"
+              className="rounded px-2 py-1 text-slate-700 underline hover:text-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
             >
               Subscribe to our channel
             </a>
           </div>
         </div>
-        <div className="w-full rounded-lg bg-white p-4 shadow-md  ">
+        <div className="w-full rounded-lg bg-white p-4 shadow-md">
           <h3 className="mb-5 text-xl font-medium text-black">Blog</h3>
           <ul>
             {posts.nodes.map((post) => (
@@ -87,7 +87,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
           <div className="mt-5 text-center">
             <Link
               to="/blog"
-              className="rounded px-2 py-1 text-slate-700 underline hover:text-mt-blue/70 focus:outline-none focus:ring-1 focus:ring-mt-old-blue"
+              className="rounded px-2 py-1 text-slate-700 underline hover:text-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
             >
               All Posts
             </Link>

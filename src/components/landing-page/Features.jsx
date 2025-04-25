@@ -14,10 +14,10 @@ const FeatureDisplay = ({ reverse = false, imgComp, header, body }) => (
       {imgComp}
     </div>
     <div className="mx-auto mt-4 w-5/6 flex-1 lg:my-auto">
-      <h3 className="text-2xl font-semibold text-zinc-800 lg:text-4xl">
+      <h3 className="text-2xl font-semibold lg:text-4xl">
         {header}
       </h3>
-      <p className="mt-2 text-base text-zinc-600 lg:text-xl">{body}</p>
+      <p className="mt-2 text-base lg:text-xl">{body}</p>
     </div>
   </div>
 );
@@ -36,7 +36,7 @@ FeatureDisplay.defaultProps = {
 const Features = () => (
   <div className="mb-16 mt-8 lg:mb-32 lg:mt-16">
     <div className="pb-8 lg:pb-16">
-      <h2 className="mx-auto w-5/6 text-center text-2xl font-extrabold tracking-tight text-zinc-900 lg:w-full lg:text-5xl">
+      <h2 className="mx-auto w-5/6 text-center text-2xl font-extrabold tracking-tight text-white lg:w-full lg:text-5xl">
         An APEX App to test APEX Apps
       </h2>
     </div>

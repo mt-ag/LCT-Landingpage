@@ -27,7 +27,7 @@ module.exports = {
           'Times',
           'serif',
         ],
-        mt: ['Hyand Px Grotesk', 'Arial', 'Helvetica', 'sans-serif'],
+        hyand: ['Hyand Px Grotesk', 'Arial', 'Helvetica', 'sans-serif'],
       },
     },
   },

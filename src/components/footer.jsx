@@ -4,7 +4,7 @@ import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
-  <footer className="grid grid-cols-1 divide-y divide-white/30 bg-mt-blue py-4 px-4 text-sm font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
+  <footer className="grid grid-cols-1 divide-y divide-white/30 py-4 px-4 text-sm font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
     <div className="mt-8 flex justify-between pb-8">
       <a
         href="https://www.hyand.com/"

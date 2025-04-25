@@ -83,9 +83,9 @@ const IndexPage = ({ data }) => {
   });
 
   return (
-    <div className="flex flex-col bg-zinc-200 font-mt">
+    <div className="flex flex-col bg-hyand-black font-hyand text-white">
       <SEO title="Low Code Testing for Oracle APEX" meta={meta} home />
-      <div className="bg-mt-blue pb-8 lg:pb-0">
+      <div className="pb-8 lg:pb-0">
         <div className="mx-auto max-w-6xl lg:px-8">
           <LandingHeader />
         </div>
@@ -93,25 +93,29 @@ const IndexPage = ({ data }) => {
           <InfoHeader />
         </div>
       </div>
-      <div className="bg-gradient-to-b from-mt-blue to-mt-old-blue pb- pt-16">
-        <div className="mx-auto max-w-4xl " />
+      <div className="pt-16">
+        <div className="mx-auto max-w-4xl" />
       </div>
-      <div className="">
+      <div>
         <Content allYoutubeVideo={data.allYoutubeVideo} posts={data.posts} />
       </div>
       <div className="mx-auto lg:w-2/3">
         <Features />
       </div>
-      <div className="bg-gradient-to-b from-zinc-100 to-white">
+      <div>
         <Offer />
       </div>
-      <div className="bg-gradient-to-b from-zinc-200 to-zinc-100">
+      <div style={{ backgroundColor: '#22282B' }}>
         <div className="mx-auto max-w-7xl lg:px-8">
           <Contact />
         </div>
       </div>
       <NewsletterModal />
-      <Footer />
+      <div>
+        <div className="mx-auto max-w-7xl">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

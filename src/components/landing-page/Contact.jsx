@@ -16,7 +16,7 @@ const Contact = () => {
     <>
       <h2
         id="contact"
-        className="pt-8 text-center text-3xl font-extrabold tracking-tight text-zinc-900 lg:pt-16 lg:text-5xl"
+        className="pt-8 text-center text-3xl font-extrabold tracking-tight lg:pt-16 lg:text-5xl"
       >
         Contact
       </h2>
@@ -29,7 +29,7 @@ const Contact = () => {
             sizes="20vw"
           />
           <div className="mt-4 sm:mt-0">
-            <p className="text-2xl font-semibold tracking-tight text-mt-blue lg:text-3xl">
+            <p className="text-2xl font-semibold tracking-tight text-hyand-blue lg:text-3xl">
               Kai Donato
             </p>
             <p className="mt-2 text-zinc-700">Product Manager LCT</p>

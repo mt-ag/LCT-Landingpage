@@ -259,7 +259,7 @@ const Offer = () => {
           <div className="text-center">
             <h2
               id="pricing"
-              className="text-3xl font-extrabold text-zinc-900 sm:text-4xl lg:text-5xl"
+              className="text-3xl font-extrabold sm:text-4xl lg:text-5xl"
             >
               Pricing
             </h2>
