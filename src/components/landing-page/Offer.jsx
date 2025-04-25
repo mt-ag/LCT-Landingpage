@@ -42,7 +42,7 @@ const PriceBlock = () => {
   return (
     <div className="rounded-3xl bg-white p-8 ring-2 ring-mt-blue/75 xl:p-10">
       <div className="flex items-center justify-between gap-x-4">
-        <h3 className="text-lg font-semibold leading-8 text-mt-old-blue">
+        <h3 className="text-lg font-semibold leading-8 text-black">
           {noSupport ? 'LCT Usage Fee (no Support)' : 'LCT With Support Hours'}
         </h3>
       </div>
@@ -144,7 +144,7 @@ const WorkshopBlock = () => {
   return (
     <div className="rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10">
       <div className="flex items-center justify-between gap-x-4">
-        <h3 className="text-lg font-semibold leading-8 text-gray-900">
+        <h3 className="text-lg font-semibold leading-8 text-black">
           Jump Start Workshop
         </h3>
 

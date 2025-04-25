@@ -7,7 +7,6 @@ module.exports = {
         'mt-blue': '#00476f',
         'mt-green': '#6ba055',
         'mt-darkgreen': '#436e5e',
-        'mt-old-blue': '#0073aa',
         'hyand-black': '#000000',
         'hyand-blue': '#0092e1',
         'hyand-green': '#00c48d',
