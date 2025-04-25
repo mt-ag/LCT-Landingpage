@@ -36,7 +36,7 @@ const Header = () => {
           to="/blog"
           className="rounded px-2 py-1 text-slate-300 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
         >
-          Blog
+          /blog
         </Link>
         <a
           href="https://www.youtube.com/@lct-apex"
@@ -44,7 +44,7 @@ const Header = () => {
           rel="noreferrer"
           className="rounded px-2 py-1 text-slate-300 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
         >
-          Videos
+          /videos
         </a>
       </div>
       <div className="flex items-center">

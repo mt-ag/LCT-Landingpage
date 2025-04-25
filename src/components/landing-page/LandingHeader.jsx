@@ -17,7 +17,7 @@ const LandingHeader = () => (
         to="/blog"
         className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
       >
-        Blog
+        /blog
       </Link>
 
       <a
@@ -26,7 +26,7 @@ const LandingHeader = () => (
         rel="noopener"
         className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
       >
-        Videos
+        /videos
       </a>
     </div>
     <div className="flex items-center">
