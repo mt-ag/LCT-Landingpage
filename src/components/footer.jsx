@@ -39,11 +39,11 @@ const Footer = () => (
           <p>
             <a
               className="u-footer-link"
-              href="https://apex.mt-itsolutions.com/"
+              href="https://apex.hyand.com/"
               target="_blank"
               rel="noreferrer"
             >
-              apex.mt-itsolutions.com
+              apex.hyand.com
             </a>
           </p>
         </div>
