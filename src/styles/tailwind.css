@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #0092e1;
+  color: white;
+}
+
 html {
   @apply bg-zinc-200 antialiased;
 }
