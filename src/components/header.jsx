@@ -20,10 +20,10 @@ const Header = () => {
   });
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-mt-blue px-1 backdrop-blur dark:border-slate-800 dark:bg-slate-800/75 md:p-3 lg:px-4">
+    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-white px-1 backdrop-blur dark:border-slate-800 dark:bg-hyand-black md:p-3 lg:px-4">
       <div className="flex items-center space-x-5">
         <Link
-          className="rounded px-2 py-1 font-bold text-zinc-200 transition-colors hover:bg-mt-old-blue/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-cyan-200 dark:hover:bg-slate-700/70"
+          className="rounded px-2 py-1 font-bold text-zinc-200 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
           to="/"
         >
           <div className="flex items-center">
@@ -34,7 +34,7 @@ const Header = () => {
         </Link>
         <Link
           to="/blog"
-          className="rounded px-2 py-1 text-slate-300 transition-colors hover:bg-mt-old-blue/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:hover:bg-slate-700/70"
+          className="rounded px-2 py-1 text-slate-300 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
         >
           Blog
         </Link>
@@ -42,7 +42,7 @@ const Header = () => {
           href="https://www.youtube.com/@lct-apex"
           target="_blank"
           rel="noreferrer"
-          className="rounded px-2 py-1 text-slate-300 transition-colors hover:bg-mt-old-blue/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:hover:bg-slate-700/70"
+          className="rounded px-2 py-1 text-slate-300 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
         >
           Videos
         </a>

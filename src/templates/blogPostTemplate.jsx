@@ -109,9 +109,9 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} meta={meta} blog />
-      <div className="flex flex-grow bg-zinc-50 dark:bg-slate-900">
-        <article className="m-auto flex-row-reverse bg-white px-2 pb-6 pt-4 shadow dark:bg-slate-800/30 lg:flex lg:px-8 lg:pt-12">
-          <div className="flex-grow border-zinc-200 dark:border-slate-700/40 lg:w-[330px] lg:border-l lg:pl-6">
+      <div className="flex flex-grow bg-white dark:bg-hyand-black">
+        <article className="m-auto flex-row-reverse bg-white px-2 pb-6 pt-4 shadow dark:bg-hyand-black lg:flex lg:px-8 lg:pt-12">
+          <div className="flex-grow border-black dark:border-hyand-border-blue lg:w-[330px] lg:border-l lg:pl-6">
             <div className="prose prose-slate mb-5 flex h-full flex-col px-2 dark:prose-invert lg:prose-lg dark:prose-p:text-slate-300 dark:prose-li:text-slate-300 md:px-4 lg:mb-0 lg:px-0">
               <div className="flex-grow text-zinc-700 dark:text-slate-300">
                 <PostStats
@@ -170,7 +170,7 @@ const BlogPostTemplate = ({ data }) => {
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </main>
-            <div className="mt-16 border-t border-zinc-200 pt-16 dark:border-slate-700/40">
+            <div className="mt-16 border-t border-black pt-16 dark:border-hyand-border-blue">
               <BlogNewsletterPrompt />
             </div>
           </div>

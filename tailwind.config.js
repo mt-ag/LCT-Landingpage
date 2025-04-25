@@ -13,6 +13,7 @@ module.exports = {
         'hyand-green': '#00c48d',
         'hyand-yellow': '#f0eb83',
         'hyand-red': '#e94f35',
+        'hyand-border-blue': '#005380',
       },
       spacing: {
         124: '32rem',
