@@ -19,7 +19,7 @@ module.exports = {
       },
       fontFamily: {
         'bold-header': [
-          '"IBM Plex Serif"',
+          '"Hyand Px Grotesk Mono"',
           'ui-serif',
           'Georgia',
           'Cambria',
