@@ -1,7 +1,8 @@
 import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/outline';
-import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
+import HyandLogoWhite from '../svgs/hyand_logo_rgb_all_white.svg';
+import HyandLogoPos from '../svgs/hyand_logo_rgb_pos.svg';
 import LCTLogo from '../svgs/lct-logo.svg';
 import useDarkmodeStore from '../store/useDarkmodeStore';
 import '../styles/headerStyles.css';
@@ -20,21 +21,21 @@ const Header = () => {
   });
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between border-b border-zinc-200 bg-white px-1 backdrop-blur dark:border-slate-800 dark:bg-hyand-black md:p-3 lg:px-4">
+    <header className="sticky top-0 z-50 flex justify-between bg-white px-1 backdrop-blur dark:bg-hyand-black md:p-3 lg:px-4">
       <div className="flex items-center space-x-5">
         <Link
-          className="rounded px-2 py-1 font-bold text-zinc-200 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
+          className="px-2 py-1 font-bold text-black transition-colors dark:text-white dark:hover:text-hyand-blue dark:focus:text-hyand-blue"
           to="/"
         >
           <div className="flex items-center">
             <LCTLogo className="mr-2 h-[32px] w-auto" />
-            <span className="hidden text-xl md:block ">Low Code Testing</span>
+            <span className="hidden text-xl md:block">Low Code Testing</span>
             <span className="text-xl md:hidden">LCT</span>
           </div>
         </Link>
         <Link
           to="/blog"
-          className="rounded px-2 py-1 text-slate-300 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
+          className="px-2 py-1 text-black transition-colors dark:text-white dark:hover:text-hyand-blue"
         >
           /blog
         </Link>
@@ -42,7 +43,7 @@ const Header = () => {
           href="https://www.youtube.com/@lct-apex"
           target="_blank"
           rel="noreferrer"
-          className="rounded px-2 py-1 text-slate-300 transition-colors focus:outline-none focus:ring focus:ring-cyan-500/50 dark:text-white dark:hover:text-hyand-blue"
+          className="px-2 py-1 text-black transition-colors dark:text-white dark:hover:text-hyand-blue"
         >
           /videos
         </a>
@@ -53,8 +54,8 @@ const Header = () => {
           onClick={toggleDarkMode}
           title={`switch to ${isDark ? 'light' : 'dark'} mode`}
           className={classNames(
-            'mr-6 rounded px-2 py-1  text-slate-400 hover:bg-mt-old-blue/50 focus:outline-none focus:ring focus:ring-cyan-500/50 dark:hover:bg-slate-700/70',
-            'transition-colors duration-300 hover:text-indigo-300 dark:hover:text-amber-400'
+            'mr-6 px-2 py-1 text-black hover:text-hyand-blue focus:text-hyand-blue',
+            'transition-colors duration-300 dark:text-white dark:hover:text-hyand-blue dark:focus:text-hyand-blue'
           )}
         >
           {isDark ? (
@@ -71,7 +72,11 @@ const Header = () => {
           rel="noreferrer"
         >
           <div>
-            <HyandLogo className="h-[24px] w-auto " />
+            {isDark ? (
+              <HyandLogoWhite className="h-[24px] w-auto" />
+            ) : (
+              <HyandLogoPos className="h-[24px] w-auto" />
+            )}
           </div>
         </a>
       </div>

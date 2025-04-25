@@ -15,7 +15,7 @@ const LandingHeader = () => (
       </div>
       <Link
         to="/blog"
-        className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
+        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
       >
         /blog
       </Link>
@@ -24,7 +24,7 @@ const LandingHeader = () => (
         href="https://www.youtube.com/@lct-apex"
         target="_blank"
         rel="noopener"
-        className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
+        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
       >
         /videos
       </a>
