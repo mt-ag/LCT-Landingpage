@@ -22,7 +22,7 @@ module.exports = {
           'Times',
           'serif',
         ],
-        mt: ['Manrope', 'Arial', 'Helvetica', 'sans-serif'],
+        mt: ['Hyand Px Grotesk', 'Arial', 'Helvetica', 'sans-serif'],
       },
     },
   },
