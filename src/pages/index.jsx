@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
         <div className="mx-auto lg:px-8">
           <LandingHeader />
         </div>
-        <div className="mx-auto mt-16 xl:w-2/3">
+        <div className="mx-auto mt-3 xl:w-2/3">
           <InfoHeader />
         </div>
       </div>
@@ -105,7 +105,7 @@ const IndexPage = ({ data }) => {
       <div>
         <Offer />
       </div>
-      <div style={{ backgroundColor: '#22282B' }}>
+      <div style={{ backgroundColor: '#0000' }}>
         <div className="mx-auto max-w-7xl lg:px-8">
           <Contact />
         </div>

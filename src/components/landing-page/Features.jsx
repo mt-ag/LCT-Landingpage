@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import LiveLogGif from '../../gifs/lct-live-log-demo.gif';
-import Metadata from '../../svgs/lct-metadata-driven.svg';
 import ImageGetter from '../ImageGetter';
 
 const FeatureDisplay = ({ reverse = false, imgComp, header, body }) => (
   <div
-    className={`flex flex-col gap-x-12 ${
+    className={`flex flex-col gap-x-12 mb-20 ${
       reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
     }`}
   >
@@ -14,10 +13,10 @@ const FeatureDisplay = ({ reverse = false, imgComp, header, body }) => (
       {imgComp}
     </div>
     <div className="mx-auto mt-4 w-5/6 flex-1 lg:my-auto">
-      <h3 className="text-2xl font-semibold lg:text-4xl">
+      <h3 className="text-6xl font-thin lg:text-6xl">
         {header}
       </h3>
-      <p className="mt-2 text-base lg:text-xl">{body}</p>
+      <p className="mt-2 text-base lg:text-l">{body}</p>
     </div>
   </div>
 );
@@ -35,21 +34,29 @@ FeatureDisplay.defaultProps = {
 
 const Features = () => (
   <div className="mb-16 mt-8 lg:mb-32 lg:mt-16">
-    <div className="pb-8 lg:pb-16">
-      <h2 className="mx-auto w-5/6 text-center text-2xl font-extrabold tracking-tight text-white lg:w-full lg:text-5xl">
-        An APEX App to test APEX Apps
+    <div className="pb-8 lg:pb-16 mb-25">
+      <h2 className="mx-auto w-5/6 text-center text-6xl font-light tracking-tight text-white lg:w-full lg:text-6xl">
+        Features      
       </h2>
     </div>
     <div className="mx-auto grid max-w-7xl gap-y-16">
       <FeatureDisplay
-        imgComp={<Metadata className="w-full" />}
+        imgComp={ 
+        <ImageGetter
+          filename="lct-metadata-driven-dark.png"
+          classes="block"
+          alt=""
+          quality="high"
+          sizes="65vw"
+        />
+        }
         header="No coding required"
         body="LCT provides an intuitive Low Code interface for designing Oracle APEX tests. By accessing your APEX application metadata, our user-friendly test definition wizards simplify the test creation process."
       />
       <FeatureDisplay
         imgComp={
           <ImageGetter
-            filename="lct-tailored-apex.png"
+            filename="apex_puzzle_lct.png"
             classes="block"
             alt=""
             quality="high"
@@ -63,7 +70,7 @@ const Features = () => (
       <FeatureDisplay
         imgComp={
           <ImageGetter
-            filename="lct-multi-browser.png"
+            filename="lct-multi-browser-dark.png"
             classes="block"
             alt="LCT supports Browsers like Edge, Firefox, Safari and Chrome"
             quality="high"
@@ -76,7 +83,7 @@ const Features = () => (
       <FeatureDisplay
         imgComp={
           <ImageGetter
-            filename="lct-regressions-feature.png"
+            filename="lct-regressions-feature-dark.png"
             classes="block"
             alt=""
             quality="high"
@@ -88,7 +95,7 @@ const Features = () => (
         reverse
       />
       <FeatureDisplay
-        imgComp={<img src={LiveLogGif} alt="test output log" />}
+        imgComp={<img src={LiveLogGif} alt="test output log" className="border-2 border-hyand-blue rounded-md"/>}
         header="Extensive Reporting"
         body="From screenshots and detailed log files to comprehensive error messages - LCT is designed to provide as much information as possible. You can even follow the test execution in real-time via our LiveLog!"
       />

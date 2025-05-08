@@ -4,7 +4,7 @@ import HyandLogo from '../../svgs/hyand_logo_rgb_all_white.svg';
 import LCTLogo from '../../svgs/lct-logo.svg';
 
 const LandingHeader = () => (
-  <header className="flex justify-between py-4 px-4 lg:px-0">
+  <header className="flex justify-between py-2 px-4 lg:px-0">
     <div className="flex items-center space-x-5">
       <div className="flex items-center">
         <LCTLogo className="mr-2 h-[36px] w-auto" />
@@ -15,7 +15,7 @@ const LandingHeader = () => (
       </div>
       <Link
         to="/blog"
-        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
+        className="rounded px-2 py-0.5 text-white hover:text-hyand-blue focus:text-hyand-blue"
       >
         /blog
       </Link>
@@ -24,7 +24,7 @@ const LandingHeader = () => (
         href="https://www.youtube.com/@lct-apex"
         target="_blank"
         rel="noopener"
-        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
+        className="rounded px-2 py-0.5 text-white hover:text-hyand-blue focus:text-hyand-blue"
       >
         /videos
       </a>

@@ -58,7 +58,7 @@ const PriceBlock = () => {
           max="100"
           value={sliderVal}
           onChange={handleSlider}
-          className="x-accent-color h-2 w-full cursor-ew-resize appearance-none rounded-full bg-gray-200 disabled:cursor-not-allowed"
+          className="hyand-blue h-2 w-full cursor-ew-resize appearance-none rounded-full bg-gray-200 disabled:cursor-not-allowed"
         />
         <div className="-mt-1 flex w-full justify-between">
           <span className="text-sm text-white">0</span>
@@ -78,7 +78,7 @@ const PriceBlock = () => {
         {features.map((feature) => (
           <li key={feature} className="flex gap-x-3">
             <CheckCircleIcon
-              className="h-6 w-5 flex-none text-mt-green"
+              className="h-6 w-5 flex-none text-hyand-green"
               aria-hidden="true"
             />
             {feature}
@@ -142,7 +142,7 @@ const WorkshopBlock = () => {
   }
 
   return (
-    <div className="rounded-3xl p-8 ring-1 ring-gray-200 xl:p-10">
+    <div className="rounded-3xl p-8 ring-2 ring-hyand-blue xl:p-10">
       <div className="flex items-center justify-between gap-x-4">
         <h3 className="text-lg font-semibold leading-8 text-white">
           Jump Start Workshop
@@ -200,7 +200,7 @@ const WorkshopBlock = () => {
         {basicWsFeatures.map((feature) => (
           <li key={feature} className="flex gap-x-3">
             <CheckCircleIcon
-              className="h-6 w-5 flex-none text-mt-green"
+              className="h-6 w-5 flex-none text-hyand-green"
               aria-hidden="true"
             />
             {feature}
@@ -216,7 +216,7 @@ const WorkshopBlock = () => {
               }`}
             >
               <CheckCircleIcon
-                className="h-6 w-5 flex-none text-mt-green"
+                className="h-6 w-5 flex-none text-hyand-green"
                 aria-hidden="true"
               />
               {feature}
@@ -232,7 +232,7 @@ const WorkshopBlock = () => {
               }`}
             >
               <CheckCircleIcon
-                className="h-6 w-5 flex-none text-mt-green"
+                className="h-6 w-5 flex-none text-hyand-green"
                 aria-hidden="true"
               />
               {feature}
@@ -279,20 +279,24 @@ const Offer = () => {
           per hour (can vary).
         </div>
 
-        <div className="mx-6 mt-12 text-center lg:mx-0">
-          <a
-            className="text-gray-300 underline hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-mt-blue focus:ring-offset-2 focus:ring-offset-white"
-            href="https://apex.mt-itsolutions.com/ords/f?p=APEXSUPPORT:3:0&p_lang=en"
-          >
-            We also offer consulting services to help with any APEX related
-            questions including testing.
-          </a>
+        {/* Outer div for centering */}
+        <div className="mx-6 mt-12 flex justify-center lg:mx-0">
+          {/* Inner div that tightly wraps content */}
+          <div className="inline-flex items-center rounded-xl border border-2 border-hyand-yellow">
+            <a
+              className="px-2 py-1.5 text-center text-hyand-yellow hover:text-hyand-yellow/80 text-lg focus:outline-none focus:ring-2 focus:ring-hyand-blue focus:ring-offset-2 focus:ring-offset-hyand-yellow/80"
+              href="https://apex.mt-itsolutions.com/ords/f?p=APEXSUPPORT:3:0&p_lang=en"
+            >
+              We also offer consulting services to help with any APEX related
+              questions including testing &gt;
+            </a>
+          </div>
         </div>
 
         <div className="mb-24 mt-16 flex">
           <a
             href={`mailto:${email}`}
-            className="mx-auto rounded-md border border-transparent bg-mt-green px-12 py-3 text-base font-semibold text-white hover:bg-mt-green/80 focus:outline-none focus:ring-2 focus:ring-mt-darkgreen focus:ring-offset-2 focus:ring-offset-white"
+            className="mx-auto rounded-md border border-transparent bg-hyand-blue/80 px-12 py-3 text-base font-semibold text-white hover:bg-hyand-blue focus:outline-none focus:ring-2 focus:ring-hyand-green/80 focus:ring-offset-2 focus:ring-offset-white"
           >
             {email === 'loading...'
               ? email

@@ -36,7 +36,7 @@ module.exports = {
         background_color: `#38BDF8`,
         theme_color: `#38BDF8`,
         display: `minimal-ui`,
-        icon: `src/images/lct-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/LCT_Logo_pur_hyand.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-postcss`,

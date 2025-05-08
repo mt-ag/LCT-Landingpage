@@ -11,8 +11,8 @@ const Content = ({ allYoutubeVideo, posts }) => (
         More about LCT from the Team
       </h2>
       <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-y-8 px-0 md:grid-cols-2 md:gap-x-8 md:gap-y-0 md:px-8 lg:gap-x-16">
-        <div className="w-full rounded-lg bg-white p-4 shadow-md ">
-          <h3 className="mb-5 text-xl font-medium text-black">Videos</h3>
+        <div className="w-full rounded-lg bg-black p-4 shadow-md border-2 border-hyand-blue">
+          <h3 className="mb-5 text-xl font-medium text-white">Videos</h3>
           <ul>
             {allYoutubeVideo.nodes.map((video) => (
               <li key={video.videoId}>
@@ -20,7 +20,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   href={`https://www.youtube.com/watch?v=${video.videoId}`}
                   target="_blank"
                   rel="noopener"
-                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-hyand-blue"
+                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:ring-1 hover:ring-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
                 >
                   <div className="">
                     <GatsbyImage
@@ -30,7 +30,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                     />
                   </div>
                   <div className="text-slate-700">
-                    <span className="text-base font-semibold">
+                    <span className="text-base font-semibold text-white">
                       {video.title}
                     </span>
                     <time
@@ -47,20 +47,20 @@ const Content = ({ allYoutubeVideo, posts }) => (
           <div className="mt-5 text-center">
             <a
               href="https://www.youtube.com/@lct-apex"
-              className="rounded px-2 py-1 text-slate-700 underline hover:text-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
+              className="rounded px-2 py-1 text-slate-700 text-white underline hover:text-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
             >
               Subscribe to our channel
             </a>
           </div>
         </div>
-        <div className="w-full rounded-lg bg-white p-4 shadow-md">
-          <h3 className="mb-5 text-xl font-medium text-black">Blog</h3>
+        <div className="w-full rounded-lg bg-black border-2 border-hyand-blue p-4 shadow-md">
+          <h3 className="mb-5 text-xl font-medium text-white">Blog</h3>
           <ul>
             {posts.nodes.map((post) => (
               <li key={post.frontmatter.slug}>
                 <Link
                   to={`/blog/${post.frontmatter.slug}`}
-                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:bg-sky-100 focus:outline-none focus:ring-1 focus:ring-mt-blue"
+                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:ring-1 hover:ring-hyand-blue focus:outline-none focus:ring-1 focus:ring-mt-blue"
                 >
                   <div className="">
                     <GatsbyImage
@@ -70,7 +70,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                     />
                   </div>
                   <div className="text-slate-700">
-                    <span className="text-base font-semibold">
+                    <span className="text-base font-semibold text-white">
                       {post.frontmatter.title}
                     </span>
                     <time
@@ -87,7 +87,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
           <div className="mt-5 text-center">
             <Link
               to="/blog"
-              className="rounded px-2 py-1 text-slate-700 underline hover:text-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
+              className="rounded px-2 py-1 text-slate-700 text-white underline hover:text-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
             >
               All Posts
             </Link>
