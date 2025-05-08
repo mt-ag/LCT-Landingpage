@@ -60,7 +60,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
               <li key={post.frontmatter.slug}>
                 <Link
                   to={`/blog/${post.frontmatter.slug}`}
-                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:ring-1 hover:ring-hyand-blue focus:outline-none focus:ring-1 focus:ring-mt-blue"
+                  className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:ring-1 hover:ring-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
                 >
                   <div className="">
                     <GatsbyImage

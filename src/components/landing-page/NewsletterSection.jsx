@@ -32,7 +32,7 @@ const NewsletterSection = () => {
                 <button
                   onClick={() => open()}
                   type="button"
-                  className="block w-full rounded-md bg-gradient-to-r from-green-200 to-emerald-400 py-3 px-4 font-medium text-gray-900 shadow hover:from-green-400 hover:to-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-mt-blue"
+                  className="block w-full rounded-md bg-gradient-to-r from-green-200 to-emerald-400 py-3 px-4 font-medium text-gray-900 shadow hover:from-green-400 hover:to-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-hyand-blue"
                 >
                   Stay up to date
                 </button>
