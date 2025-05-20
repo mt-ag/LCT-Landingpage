@@ -67,7 +67,7 @@ const Header = () => {
         <a
           href="https://www.hyand.com/"
           className="hidden px-2 focus:outline-none focus:ring focus:ring-cyan-500/50 lg:block"
-          aria-label="MT Part of Hyand"
+          aria-label="Hyand"
           target="_blank"
           rel="noreferrer"
         >

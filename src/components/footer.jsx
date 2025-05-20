@@ -10,7 +10,7 @@ const Footer = () => (
         href="https://www.hyand.com/"
         className=" mb-2 text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
-        aria-label="MT Part of Hyand"
+        aria-label="Hyand"
         target="_blank"
         rel="noreferrer"
       >
