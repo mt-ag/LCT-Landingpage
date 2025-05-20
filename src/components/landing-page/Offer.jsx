@@ -172,7 +172,7 @@ const WorkshopBlock = () => {
                   active ? 'ring-2 ring-hyand-blue ring-offset-2' : '',
                   checked
                     ? 'bg-hyand-blue text-white hover:bg-hyand-blue/80'
-                    : 'bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50',
+                    : 'bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-white/80',
                   'flex cursor-pointer select-none items-center justify-center rounded-md px-3 py-3 text-sm font-semibold uppercase focus:outline-none sm:flex-1'
                 )
               }
