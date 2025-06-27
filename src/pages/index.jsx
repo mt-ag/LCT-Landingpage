@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import NewsletterModal from '../components/NewsletterModal';
 import Footer from '../components/footer';
 import Contact from '../components/landing-page/Contact';
 import Content, {
@@ -11,7 +10,6 @@ import Content, {
 import Features from '../components/landing-page/Features';
 import InfoHeader from '../components/landing-page/InfoHeader';
 import LandingHeader from '../components/landing-page/LandingHeader';
-import NewsletterSection from '../components/landing-page/NewsletterSection';
 import Offer from '../components/landing-page/Offer';
 import SEO from '../components/seo';
 import getHomeMeta from '../util/getHomeMeta';
@@ -110,7 +108,6 @@ const IndexPage = ({ data }) => {
           <Contact />
         </div>
       </div>
-      <NewsletterModal />
       <Footer />
     </div>
   );
