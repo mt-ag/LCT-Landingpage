@@ -1,0 +1,85 @@
+---
+title: "New Release: LCT 25.2"
+date: 2025-06-27
+description: Dashboard, Test Suite rework
+slug: lct-release-25-2
+titleImage: ./Release-25.2.png
+titleImageAlt: Release 25.2 of LCT
+titleImageSource: { text: null, href: null }
+tags: ["Release"]
+authors: ["chrisroehrs"]
+---
+
+## New Features
+
+### Dashboard
+
+Did you ever want to know how your worksheets and Test Suites perform over time?
+In this version we added a dashboard that summarizes and visualizes all recent test runs.
+
+<Image
+    filename="lct_dashboard.png"
+    alt="Dashboard of LCT showing a digram with success and failure statistics of worksheet test runs, a diagram showing the number of various test cases and a list of recently edited worksheets."
+/>
+
+On the top, you can find some key metrics about the current LCT instance:
+
+- Number of apps tested
+- Number of worksheets
+- Number of active (non-deactivated) test cases
+- Number of existing and active Test Suites
+
+Different diagrams are displayed across three tabs:
+
+- *Overall*:
+  - Executions diagram summarizes success/failure rates of all recent test executions
+  - Shows test development progress, measured by number of created and updated steps
+- *Worksheets*:
+  - Executions diagram summarizes success/failure rates of all recent worksheet executions
+  - Shows some worksheet statistics and a list of recently edited worksheets
+- *Test Suites*:
+  - Executions diagram summarizes success/failure rates of all recent Test Suite executions
+  - Shows some Test Suite statistics and a list of recently edited Test Suites
+
+On the left side there are some filters:
+
+- *Interval*: Set the time interval for the execution success/failure diagrams
+- *Worksheets*: Choose specific worksheets for all stats
+- *Applications*: Filter by worksheets that test one of the selected applications
+
+Setting a filter updates all diagrams and lists on the page.
+
+### Test Suites rework
+
+We extended our Test Suites feature to make it more powerful!
+
+<Image
+    filename="test_suite_exec_settings_1.png"
+    alt="The Test Suite details page. In the table, two worksheets were added. The first cell in the column &quot;Execution settings&quot; is highlighted."
+/>
+
+<Image
+    filename="test_suite_exec_settings_2.png"
+    alt="The &quot;Edit Execution Settings&quot; dialog page. It has two tabs &quot;Run Configuration&quot; and &quot;Execution Settings&quot;. The first tab is opened, showing a text box where the Base URL can be edited."
+/>
+
+It is now possible to define execution settings for each worksheet in a Test Suite.
+We support all settings that can also be defined on worksheet level.
+If you do not define a setting for one entry in the table, the corresponding worksheet or global setting will take priority.
+To facilitate testing with different execution settings, worksheets tested with the same engine can be added multiple times.
+
+<Image
+    filename="test_suite_activate_column.png"
+    alt="The overview page for Test Suites. There is a table with the following columns: Name, Description, Active, Successful/Total Executions, Created By and Created On. A Test Suite is listed in the table."
+/>
+
+On the overview page, Test Suites can now be edited. You can modify the name, description and the activation state directly in the grid.
+Also, we added a page where you can restore (soft-)deleted Test Suites.
+
+## Bug fixes
+
+We fixed a bunch of bugs that did occur when adding steps via the wizard or when executing worksheets.
+
+## Get in contact
+
+Interested in LCT or have inquiries? [Feel free to reach out to us](https://lct.software/#contact). You can also subscribe to our newsletter below or explore our [pricing details](https://lct.software/#pricing).

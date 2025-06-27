@@ -27,8 +27,16 @@
     "id": "llenffer",
     "name": "Lynn Nari Lenffer",
     "image": "llenffer.jpg",
-    "twitter" : "https://twitter.com/lynninafaerie",
+    "twitter": "https://twitter.com/lynninafaerie",
     "blog": null,
     "linkedIn": null
+  },
+  {
+    "id": "chrisroehrs",
+    "name": "Chris Röhrs",
+    "image": "chrisroehrs.jpg",
+    "twitter": null,
+    "blog": null,
+    "linkedin": null
   }
 ]
