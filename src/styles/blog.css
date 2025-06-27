@@ -13,22 +13,6 @@ html {
   @apply scroll-smooth;
 }
 
-#blog-newsletter-prompt-container {
-  background-blend-mode: overlay;
-}
-
-.dark #blog-newsletter-prompt-container {
-  background-blend-mode: soft-light;
-}
-
-/* #blog-newsletter-prompt-header {
-  text-shadow: #ffffffcc 2px 2px 0px;
-} */
-
-.dark #blog-newsletter-prompt-header {
-  text-shadow: #00000066 2px 2px 0px;
-}
-
 code::after,
 code::before {
   content: none !important;
