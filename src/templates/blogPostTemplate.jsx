@@ -14,7 +14,6 @@ import getBlogMeta from '../util/getBlogMeta';
 import {
   AuthorDisplay,
   PostStats,
-  BlogNewsletterPrompt,
 } from '../components/blog';
 import Codemirror from '../components/blog/Codemirror';
 import BlogImageGetter from '../components/blog/BlogImageGetter';
@@ -170,9 +169,6 @@ const BlogPostTemplate = ({ data }) => {
                 <MDXRenderer>{body}</MDXRenderer>
               </MDXProvider>
             </main>
-            <div className="mt-16 border-t border-black pt-16 dark:border-hyand-border-blue">
-              <BlogNewsletterPrompt />
-            </div>
           </div>
         </article>
       </div>
