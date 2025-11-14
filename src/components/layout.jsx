@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
     <div className="flex flex-grow flex-col">
       <main className="flex flex-grow flex-col">{children}</main>
     </div>
-    <div>
+    <div className="text-white bg-hyand-black">
       <div className="mx-auto max-w-7xl">
         <Footer />
       </div>
