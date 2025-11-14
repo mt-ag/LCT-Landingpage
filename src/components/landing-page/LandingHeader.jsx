@@ -38,7 +38,7 @@ const LandingHeader = () => (
         target="_blank"
         rel="noreferrer"
       >
-        <div className="">
+        <div>
           <HyandLogo className="h-[28px] w-auto " />
         </div>
       </a>

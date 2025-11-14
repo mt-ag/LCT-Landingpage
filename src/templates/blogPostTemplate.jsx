@@ -146,7 +146,7 @@ const BlogPostTemplate = ({ data }) => {
                 {title}
               </h1>
             </header>
-            <main className="">
+            <main>
               <div className="my-4 text-zinc-800 dark:text-zinc-200">
                 {description}
               </div>

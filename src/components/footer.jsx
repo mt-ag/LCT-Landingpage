@@ -14,7 +14,7 @@ const Footer = () => (
         target="_blank"
         rel="noreferrer"
       >
-        <div className="">
+        <div>
           <HyandLogo className="h-[45px] w-auto " />
         </div>
       </a>
@@ -73,7 +73,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="mb-8 flex justify-between pt-4 text-sm">
-      <div className="">{`© ${new Date().getFullYear()} • Hyand Solutions GmbH`}</div>
+      <div>{`© ${new Date().getFullYear()} • Hyand Solutions GmbH`}</div>
       <div className="flex">
         <a
           href="https://www.hyand.com/impressum/"

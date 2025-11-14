@@ -22,7 +22,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   rel="noopener"
                   className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:ring-1 hover:ring-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
                 >
-                  <div className="">
+                  <div>
                     <GatsbyImage
                       image={video.localThumbnail.sharp.gatsbyImageData}
                       alt=""
@@ -62,7 +62,7 @@ const Content = ({ allYoutubeVideo, posts }) => (
                   to={`/blog/${post.frontmatter.slug}`}
                   className="my-1 grid grid-cols-2 items-center gap-y-4 space-x-4 rounded px-2 py-1 transition-colors duration-150 ease-in-out hover:ring-1 hover:ring-hyand-blue focus:outline-none focus:ring-1 focus:ring-hyand-blue"
                 >
-                  <div className="">
+                  <div>
                     <GatsbyImage
                       image={post.frontmatter.titleImage.sharp.gatsbyImageData}
                       alt=""
