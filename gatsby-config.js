@@ -142,7 +142,7 @@ module.exports = {
                     }
                   }
                 }
-              }            
+              }
             `,
             output: '/blog/feed.xml',
             title: 'LCT Blog',

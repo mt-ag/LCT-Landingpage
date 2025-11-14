@@ -44,8 +44,8 @@ const InfoHeader = () => {
       className="pt-16 pb-20 sm:pt-24 sm:pb-24 lg:pt-20 lg:pb-32 relative"
     >
       {/* Gradient overlay - fades from transparent to black */}
-      <div 
-        className="absolute inset-x-0 bottom-0 h-60 pointer-events-none" 
+      <div
+        className="absolute inset-x-0 bottom-0 h-60 pointer-events-none"
         style={{
           background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
         }}

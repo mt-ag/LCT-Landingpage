@@ -35,7 +35,7 @@ const Contact = () => {
                   sizes="20vw"
                 />
               </div>
-              
+
               {/* Text content below image - aligned left but same width as image */}
               <div className="w-full mt-4">
                 <div className="text-left">
@@ -79,7 +79,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 {/* Email button */}
                 <div className="mt-5 text-left">
                   <div className="inline-block">

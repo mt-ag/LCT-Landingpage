@@ -36,12 +36,12 @@ const Features = () => (
   <div className="mb-16 mt-8 lg:mb-32 lg:mt-16">
     <div className="pb-8 lg:pb-16 mb-25">
       <h2 className="mx-auto w-5/6 text-center text-6xl font-light tracking-tight text-white lg:w-full lg:text-6xl">
-        Features      
+        Features
       </h2>
     </div>
     <div className="mx-auto grid max-w-7xl gap-y-16">
       <FeatureDisplay
-        imgComp={ 
+        imgComp={
         <ImageGetter
           filename="lct-metadata-driven-dark.png"
           classes="block"
