@@ -286,7 +286,7 @@ const Offer = () => {
           >
             {email === 'loading...'
               ? email
-              : 'Get in contact or request a Demo'}
+              : 'Get in contact or request a demo'}
           </a>
         </div>
       </div>

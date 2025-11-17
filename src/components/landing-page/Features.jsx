@@ -90,13 +90,13 @@ const Features = () => (
             sizes="65vw"
           />
         }
-        header="Automatically Detect Regressions"
+        header="Automatically detect regressions"
         body="Automate your test scheduling and receive instant notifications on any regression issues. Minimize risks associated with Oracle APEX upgrades and new feature implementations."
         reverse
       />
       <FeatureDisplay
         imgComp={<img src={LiveLogGif} alt="test output log" className="border-2 border-hyand-blue rounded-md"/>}
-        header="Extensive Reporting"
+        header="Extensive reporting"
         body="From screenshots and detailed log files to comprehensive error messages - LCT is designed to provide as much information as possible. You can even follow the test execution in real-time via our LiveLog!"
       />
     </div>
