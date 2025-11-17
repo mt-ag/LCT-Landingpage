@@ -66,7 +66,7 @@ const Header = () => {
         </button>
         <a
           href="https://www.hyand.com/"
-          className="hidden px-2 focus:outline-none focus:ring focus:ring-cyan-500/50 lg:block"
+          className="hidden px-2 py-1 focus:outline-none focus:ring focus:ring-cyan-500/50 lg:block"
           aria-label="Hyand"
           target="_blank"
           rel="noreferrer"
