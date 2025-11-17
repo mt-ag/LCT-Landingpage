@@ -26,7 +26,7 @@ const Footer = () => (
         <p className="mb-2">40882 Ratingen</p>
         <p className="mt-5 mb-2">Phone: +49 2102 30961-0</p>
         <p className="mb-5">Fax: +49 2102 30961-101</p>
-        <p>Info@hyand.com</p>
+        <p>info@hyand.com</p>
       </div>
       <div className="grid grid-cols-1 space-y-4 md:grid-cols-2 md:space-y-0 md:space-x-12">
         <div>
@@ -43,7 +43,7 @@ const Footer = () => (
               target="_blank"
               rel="noreferrer"
             >
-              apex.hyand.com
+              Hyand APEX Portal
             </a>
           </p>
         </div>
@@ -52,17 +52,37 @@ const Footer = () => (
           <p>
             <a
               className="u-footer-link"
-              href="https://twitter.com/LowCodeTesting"
+              href="https://bsky.app/profile/lowcodetesting.bsky.social"
               target="_blank"
               rel="noreferrer"
             >
-              Twitter
+              Bluesky
             </a>
           </p>
           <p>
             <a
               className="u-footer-link"
-              href="https://www.youtube.com/channel/UCWj_laDAKjgRaw4SjEdVyIA"
+              href="https://www.linkedin.com/company/low-code-testing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+          <p>
+            <a
+              className="u-footer-link"
+              href="https://x.com/LowCodeTesting"
+              target="_blank"
+              rel="noreferrer"
+            >
+              X (Twitter)
+            </a>
+          </p>
+          <p>
+            <a
+              className="u-footer-link"
+              href="https://www.youtube.com/@lct-apex"
               target="_blank"
               rel="noreferrer"
             >
