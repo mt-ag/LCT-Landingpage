@@ -279,20 +279,6 @@ const Offer = () => {
           per hour (can vary).
         </div>
 
-        {/* Outer div for centering */}
-        <div className="mx-6 mt-12 flex justify-center lg:mx-0">
-          {/* Inner div that tightly wraps content */}
-          <div className="inline-flex items-center rounded-xl border border-2 border-hyand-blue">
-            <a
-              className="px-2 py-1.5 text-center text-white hover:text-white/80 text-lg focus:outline-none focus:ring-2 focus:ring-hyand-blue focus:ring-offset-2 focus:ring-offset-hyand-blue/80"
-              href="https://apex.mt-itsolutions.com/ords/f?p=APEXSUPPORT:3:0&p_lang=en"
-            >
-              We also offer consulting services to help with any APEX related
-              questions including testing &gt;
-            </a>
-          </div>
-        </div>
-
         <div className="mb-24 mt-16 flex">
           <a
             href={`mailto:${email}`}
