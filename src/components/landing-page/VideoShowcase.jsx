@@ -17,7 +17,7 @@ const VideoShowcase = () => {
   };
 
   return (
-    <div className="relative aspect-video overflow-hidden rounded-md border-4 border-transparent bg-gradient-to-tl from-cyan-200 to-sky-500">
+    <div className="relative aspect-video overflow-hidden rounded-md border-2 border-hyand-blue">
       <video className="w-full" controls preload="none" ref={videoEl}>
         <source src="/videos/lct-demo.webm" type="video/webm" />
         Your browser does not support videos.
@@ -25,12 +25,12 @@ const VideoShowcase = () => {
       <div ref={videoOverlay}>
         <button
           type="button"
-          className="absolute left-0 top-0 z-40 mx-auto h-full w-full text-cyan-300/90 transition-colors duration-150 ease-in-out hover:text-cyan-600/75"
+          className="absolute left-0 top-0 z-40 mx-auto h-full w-full hyand-blue-300/90 transition-colors duration-150 ease-in-out hover:text-cyan-600/75"
           onClick={handleClick}
           aria-label="Play Low Code Testing for Oracle APEX (LCT) Demo Video"
         >
           <div>
-            <PlayIcon className="mx-auto h-48 w-48" />
+            <PlayIcon className="mx-auto h-48 w-48 text-hyand-blue/75" />
           </div>
         </button>
         <div className="absolute left-0 top-0 z-30 mx-auto flex h-full w-full text-center ">

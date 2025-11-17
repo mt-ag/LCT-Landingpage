@@ -4,10 +4,10 @@ import HyandLogo from '../../svgs/hyand_logo_rgb_all_white.svg';
 import LCTLogo from '../../svgs/lct-logo.svg';
 
 const LandingHeader = () => (
-  <header className="flex justify-between py-4 px-4 lg:px-0">
+  <header className="flex justify-between px-1 md:p-3 lg:px-4">
     <div className="flex items-center space-x-5">
-      <div className="flex items-center">
-        <LCTLogo className="mr-2 h-[36px] w-auto" />
+      <div className="flex items-center px-2 py-1">
+        <LCTLogo className="mr-2 h-[32px] w-auto" />
         <h1 className="text-xl font-bold text-zinc-100">
           <span className="hidden md:block">Low Code Testing</span>
           <span className="md:hidden">LCT</span>
@@ -15,31 +15,31 @@ const LandingHeader = () => (
       </div>
       <Link
         to="/blog"
-        className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
+        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
       >
-        Blog
+        /blog
       </Link>
 
       <a
         href="https://www.youtube.com/@lct-apex"
         target="_blank"
         rel="noopener"
-        className="rounded px-2 py-1 text-zinc-200 hover:bg-sky-200/10 focus:outline-none focus:ring focus:ring-sky-300/50"
+        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
       >
-        Videos
+        /videos
       </a>
     </div>
     <div className="flex items-center">
       <a
         href="https://www.hyand.com/"
-        className="mr-0 ml-auto flex text-zinc-100 hover:text-zinc-100/75"
+        className="mr-0 ml-auto px-2 py-1 flex text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
-        aria-label="MT Part of Hyand"
+        aria-label="Hyand"
         target="_blank"
         rel="noreferrer"
       >
-        <div className="">
-          <HyandLogo className="h-[28px] w-auto " />
+        <div>
+          <HyandLogo className="h-[24px] w-auto" />
         </div>
       </a>
     </div>

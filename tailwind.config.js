@@ -4,17 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'mt-blue': '#00476f',
-        'mt-green': '#6ba055',
-        'mt-darkgreen': '#436e5e',
-        'mt-old-blue': '#0073aa',
+        'hyand-black': '#000000',
+        'hyand-blue': '#0092e1',
+        'hyand-green': '#00c48d',
+        'hyand-yellow': '#f0eb83',
+        'hyand-red': '#e94f35',
+        'hyand-border-blue': '#005380',
       },
       spacing: {
         124: '32rem',
       },
       fontFamily: {
         'bold-header': [
-          '"IBM Plex Serif"',
+          '"Hyand Px Grotesk Mono"',
           'ui-serif',
           'Georgia',
           'Cambria',
@@ -22,7 +24,7 @@ module.exports = {
           'Times',
           'serif',
         ],
-        mt: ['Manrope', 'Arial', 'Helvetica', 'sans-serif'],
+        hyand: ['"Hyand Px Grotesk"', 'Arial', 'Helvetica', 'sans-serif'],
       },
     },
   },

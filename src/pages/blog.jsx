@@ -41,8 +41,8 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" description="LCT Blogposts" />
-      <div className="flex flex-grow flex-col items-center bg-zinc-50 dark:bg-slate-900">
-        <div className="w-full max-w-6xl flex-grow bg-white py-12 shadow dark:bg-slate-800/30 dark:text-zinc-200">
+      <div className="flex flex-grow flex-col items-center bg-white dark:bg-hyand-black">
+        <div className="w-full max-w-6xl flex-grow bg-white py-12 shadow dark:bg-hyand-black dark:text-white">
           <div className="text-center">
             <h1 className="brown-header-text text-xl font-extrabold leading-9 sm:text-2xl sm:leading-10 md:text-3xl">
               Blog

@@ -10,7 +10,7 @@ export const AuthorDisplay = ({ authors }) => {
 
   return (
     <>
-      <div className="mb-2 hidden text-center text-xl text-zinc-900 dark:text-slate-300 lg:block">
+      <div className="mb-2 hidden text-center text-xl text-black dark:text-white lg:block">
         {authorsData.length > 1 ? 'Authors' : 'Author'}
       </div>
       <div className="grid grid-cols-2 gap-2 lg:grid-cols-1 lg:gap-5">
@@ -20,19 +20,19 @@ export const AuthorDisplay = ({ authors }) => {
               <ImageGetter
                 filename={a.image}
                 alt=""
-                classes="object-cover shadow-md dark:shadow-none shadow-cyan-100 rounded-full select-none border-4 border-sky-500/60 dark:border-sky-500"
+                classes="object-cover shadow-md dark:shadow-none shadow-cyan-100 rounded-full select-none border-4 border-hyand-green/60 dark:border-hyand-green"
                 sizes="10vw"
               />
             </div>
             <div className="col-span-2 my-auto space-y-1">
-              <div className="md:text-md text-xs font-light text-gray-900 dark:text-slate-300 sm:text-sm">
+              <div className="md:text-md text-xs font-light text-black dark:text-white sm:text-sm">
                 {a.name}
               </div>
               <div className="flex space-x-3">
                 {a.twitter ? (
                   <a
                     href={a.twitter}
-                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-[#1DA1F2] dark:text-slate-500 dark:hover:text-[#1DA1F2]"
+                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-[#1DA1F2] dark:text-white dark:hover:text-[#1DA1F2]"
                     aria-label="Twitter"
                     title="Twitter"
                   >
@@ -49,7 +49,7 @@ export const AuthorDisplay = ({ authors }) => {
                 {a.blog ? (
                   <a
                     href={a.blog}
-                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-emerald-400 dark:text-slate-500 dark:hover:text-emerald-400"
+                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-black dark:text-white dark:hover:text-hyand-green"
                     aria-label="Blog"
                     title="Blog"
                   >
@@ -59,7 +59,7 @@ export const AuthorDisplay = ({ authors }) => {
                 {a.linkedIn ? (
                   <a
                     href={a.linkedIn}
-                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-[#0e76a8] dark:text-slate-500 dark:hover:text-[#0e76a8]"
+                    className="text-zinc-400 transition-colors duration-500 ease-in-out hover:text-[#0e76a8] dark:text-white dark:hover:text-[#0e76a8]"
                     aria-label="LinkedIn"
                     title="LinkedIn"
                   >

@@ -4,17 +4,17 @@ import HyandLogo from '../svgs/hyand_logo_rgb_all_white.svg';
 import '../styles/tailwind.css';
 
 const Footer = () => (
-  <footer className="grid grid-cols-1 divide-y divide-white/30 bg-mt-blue py-4 px-4 text-sm font-light text-white md:px-8 md:text-base lg:text-lg xl:text-xl">
+  <footer className="grid grid-cols-1 divide-y divide-white/30 py-4 px-4 text-sm font-light md:px-8 md:text-base lg:text-lg xl:text-xl">
     <div className="mt-8 flex justify-between pb-8">
       <a
         href="https://www.hyand.com/"
         className=" mb-2 text-zinc-100 hover:text-zinc-100/75"
         style={{ width: 'fit-content' }}
-        aria-label="MT Part of Hyand"
+        aria-label="Hyand"
         target="_blank"
         rel="noreferrer"
       >
-        <div className="">
+        <div>
           <HyandLogo className="h-[45px] w-auto " />
         </div>
       </a>
@@ -26,7 +26,7 @@ const Footer = () => (
         <p className="mb-2">40882 Ratingen</p>
         <p className="mt-5 mb-2">Phone: +49 2102 30961-0</p>
         <p className="mb-5">Fax: +49 2102 30961-101</p>
-        <p>Info@hyand.com</p>
+        <p>info@hyand.com</p>
       </div>
       <div className="grid grid-cols-1 space-y-4 md:grid-cols-2 md:space-y-0 md:space-x-12">
         <div>
@@ -39,11 +39,11 @@ const Footer = () => (
           <p>
             <a
               className="u-footer-link"
-              href="https://apex.mt-itsolutions.com/"
+              href="https://apex.hyand.com/"
               target="_blank"
               rel="noreferrer"
             >
-              apex.mt-itsolutions.com
+              Hyand APEX Portal
             </a>
           </p>
         </div>
@@ -52,17 +52,37 @@ const Footer = () => (
           <p>
             <a
               className="u-footer-link"
-              href="https://twitter.com/LowCodeTesting"
+              href="https://bsky.app/profile/lowcodetesting.bsky.social"
               target="_blank"
               rel="noreferrer"
             >
-              Twitter
+              Bluesky
             </a>
           </p>
           <p>
             <a
               className="u-footer-link"
-              href="https://www.youtube.com/channel/UCWj_laDAKjgRaw4SjEdVyIA"
+              href="https://www.linkedin.com/company/low-code-testing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+          <p>
+            <a
+              className="u-footer-link"
+              href="https://x.com/LowCodeTesting"
+              target="_blank"
+              rel="noreferrer"
+            >
+              X (Twitter)
+            </a>
+          </p>
+          <p>
+            <a
+              className="u-footer-link"
+              href="https://www.youtube.com/@lct-apex"
               target="_blank"
               rel="noreferrer"
             >
@@ -73,7 +93,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="mb-8 flex justify-between pt-4 text-sm">
-      <div className="">{`© ${new Date().getFullYear()} • Hyand Solutions GmbH`}</div>
+      <div>{`© ${new Date().getFullYear()} • Hyand Solutions GmbH`}</div>
       <div className="flex">
         <a
           href="https://www.hyand.com/impressum/"
