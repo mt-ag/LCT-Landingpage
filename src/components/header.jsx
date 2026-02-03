@@ -47,6 +47,14 @@ const Header = () => {
         >
           /videos
         </a>
+        <a
+          href="https://docs.lct.software/"
+          target="_blank"
+          rel="noreferrer"
+          className="px-2 py-1 text-black transition-colors dark:text-white dark:hover:text-hyand-blue"
+        >
+          /docs
+        </a>
       </div>
       <div className="flex items-center">
         <button
