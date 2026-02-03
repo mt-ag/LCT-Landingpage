@@ -28,6 +28,14 @@ const LandingHeader = () => (
       >
         /videos
       </a>
+      <a
+        href="https://docs.lct.software/"
+        target="_blank"
+        rel="noopener"
+        className="rounded px-2 py-1 text-white hover:text-hyand-blue focus:text-hyand-blue"
+      >
+        /docs
+      </a>
     </div>
     <div className="flex items-center">
       <a
